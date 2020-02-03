@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "David Burns - AutomatedTester"
 theme = "hugo-coder"
 
+publishDir = "docs"
+
 [params]
     author = "David Burns"
     info = "Open Sourcer, Engineer, and Engineering Manager"
