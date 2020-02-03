@@ -1,4 +1,4 @@
-baseURL = "https://www.automatedtester.co.uk/"
+baseURL = "https://www.theautomatedtester.co.uk/"
 languageCode = "en-us"
 title = "David Burns - AutomatedTester"
 theme = "hugo-coder"
