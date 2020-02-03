@@ -10,7 +10,7 @@ publishDir = "docs"
     info = "Open Sourcer, Engineer, and Engineering Manager"
     description = "David Burns - Engineer"
     keywords = "blog,developer,personal,selenium,automation,browsers,interoperability"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "img/David-Burns-Headshot.jpg"
 
     favicon_32 = "/images/favicon-32x32.png"
     favicon_16 = "/images/favicon-16x16.png"

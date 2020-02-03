@@ -6,9 +6,20 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://www.theautomatedtester.co.uk/about/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/about/</guid>
+      <description>David Burns Chair person for the W3C Browser Testing and Tools Working Group. Editor of the W3C WebDriver specification. Heading up the work to make the web predictable and help give software engineers the tools to make sure their websites work in Firefox and other browsers at Mozilla.
+I was Programme, Project and Product Manager and tech leader for Firefox&amp;rsquo;s implementation of the WebDriver Specification as well as a core contributor on the Selenium Open Source Project.</description>
+    </item>
     
   </channel>
 </rss>
