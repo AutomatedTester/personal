@@ -1,0 +1,53 @@
+baseURL = "https://automatedtester.co.uk/"
+languageCode = "en-us"
+title = "David Burns - AutomatedTester"
+theme = "hugo-coder"
+
+[params]
+    author = "David Burns"
+    info = "Open Sourcer, Engineer, and Engineering Manager"
+    description = "David Burns - Engineer"
+    keywords = "blog,developer,personal,selenium,automation,browsers,interoperability"
+    avatarurl = "images/avatar.jpg"
+
+    favicon_32 = "/img/favicon-32x32.png"
+    favicon_16 = "/img/favicon-16x16.png"
+
+    footercontent = "Engineering Effectiveness Nerd"
+
+    hidecredits = false
+    hidecopyright = false
+
+    rtl = false
+
+    math = true
+    custom_css = ["css/custom.css"]
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/automatedtester/"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter fa-2x"
+    weight = 2
+    url = "https://twitter.com/automatedtester/"
+
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin fa-2x"
+    weight = 2
+    url = "https://linkedin.com/in/automatedtester/"
+
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
