@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.theautomatedtester.co.uk/about/</loc>
-    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
+    <loc>https://www.theautomatedtester.co.uk/blog/</loc>
+    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.theautomatedtester.co.uk/</loc>
+    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/</loc>
+    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.theautomatedtester.co.uk/about/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url>
   
