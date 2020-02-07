@@ -31,5 +31,67 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 I was Programme, Project and Product Manager and tech leader for Firefox&amp;rsquo;s implementation of the WebDriver Specification as well as a core contributor on the Selenium Open Source Project.</description>
     </item>
     
+    <item>
+      <title>What makes a senior developer or senior engineer</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2018/what-makes-a-senior-developer-or-senior-engineer/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2018/what-makes-a-senior-developer-or-senior-engineer/</guid>
+      <description>Over the festive break I sent out this tweet.
+I would fire the “senior” engineers for being over levelled. Senior engineers jobs are to mentor and build up the engineers below them. If they find that a burden then they need to re-evaluate their seniority. https://t.co/f0G5TtumRE
+&amp;mdash; David Burns (@AutomatedTester) December 22, 2017  The, now deleted, quoted tweet went along the lines of &amp;ldquo;If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Harassment of Open Source Maintainers or Contributors</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2017/harassment-of-open-source-maintainers-or-contributors/</link>
+      <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2017/harassment-of-open-source-maintainers-or-contributors/</guid>
+      <description>On Friday I had the unfortunate pleasure of taking the brunt on an unhappy Selenium user. Their issue? My team said that a release of GeckoDriver would happen when we are confident in the code. They said that was not professional. They started by telling me that they contribute to Mozilla and this is not acceptable for them as a customer.
+Below is a break down of why I took exception to this:</description>
+    </item>
+    
+    <item>
+      <title>honest and open conversations</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2017/honest-and-open-conversations/</link>
+      <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2017/honest-and-open-conversations/</guid>
+      <description>Can you have an open and honest conversation with your peers and, this is the most important one, can you have an open and honest conversation with your manager?
+Have a good think about this, don&amp;rsquo;t answer straight away. Let&amp;rsquo;s go through the following scenarios to find out if you can have open and honest conversations.
+Can you&amp;hellip;
+Tell your manager when you are struggling with a task and not feel like you are going to chastised?</description>
+    </item>
+    
+    <item>
+      <title>trust</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2016/trust/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2016/trust/</guid>
+      <description>The thing that is at the core of every hyper effective team is trust. Without it, any of the pieces that make the team hyper effective can fall apart very quickly. This is something that I have always instinctively known. I always work hard with my reports to make sure they can trust me. If they trust me, and more importantly I trust them, then I can ask them to take on work and then just come back every so often to see if they are stuck.</description>
+    </item>
+    
+    <item>
+      <title>Public Source vs Open Source</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2016/public-source-vs-open-source/</link>
+      <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2016/public-source-vs-open-source/</guid>
+      <description>A few weeks ago I had an interesting conversation on twitter and then on instant messaging about a bit of software that was open sourced. Some thought, and might still do, the new piece of software might not be supported.
+There was also recently a good blog post from James Long about how it can be hard to create open source code and then maintain it. Either life gets in the way or another project gets in the way.</description>
+    </item>
+    
+    <item>
+      <title>The &#34;power&#34; of overworking</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2016/the-power-of-overworking/</link>
+      <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2016/the-power-of-overworking/</guid>
+      <description>The other week I was in Orlando, Florida for a Mozilla All-Hands. It is a week where around 1200 Mozillians get together to spend time with each other planning, coding, or solving some hard problems.
+One of the topics that came up was how someone always seemed to be online. This comment was a little more than &amp;ldquo;they never seem to go offline from IRC&amp;rdquo;. It was &amp;ldquo;they seem to commenting on things around 20 hours a day&amp;rdquo;.</description>
+    </item>
+    
   </channel>
 </rss>
