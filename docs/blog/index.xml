@@ -55,6 +55,18 @@ Tell your manager when you are struggling with a task and not feel like you are 
     </item>
     
     <item>
+      <title>WebDriver F2F - July 2016</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2016/webdriver-f2f-july-2016/</link>
+      <pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2016/webdriver-f2f-july-2016/</guid>
+      <description>Last week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Microsoft campus in Redmond, Washington.
+The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
+The meeting notes are available for Wednesday and Thursday. The most notable items are;
+ Finalising Actions in the specification newSession Certificate handling on navigation Specification tests  We also welcomed Apple to their first WG meeting.</description>
+    </item>
+    
+    <item>
       <title>trust</title>
       <link>https://www.theautomatedtester.co.uk/blog/2016/trust/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
@@ -81,6 +93,37 @@ There was also recently a good blog post from James Long about how it can be har
       <guid>https://www.theautomatedtester.co.uk/blog/2016/the-power-of-overworking/</guid>
       <description>The other week I was in Orlando, Florida for a Mozilla All-Hands. It is a week where around 1200 Mozillians get together to spend time with each other planning, coding, or solving some hard problems.
 One of the topics that came up was how someone always seemed to be online. This comment was a little more than &amp;ldquo;they never seem to go offline from IRC&amp;rdquo;. It was &amp;ldquo;they seem to commenting on things around 20 hours a day&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>WebDriver Specification - Have you read it lately?</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2015/webdriver-specification-have-you-read-it-lately/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2015/webdriver-specification-have-you-read-it-lately/</guid>
+      <description>A lot of work has gone into the WebDriver Specification this year. The methods in there have had a major make over to make them more specific in the steps that are required as well as having the relevant links. Go have a read of it and feel free to raise bugs against it, we will be updating it quite regularly. You can see all the work that is happening on Github.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t write &#34;Five Hidden Costs of X&#34; but when you do I will reply</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/</guid>
+      <description>Recently I was shown that Telerik did a &amp;ldquo;Five Hidden Costs of Selenium&amp;quot;. I knew straight away from the title that this was purely a marketing document targeting teams with little to no automation skills to do automation. For what it is worth, if you want to do automation you should really hire the right engineers for the job.
+My offence with the article is not that its wrong, there are a few items I disagree with which are documented below, but with it trying to sell snake oil or silver bullets.</description>
+    </item>
+    
+    <item>
+      <title>WebDriver Face To Face - February 2014</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/</link>
+      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/</guid>
+      <description>This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
+The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
+The meeting notes are available for Tuesday and Wednesday. The most notable items are;
+ Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By.</description>
     </item>
     
   </channel>
