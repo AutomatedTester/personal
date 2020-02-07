@@ -37,7 +37,7 @@ So... There are tools that use Chrome's Debug Protocol to drive the browser and 
 
 Also, ignoring the interesting design choices from the the Google team, there is the problem that we have to have a permenantly open connection. In this case it uses WebSockets but if you remember my comment earlier about the internet is down until it's up. WebSockets would be constantly re-establishing the connection. There is also the problem of how much traffic would be going up and down that pipe. 
 
-This is fine for puppeteer where you are only speaking to something on your local machine but if you are combining a CI service, like Circle CI or TravisCI and something like AWS Device Farm, Saucelabs, or BrowserStack you suddenly have a lot of internet inbetween you and your runner and that data needs to get somewhere.
+This is fine for puppeteer where you are only speaking to something on your local machine but if you are combining a CI service, like Circle CI or TravisCI and something like AWS Device Farm, Sauce Labs, or BrowserStack you suddenly have a lot of internet inbetween you and your runner and that data needs to get somewhere.
 
 The W3C Browser Testing and Tools Working group, which is made up of browser vendors and Selenium folk, are trying to design what this will look like to make sure that we can make it cross browser from the start without having to do weird hacky patches to browsers and ship those browsers ourselves.
 
