@@ -105,6 +105,56 @@ One of the topics that came up was how someone always seemed to be online. This 
     </item>
     
     <item>
+      <title>WebDriver Face To Face TPAC 2014</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-tpac-2014/</link>
+      <pubDate>Tue, 04 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-tpac-2014/</guid>
+      <description>Last week was the 2014 W3C TPAC. For those that don&amp;rsquo;t know, TPAC is a conference where a number of W3C working groups get together in the same venue. This allows for a great amount of discussions between groups and also allows people to see what is coming in the future of the web.
+The WebDriver Working Group was part of TPAC this year, like previous years, and there was some really great discussions.</description>
+    </item>
+    
+    <item>
+      <title>WebDriver F2F - London 2014</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f-london-2014/</link>
+      <pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f-london-2014/</guid>
+      <description>Last week saw the latest face to face of the WebDriver Working Group held at Facebook. This meeting was important as this is hopefully the last face to face before we go to Last call allowing us to concentrate on issues that come up during last call.
+This meeting was really useful as we were a number of discussions around the prose of the spec when it comes to conformance and usability of the spec, especially when given to implementors who have never worked on WebDriver.</description>
+    </item>
+    
+    <item>
+      <title>My ideal build, test, and land world</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/my-ideal-build-test-and-land-world/</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/my-ideal-build-test-and-land-world/</guid>
+      <description>The other week I tweeted I was noticing for that day we had 1 revert push to Mozilla Inbound in every 10 pushes. For those that don&amp;rsquo;t know, Mozilla Inbound is the most active integration repository that Firefox code lands in. A push can contain a number of commits depending on the bug or if a sheriff is handling checkin-needed bugs.
+This tweet got replies like, and I am paraphrasing, &amp;ldquo;That&amp;rsquo;s not too bad&amp;rdquo;, &amp;ldquo;I expected it to be worse&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Do you trust a test that you have never seen fail</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/do-you-trust-a-test-that-you-have-never-seen-fail/</link>
+      <pubDate>Mon, 28 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/do-you-trust-a-test-that-you-have-never-seen-fail/</guid>
+      <description>Recently David Heinemeier Hansson (dhh) wrote a blog post called &amp;ldquo;TDD is dead, long live testing&amp;quot;. He describes how the TDD world has got mean spirited and perhaps the use of the technique was to break down the barriers of automated testing and regression testing but that is no longer the case. (I agree with this a little but there are a lot of angry people out there)
+He then declares that he has had enough and declares that he does not write tests first and is proud of it.</description>
+    </item>
+    
+    <item>
+      <title>Management is hard</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/management-is-hard/</link>
+      <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/management-is-hard/</guid>
+      <description>I have been a manager within the A*Team for 6 months now and I wanted to share what I have learnt in that time. The main thing that I have learnt is being a manager is hard work.
+Why has it been hard? Well, being a manager is requires a certain amount of personal skills. So being able to speak to people and check they are doing the tasks they are supposed to is trivial.</description>
+    </item>
+    
+    <item>
       <title>Don&#39;t write &#34;Five Hidden Costs of X&#34; but when you do I will reply</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/</link>
       <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
@@ -124,6 +174,70 @@ My offence with the article is not that its wrong, there are a few items I disag
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Tuesday and Wednesday. The most notable items are;
  Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By.</description>
+    </item>
+    
+    <item>
+      <title>TPAC 2013 - WebDriver Face To Face and more</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2013/tpac-2013-webdriver-face-to-face-and-more/</link>
+      <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2013/tpac-2013-webdriver-face-to-face-and-more/</guid>
+      <description>Last week I was at W3 TPAC for week of face to face meeting to discuss WebDriver and other W3C specifications that other working groups are working on.
+Our initial agenda went up just before the meeting and we were lucky enough to get through all the items. If you would like to read the notes for the meeting Monday and Tuesday.
+Highlights from the meeting are
+ We are rescoping the specification to have the relevant things we need - we have been suffering from scope creep so we are removing things that aren&amp;rsquo;t complete or won&amp;rsquo;t be completed soon.</description>
+    </item>
+    
+    <item>
+      <title>The tale of Selenium bug 141</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/</link>
+      <pubDate>Wed, 26 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/</guid>
+      <description>The selenium project has for a while now wanted to create a library that allows user emulation in the browser. The project has done a reasonable job at this so far with respect to this. We check if items are in the DOM, we check the visibility of items and we normalise text from the browser, amongst our other amazing talents!
+Our default position is we enforce the idea of emulation.</description>
+    </item>
+    
+    <item>
+      <title>The value of locators and why everyone &#34;owns&#34; them</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2013/the-value-of-locators-and-why-everyone-owns-them/</link>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2013/the-value-of-locators-and-why-everyone-owns-them/</guid>
+      <description>The other day I got asked if I knew of a tool that would notice changes to IDs of elements and update Selenium tests accordingly because there was an incurred maintenance cost in updating these all the time because the test will fail.
+The tl;dr; is there isn&amp;rsquo;t a tool and I don&amp;rsquo;t think there should ever be one
+Why?
+HTML documents are not complex things, far from it, so when we change them we should think about how this is going to impact everything that hangs off a page.</description>
+    </item>
+    
+    <item>
+      <title>Why working on Open Source software makes you a better developer</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2013/why-working-on-open-source-software-makes-you-a-better-developer/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2013/why-working-on-open-source-software-makes-you-a-better-developer/</guid>
+      <description>Recently there was a bit of a rant on the Selenium users mailing list about how there were a few bugs irritating the person and, because they are only testers with not enough development experience, didnt feel that they could help with fixing these issues.
+Note: this person was not rude and was not trolling so was happy to reach out.
+One thing that I want people to know is that you don&amp;rsquo;t have to be a brilliant developer to work on Open Source projects.</description>
+    </item>
+    
+    <item>
+      <title>Could CSS3 be making sites that are not testable?</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2013/could-css3-be-making-sites-that-are-not-testable/</link>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2013/could-css3-be-making-sites-that-are-not-testable/</guid>
+      <description>Could CSS 3, while is a great thing for the Internet and for web developers, be making websites that are extremely hard to automate?
+As most of you know, in Selenium WebDriver we try an emulate what elements that a user can interact with. This means that we do a lot of DOM walking and gathering important little bits about the CSS on each of the elements to make sure that they are visible.</description>
+    </item>
+    
+    <item>
+      <title>Using Dropbox as a source respository for book writing</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2013/using-dropbox-as-a-source-repository-for-book-writing/</link>
+      <pubDate>Wed, 16 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2013/using-dropbox-as-a-source-repository-for-book-writing/</guid>
+      <description>As many of you know I have recently released the 2nd edition of my Selenium book. When I wrote my first book I looked for a way to do version control of my book. Being a developer and test type, I used git to do all of my version control but I found that I would sometimes forget to commit and push my changes. This broke my own rule of keeping commits small.</description>
     </item>
     
   </channel>

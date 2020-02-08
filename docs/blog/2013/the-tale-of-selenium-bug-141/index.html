@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="David Burns - Engineer">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The tale of Selenium bug 141"/>
+<meta name="twitter:description" content="The selenium project has for a while now wanted to create a library that allows user emulation in the browser. The project has done a reasonable job at this so far with respect to this. We check if items are in the DOM, we check the visibility of items and we normalise text from the browser, amongst our other amazing talents!
+Our default position is we enforce the idea of emulation."/>
+
+    <meta property="og:title" content="The tale of Selenium bug 141" />
+<meta property="og:description" content="The selenium project has for a while now wanted to create a library that allows user emulation in the browser. The project has done a reasonable job at this so far with respect to this. We check if items are in the DOM, we check the visibility of items and we normalise text from the browser, amongst our other amazing talents!
+Our default position is we enforce the idea of emulation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/" />
+<meta property="article:published_time" content="2013-06-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-06-26T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/">
+    
+    <title>
+  The tale of Selenium bug 141 · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.624134b411585efffadab6a91e7d0383f0d4e22ad49de3690eccbc96f528e670.css" integrity="sha256-YkE0tBFYXv/62rapHn0Dg/DU4irUneNpDsy8lvUo5nA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.63.2" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/blog/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>The tale of Selenium bug 141</h1>
+    </header>
+
+    <p>The selenium project has for a while now wanted to create a library that allows user emulation in the browser. The project has done a reasonable job at this so far with respect to this. We check if items are in the DOM, we check the visibility of items and we normalise text from the browser, amongst our other amazing talents!</p>
+<p>Our default position is we enforce the idea of emulation. &ldquo;How would a user do this action?&rdquo; is the main question we ask ourselves! So when a bug that doesn&rsquo;t meet that we tend not to implement it. One of these times is bug 141 - WebDriver lacks HTTP response header and status code methods. This is one of the most contentious bugs in the Selenium repository. People see Selenium as more than browser automation library, they see it as a web testing framework. Yes, Selenium RC was like this but then again Selenium RC also had ~140 methods hung off one object. We made a mistake in the past, let&rsquo;s try not to repeat it! Anyway, I digress, in a web testing framework world there may be times where there are use cases where you need to find out data from the response header and status codes.</p>
+<p>So is this a feature we want to add to WebDriver? No. &ldquo;But David, we do!?!?!?&rdquo; I hear you cry! The use case that comes up regularly is I want to know if a server is returning a 404 or 500 when I access a page. Why is there a need to start a browser to find this out? When I asked this question on twitter, my friend and fellow committer Kevin Menard said that it could be useful to to see the page response on failure and some pages can only be accessed with a real browser. The use cases that Kevin had is you want to check that the endpoint that you originally hit might might change based on the user agent passed in or there might be a site that follows the single page idea and breaks push state and therefore most of the web semantics. I admit Kevin is right with those use cases. However its only looking at a small part of the issue and there are a lot of corner cases. The major one for me is watching XHRs. What if one of your XHR returns a 500 and you get an error? Should WebDriver show you that information as well? I am sure you can see how quickly this can escalate. If you start worrying about all requests, and you should if you are worried about the initial request to a page, then you want the browser to capture all of this information and return it in a standard format. There just happens to be a format called Http Archive (HAR).</p>
+<p>So does the project take the task of creating a mechanism for extracting a HAR from the browser? That could be near impossible on browsers that don&rsquo;t readily share network usage information. So we go from WebDriver being a browser automation framework for user emulation to browser automation framework for user emulation and networking information gathering. That might be a little obtuse but its meant to be.</p>
+<p>While Selenium&rsquo;s main use case is for test automation, is not solely designed for that. We want to be the best at browser automation. Proxies are really good at managing network information and reporting on it in standard formats. Examples are fiddler and browsermob-proxy. And you can even hook them into Selenium WebDriver! Like the following:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> browsermobproxy <span style="color:#f92672">import</span> Server
+server <span style="color:#f92672">=</span> Server(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">path/to/browsermob-proxy</span><span style="color:#e6db74">&#34;</span>)
+server<span style="color:#f92672">.</span>start()
+proxy <span style="color:#f92672">=</span> server<span style="color:#f92672">.</span>create_proxy()
+
+<span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+profile  <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>FirefoxProfile()
+profile<span style="color:#f92672">.</span>set_proxy(proxy<span style="color:#f92672">.</span>selenium_proxy())
+driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox(firefox_profile<span style="color:#f92672">=</span>profile)
+
+
+proxy<span style="color:#f92672">.</span>new_har(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">google</span><span style="color:#e6db74">&#34;</span>)
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://www.google.co.uk</span><span style="color:#e6db74">&#34;</span>)
+proxy<span style="color:#f92672">.</span>har <span style="color:#75715e"># returns a HAR JSON blob</span>
+
+server<span style="color:#f92672">.</span>stop()
+driver<span style="color:#f92672">.</span>quit()</code></pre></div></p>
+<p>Yes it might be a little verbose to use them but if you really want to see that type of information then you should do it properly otherwise the real errors, that you originally wanted, will go missing.</p>
+<p>Putting in half a solution into Selenium is just going to create scope creep and a large number of bugs because its not doing the &ldquo;right&rdquo; thing. The &ldquo;right&rdquo; thing is far too subjective for it to be done correctly.</p>
+
+  </article>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Engineering Effectiveness Nerd</p>
+    
+    
+      
+        © 2020
+      
+       David Burns 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
