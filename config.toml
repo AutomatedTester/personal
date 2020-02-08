@@ -5,6 +5,8 @@ theme = "hugo-coder"
 
 publishDir = "docs"
 
+googleAnalytics = "UA-1089177-5"
+
 [params]
     author = "David Burns"
     info = "Open Sourcer, Engineer, and Engineering Manager"
