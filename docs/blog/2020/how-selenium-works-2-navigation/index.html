@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="David Burns - Engineer">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How Selenium Works: Episode 2 - Navigation"/>
+<meta name="twitter:description" content="After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
+I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works."/>
+
+    <meta property="og:title" content="How Selenium Works: Episode 2 - Navigation" />
+<meta property="og:description" content="After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
+I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-2-navigation/" />
+<meta property="article:published_time" content="2020-02-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-13T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-2-navigation/">
+    
+    <title>
+  How Selenium Works: Episode 2 - Navigation · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-2-navigation/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.624134b411585efffadab6a91e7d0383f0d4e22ad49de3690eccbc96f528e670.css" integrity="sha256-YkE0tBFYXv/62rapHn0Dg/DU4irUneNpDsy8lvUo5nA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.63.2" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/blog/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>How Selenium Works: Episode 2 - Navigation</h1>
+    </header>
+
+    <p>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.</p>
+<p>I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</p>
+<p>In this episode we are going to look into the sheer amount of work that goes into navigation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+
+driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+<p>We can see above&hellip; it looks easy enough right&hellip; no!</p>
+<p>Actually, it leads me to a pet peeve in interviews. If someone ever asks you to ever describe what happens in a browser when you type a URL and press enter there is a high probability that they have no real idea what goes into navigation. Anyway&hellip; back to Selenium and how we navigate.</p>
+<h1 id="driverget"><code>driver.get</code></h1>
+<p>Once we send the request over the <a href="/blog/how-selenium-works-transport/">transportation layer</a> the real fun starts. We need to figure out where we want to go and tell the browser to start going there for us. Unfortunately this will lead to the first of the many problems for automators.</p>
+<h2 id="certificates">Certificates</h2>
+<p>If you have ever worked in major corporate companies where technology is not the core then you will understand the pain that a development team might have to endure. Now double that pain and you&rsquo;re starting to get an idea of the pain that testers and automators have to deal with.</p>
+<p>One of these pains is certificates. Companies are cheap and will do self-signed certificates and other monstrosities. Especially in the early days of Selenium when there wasn&rsquo;t services like <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>. And even now, most Developers and QA teams rarely have access to change configurations on their test environments or on their CI servers. We needed to come up with a way to circumvent the certificates. (<em>This is one of the first reasons why Selenium is seen as a security risk</em>)</p>
+<p>So each of the browsers will allow the poorly configured certificates through when we automate. It&rsquo;s because if we didn&rsquo;t a lot of testers/developers would never be able to test their sites.</p>
+<p>Now&hellip; that we go round the first problem we need to move on to getting the page to load.</p>
+<h2 id="loading">Loading</h2>
+<p>Once we have got round the certificates we get the page to load. Luckily we don&rsquo;t need to do anything more than the equivalent of</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>; 
+<span style="color:#75715e">// or
+</span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>;
+</code></pre></div>
+<h2 id="done">Done&hellip;</h2>
+<p>When Selenium has &ldquo;finished&rdquo; a command it will return. So, we just need to wait for the page to be finished loading. To be honest, what does <em>&ldquo;finished loading&rdquo;</em> even mean.</p>
+<p>In the browser it will fire a number of different events. We will know when the page has been shown and then tell you what it&rsquo;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><code>readyState</code></a>. Selenium will check all of that and it will also wait for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event"><code>DOMContentLoaded</code></a>.</p>
+<p>Then there is the problem if you&rsquo;re on the page and you try navigate to an anchor on the page. Let&rsquo;s look at the following example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+
+driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk#someAnchor</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+<p>Oh look, none of the page loading events are going to be fired! Yay? Stupid browser is being efficient and will just scroll to the anchor. This means that we can&rsquo;t solely depend on events coming out of the page.</p>
+<p>No, so we need to have specialised code for this case and what &ldquo;done&rdquo; means in this case. If we get this wrong it&rsquo;s going to create a lot of unstable tests. Unstable tests make people grumpy and we don&rsquo;t want grumpy developers, there are enough of them in the world without unstable tests.</p>
+<p>Once we have done those checks, and you can manipulate how we look at those events, if you want it to load quicker, using the <a href="https://w3c.github.io/webdriver/#dfn-page-loading-strategy">Page Load Strategies</a>. This is more of a power user feature so I wouldn&rsquo;t worry about them now but they affect how quickly the navigation command</p>
+<h2 id="what-about-javascript-frameworks-and-navigation">What about JavaScript Frameworks and navigation</h2>
+<p>This is where there is &ldquo;fun&rdquo;. A lot of frameworks will do a lot of loading after their initial load on to the page. If you have ever worked on a single page app, or have ever used a single page app, you will have seen a lot of items render as the data comes in. Unfortunately it does mean that you can&rsquo;t just rely on the navigation command returning. You will have to add a <code>WebDriverWait</code> command to your code, as shown below, to make sure your test is in the right state before going off to do what it needs to.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+<span style="color:#f92672">from</span> selenium.webdriver.support.wait <span style="color:#f92672">import</span> WebDriverWait
+
+driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
+element <span style="color:#f92672">=</span> WebDriverWait(driver, <span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>until(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#960050;background-color:#1e0010">“</span>someId<span style="color:#960050;background-color:#1e0010">”</span>))</code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+<p>When loading a page, don&rsquo;t always rely on Selenium returning when the page has finished. If you need to look at an element on the page then do that. Just be aware of how the JavaScript on the page could mutate the page after the initial downloads are done.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://w3c.github.io/webdriver/#navigate-to">Navigation Specification Prose</a></li>
+<li><a href="https://w3c.github.io/webdriver/#dfn-table-of-page-load-strategies">Page Load Strategies</a></li>
+</ul>
+
+  </article>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Engineering Effectiveness Nerd</p>
+    
+    
+      
+        © 2020
+      
+       David Burns 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1089177-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>
