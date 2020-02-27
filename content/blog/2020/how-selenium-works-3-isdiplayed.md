@@ -43,6 +43,8 @@ Next we need to look and see if we can actually scroll to the element if that is
 
 From there we need to do a few checks on items like `<input>`, `<option>`, `<optgroup>` and `<map>`. `<option>` and `<optgroup>`  items are "hidden" unless you click on them we assume they are visible... well mostly.
 
+Then we move on to checking the size of the element. For elements that have a 0 size we say they are not visible. We also check their opacity. If the opacity is 0 then we don't view the element as visible.
+
 Once we have done these tests we need then recursively walk the DOM and redo all the tests until we reach the [`documentElement`](https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement).
 
 ### Why the recursion?
