@@ -57,7 +57,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
     <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="generator" content="Hugo 0.67.0" />
   </head>
 
   
@@ -105,7 +105,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)</code></pre></div>
 <p>We can see above&hellip; it looks easy enough right&hellip; no!</p>
 <p>Actually, it leads me to a pet peeve in interviews. If someone ever asks you to ever describe what happens in a browser when you type a URL and press enter there is a high probability that they have no real idea what goes into navigation. Anyway&hellip; back to Selenium and how we navigate.</p>
 <h1 id="driverget"><code>driver.get</code></h1>
@@ -128,8 +128,8 @@ driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk#someAnchor</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk#someAnchor&#34;</span>)</code></pre></div>
 <p>Oh look, none of the page loading events are going to be fired! Yay? Stupid browser is being efficient and will just scroll to the anchor. This means that we can&rsquo;t solely depend on events coming out of the page.</p>
 <p>No, so we need to have specialised code for this case and what &ldquo;done&rdquo; means in this case. If we get this wrong it&rsquo;s going to create a lot of unstable tests. Unstable tests make people grumpy and we don&rsquo;t want grumpy developers, there are enough of them in the world without unstable tests.</p>
 <p>Once we have done those checks, and you can manipulate how we look at those events, if you want it to load quicker, using the <a href="https://w3c.github.io/webdriver/#dfn-page-loading-strategy">Page Load Strategies</a>. This is more of a power user feature so I wouldn&rsquo;t worry about them now but they affect how quickly the navigation command</p>
@@ -139,7 +139,7 @@ driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span
 <span style="color:#f92672">from</span> selenium.webdriver.support.wait <span style="color:#f92672">import</span> WebDriverWait
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
 element <span style="color:#f92672">=</span> WebDriverWait(driver, <span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>until(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#960050;background-color:#1e0010">“</span>someId<span style="color:#960050;background-color:#1e0010">”</span>))</code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>When loading a page, don&rsquo;t always rely on Selenium returning when the page has finished. If you need to look at an element on the page then do that. Just be aware of how the JavaScript on the page could mutate the page after the initial downloads are done.</p>

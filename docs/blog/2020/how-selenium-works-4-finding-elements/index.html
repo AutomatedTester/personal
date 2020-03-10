@@ -57,7 +57,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
     <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="generator" content="Hugo 0.67.0" />
   </head>
 
   
@@ -112,32 +112,32 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 <span style="color:#f92672">from</span> selenium.webdriver.common.by <span style="color:#f92672">import</span> By
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someID</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>CSS_SELECTOR, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#someID</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>CSS_SELECTOR, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#someID</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>NAME, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someName</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>NAME, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someName</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>CLASS_NAME, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someName</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>CLASS_NAME, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someName</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>TAG_NAME, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someName</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>TAG_NAME, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">someName</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;someID&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>CSS_SELECTOR, <span style="color:#e6db74">&#34;#someID&#34;</span>)
+driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>CSS_SELECTOR, <span style="color:#e6db74">&#34;#someID&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>NAME, <span style="color:#e6db74">&#34;someName&#34;</span>)
+driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>NAME, <span style="color:#e6db74">&#34;someName&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>CLASS_NAME, <span style="color:#e6db74">&#34;someName&#34;</span>)
+driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>CLASS_NAME, <span style="color:#e6db74">&#34;someName&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>TAG_NAME, <span style="color:#e6db74">&#34;someName&#34;</span>)
+driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>TAG_NAME, <span style="color:#e6db74">&#34;someName&#34;</span>)</code></pre></div>
 <p>We can also look up elements on the page by <a href="https://developer.mozilla.org/en-US/docs/Web/XPath">XPATH</a>.</p>
 <p>We can do the following</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
 <span style="color:#f92672">from</span> selenium.webdriver.common.by <span style="color:#f92672">import</span> By
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>XPATH, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">//li</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>XPATH, <span style="color:#e6db74">&#34;//li&#34;</span>)</code></pre></div>
 <p>We can also look up links based on the visible text. Visible text uses the <a href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-3-isdiplayed/"><code>isDisplayed</code> algorithm</a> to work out what people can and can&rsquo;t read. Selenium will collect all the <code>&lt;a&gt;&lt;/a&gt;</code> tags on the page, get the visible text, and then find the first element that has that text.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
 <span style="color:#f92672">from</span> selenium.webdriver.common.by <span style="color:#f92672">import</span> By
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>LINK_TEXT, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">some text</span><span style="color:#e6db74">&#34;</span>)
-driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>PARTIAL_LINK_TEXT, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">text</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>LINK_TEXT, <span style="color:#e6db74">&#34;some text&#34;</span>)
+driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>PARTIAL_LINK_TEXT, <span style="color:#e6db74">&#34;text&#34;</span>)</code></pre></div>
 <h2 id="what-happens-when-it-finds-the-element">What happens when it finds the element?</h2>
 <p>When we are able to find an element we keep track of it in a Map. The Map will contain a representation of a element using <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">uuid</a>. The map allows us to look up elements when we get them back from a Selenium test and make sure that element is actually <a href="https://dom.spec.whatwg.org/#connected">connected</a> to the DOM. If the element is not connected to the DOM and you try use it you will get a <a href="https://w3c.github.io/webdriver/#dfn-stale-element-reference"><code>StaleElementReferenceException</code></a>.</p>
 <h2 id="and-when-it-doesnt-find-the-element-or-elements">and when it doesn&rsquo;t find the element or elements</h2>
@@ -148,9 +148,9 @@ driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92
 <span style="color:#f92672">from</span> selenium.webdriver.common.by <span style="color:#f92672">import</span> By
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
 <span style="color:#66d9ef">try</span>:
-    driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>LINK_TEXT, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">some text</span><span style="color:#e6db74">&#34;</span>)
+    driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>LINK_TEXT, <span style="color:#e6db74">&#34;some text&#34;</span>)
 <span style="color:#66d9ef">except</span> NoSuchElementException:
     <span style="color:#66d9ef">pass</span></code></pre></div>
 <p>If you are looking for more than 1 element you will get an empty list:</p>
@@ -159,10 +159,22 @@ driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span
 <span style="color:#f92672">from</span> selenium.webdriver.common.by <span style="color:#f92672">import</span> By
 
 driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://www.theautomatedtester.co.uk</span><span style="color:#e6db74">&#34;</span>)
-elements <span style="color:#f92672">=</span> driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>CSS_SELECTOR, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">myShadowElements</span><span style="color:#e6db74">&#34;</span>)
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+elements <span style="color:#f92672">=</span> driver<span style="color:#f92672">.</span>find_elements(By<span style="color:#f92672">.</span>CSS_SELECTOR, <span style="color:#e6db74">&#34;myShadowElements&#34;</span>)
 
 <span style="color:#66d9ef">assert</span> len(elements) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span></code></pre></div>
+<h2 id="coming-soon-relative-locators">Coming Soon: Relative locators</h2>
+<p>These allow you to search for elements on the page by their relative position to another. For example you can find the element that is above and to the left of another element. See below</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+<span style="color:#f92672">from</span> selenium.common.exceptions <span style="color:#f92672">import</span> NoSuchElementException
+<span style="color:#f92672">from</span> selenium.webdriver.common.by <span style="color:#f92672">import</span> By
+<span style="color:#f92672">from</span> selenium.webdriver.support.relative_locator <span style="color:#f92672">import</span> with_tag_name
+
+driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+elements <span style="color:#f92672">=</span> driver<span style="color:#f92672">.</span>find_elements(
+                    with_tag_name(<span style="color:#e6db74">&#34;td&#34;</span>)<span style="color:#f92672">.</span>above(
+                        driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;center&#34;</span>))<span style="color:#f92672">.</span>to_right_of(driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;second&#34;</span>)))</code></pre></div>
 <h2 id="further-reading">Further reading</h2>
 <p>You can read further in the <a href="https://w3c.github.io/webdriver/#element-retrieval">Element Retrieval</a> section of the <a href="https://w3c.github.io/webdriver/">WebDriver Specification</a></p>
 

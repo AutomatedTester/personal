@@ -101,6 +101,23 @@ assert len(elements) == 0
 
 {{< /highlight >}}
 
+## Coming Soon: Relative locators
+
+These allow you to search for elements on the page by their relative position to another. For example you can find the element that is above and to the left of another element. See below
+
+{{< highlight python >}}
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.relative_locator import with_tag_name
+
+driver = webdriver.Firefox()
+driver.get("https://www.theautomatedtester.co.uk")
+elements = driver.find_elements(
+                    with_tag_name("td").above(
+                        driver.find_element(By.ID, "center")).to_right_of(driver.find_element(By.ID, "second")))
+
+{{< /highlight >}}
 
 ## Further reading
 

@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://www.theautomatedtester.co.uk/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-4-finding-elements/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
@@ -34,6 +29,11 @@
   
   <url>
     <loc>https://www.theautomatedtester.co.uk/about/</loc>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.theautomatedtester.co.uk/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url>
   
