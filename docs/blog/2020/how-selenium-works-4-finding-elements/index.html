@@ -174,7 +174,8 @@ driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672"
 driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
 elements <span style="color:#f92672">=</span> driver<span style="color:#f92672">.</span>find_elements(
                     with_tag_name(<span style="color:#e6db74">&#34;td&#34;</span>)<span style="color:#f92672">.</span>above(
-                        driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;center&#34;</span>))<span style="color:#f92672">.</span>to_right_of(driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;second&#34;</span>)))</code></pre></div>
+                    driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;center&#34;</span>))\
+                    <span style="color:#f92672">.</span>to_right_of(driver<span style="color:#f92672">.</span>find_element(By<span style="color:#f92672">.</span>ID, <span style="color:#e6db74">&#34;second&#34;</span>)))</code></pre></div>
 <h2 id="further-reading">Further reading</h2>
 <p>You can read further in the <a href="https://w3c.github.io/webdriver/#element-retrieval">Element Retrieval</a> section of the <a href="https://w3c.github.io/webdriver/">WebDriver Specification</a></p>
 

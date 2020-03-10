@@ -115,7 +115,8 @@ driver = webdriver.Firefox()
 driver.get("https://www.theautomatedtester.co.uk")
 elements = driver.find_elements(
                     with_tag_name("td").above(
-                        driver.find_element(By.ID, "center")).to_right_of(driver.find_element(By.ID, "second")))
+                    driver.find_element(By.ID, "center"))\
+                    .to_right_of(driver.find_element(By.ID, "second")))
 
 {{< /highlight >}}
 
