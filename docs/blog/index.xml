@@ -270,5 +270,15 @@ As most of you know, in Selenium WebDriver we try an emulate what elements that 
       <description>As many of you know I have recently released the 2nd edition of my Selenium book. When I wrote my first book I looked for a way to do version control of my book. Being a developer and test type, I used git to do all of my version control but I found that I would sometimes forget to commit and push my changes. This broke my own rule of keeping commits small.</description>
     </item>
     
+    <item>
+      <title>Py.Test and -XDist Plugin</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</link>
+      <pubDate>Mon, 14 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</guid>
+      <description>The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
+The thing that people don&amp;rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.</description>
+    </item>
+    
   </channel>
 </rss>
