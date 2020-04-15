@@ -60,7 +60,7 @@ We need to tell the browser to watch for navigation happening thanks to the clic
 
 ### Exceptions
 
-There is one element that will be an exception and that is the `<input type=file>` element. When this element is being interacted with the browser will try to check if the string being passed in is a path to a file. If it is not the browser will error and pass that back to the Selenium script. When using Selenium Grid, Selenium will encode the file you want to upload as a base64 string, send it through the grid, and then let the grid update the file path that will be used.
+There is one element that will be an exception and that is the `<input type=file>` element. When this element is being interacted with the browser will try to check if the string being passed in is a path to a file. If it is not, the browser will error and pass that back to the Selenium script. When using Selenium Grid, Selenium will encode the file you want to upload as a base64 string, send it through the grid, and then let the grid update the file path that will be used.
 
 ## Further Reading
 
