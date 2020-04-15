@@ -27,7 +27,7 @@ Next, we need to make sure that we can scroll to the element. To have all the ev
 
 ### Check if the element is interactable
 
-The browser will now check if the element that will receive our text can receive it. For example, we will look if the element might be `disabled`. If it looks like the element the can't receive the text the browser will throw an `ElementNotInteractableException`.
+The browser will now check if the element that will receive our text can receive it. For example, we will look if the element might be `disabled`. If it looks like the element can't receive the text, the browser will throw an `ElementNotInteractableException`.
 
 ### Process Text String
 
