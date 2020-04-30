@@ -143,6 +143,9 @@ table tr th:last-child {
 img {
   max-width: 100%; }
 
+figure {
+  text-align: center; }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -196,6 +199,10 @@ img {
       margin: 3.2rem 0; }
       .content article footer .see-also h3 {
         margin: 3.2rem 0; }
+  .content article p {
+    text-align: justify;
+    text-justify: auto;
+    hyphens: auto; }
   .content .post .post-title {
     margin-bottom: .75em; }
   .content .post .post-meta i {
