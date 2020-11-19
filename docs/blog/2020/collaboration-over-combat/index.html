@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="David Burns - Engineer">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Collaboration over combat"/>
+<meta name="twitter:description" content="As most of you know, I am a core contributor to the Selenium project and thanks to BrowserStack I&rsquo;m able to do this as my main job. Yesterday I heard that a similar project, and there are a few nowadays, is adding a feature we added 8 years ago and no longer support because we dropped to automation as it was incredibly limiting.
+Another project has started adding multiple language support, which is awesome, but they&rsquo;re generating the code."/>
+
+    <meta property="og:title" content="Collaboration over combat" />
+<meta property="og:description" content="As most of you know, I am a core contributor to the Selenium project and thanks to BrowserStack I&rsquo;m able to do this as my main job. Yesterday I heard that a similar project, and there are a few nowadays, is adding a feature we added 8 years ago and no longer support because we dropped to automation as it was incredibly limiting.
+Another project has started adding multiple language support, which is awesome, but they&rsquo;re generating the code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/collaboration-over-combat/" />
+<meta property="article:published_time" content="2020-11-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-19T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.theautomatedtester.co.uk/blog/2020/collaboration-over-combat/">
+    
+    <title>
+  Collaboration over combat · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2020/collaboration-over-combat/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.78.2" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/blog/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Collaboration over combat</h1>
+    </header>
+
+    <p>As most of you know, I am a core contributor to the Selenium project and thanks to BrowserStack I&rsquo;m able to
+do this as my main job. Yesterday I heard that a similar project, and there are a few nowadays, is adding a feature
+we added 8 years ago and no longer support because we dropped to automation as it was incredibly limiting.</p>
+<p>Another project has started adding multiple language support, which is awesome, but they&rsquo;re generating the code.
+The Selenium Project did that before it was cool and then we dropped it. Why? Code generation never created idiomatic
+language bindings. It was also a lot of work to maintain.</p>
+<p>Now, I bet you&rsquo;re wondering what this has to do with collaboration or even combat.</p>
+<p>Both of these projects have actively refused to engage with the Selenium project when we have tried. They have even gone
+so far as to bad mouth Selenium in their marketing copy.</p>
+<p>Do I think that Selenium is better than their projects? No.
+Do I think that their projects are better than Selenium? No.</p>
+<p>In reality, I think the merging of projects would be a bigger benefit to the web as a whole. As some of you know, I rail hard against
+the idea that the web should be Chrome only. We should not allow that to happen because we need freedom of choice but there are
+also security considerations that need to be thought out if everyone has the same.</p>
+<p>Some of these projects don&rsquo;t ship real browsers so you can&rsquo;t guarantee that works in your test will work in the real world. Some of them
+inject everything into the JavaScript Sandbox and therefore are limited to what they can do. Got a super-secure login that checks that
+clicks on submit are real clicks? Not many automation frameworks will allow you to test this flow.</p>
+<p>It would be one thing if those projects approached the Selenium project and said, ‘We think it would be better to do things our way because of reasons x, y, and z’
+and the Selenium project said, ‘No, we believe our way is better, and we won’t be doing things that way,’ but no project, to my knowledge, has done so.</p>
+<p>The main thing that I would love is to have a high-quality web. One that doesn&rsquo;t force people to use a specific browser because developers
+are lazy when it comes to testing. Collaboration between projects will elevate the web while &ldquo;Not Invented Here&rdquo; will hinder it.</p>
+<p>I want more collaboration on the web!</p>
+
+  </article>
+</section>
+
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2020
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1089177-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>
