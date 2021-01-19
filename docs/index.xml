@@ -6,7 +6,18 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I am on Twitch</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2021/i-am-on-twitch/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2021/i-am-on-twitch/</guid>
+      <description>At the end of 2020, I wanted to try something new, well new for the Selenium community. I created a new Twitch channel.
+Why? The main reason is that I wanted to show people that working on Selenium is not scary. You don&amp;rsquo;t need to be a &amp;ldquo;rockstar&amp;rdquo; engineer. Actually, Rockstars are actively discouraged since they normally just trash hotel rooms.
+What have I done so far? I have shown people around the codebase.</description>
+    </item>
+    
     <item>
       <title>Collaboration over combat</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/collaboration-over-combat/</link>
