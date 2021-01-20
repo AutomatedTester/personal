@@ -3,7 +3,7 @@ title: "I am on Twitch"
 publishDate: 2021-01-19
 ---
 
-At the end of 2020, I wanted to try something new, well new for the Selenium community. I created a new [Twitch channel](twitch.tv/automatedtester).
+At the end of 2020, I wanted to try something new, well new for the Selenium community. I created a new [Twitch channel](https://twitch.tv/automatedtester).
 
 ## Why?
 
