@@ -55,3 +55,8 @@ googleAnalytics = "UA-1089177-5"
     name = "About"
     weight = 2
     url = "/about/"
+[[menu.main]]
+    name = "Twitch"
+    weight = 3
+    url = "https://streamlabs.com/automatedtester#social-reach"
+
