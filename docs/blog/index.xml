@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source is corporate responsibility</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/</link>
+      <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/</guid>
+      <description>It&amp;rsquo;s that fun time of the year for most people at work. It&amp;rsquo;s the beginning of the fiscal year, it&amp;rsquo;s review cycle time, it&amp;rsquo;s the beginning of a new quarter. For most managers, myself included, it means that there is a huge amount of work that needs to happen.
+I head up the Open Source efforts at BrowserStack and, like most engineering leadership, I am looking at how we can promote our work without being overbearing in a community.</description>
+    </item>
+    
     <item>
       <title>I am on Twitch</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/i-am-on-twitch/</link>
