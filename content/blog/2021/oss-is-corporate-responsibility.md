@@ -19,8 +19,8 @@ since I am an engineer, shipping code!
 
 ## But what about metrics?
 
-For the most part we can't have all the fancy analytics
-that most "corporate" teams have, for the most part, goes
+We can't have all the fancy analytics
+that most "corporate" teams have, for the most part, as it goes
 against the general ethos of open source. This means the normal
 "metrics" that developer teams use are not available.
 
