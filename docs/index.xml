@@ -350,6 +350,15 @@ As most of you know, in Selenium WebDriver we try an emulate what elements that 
     </item>
     
     <item>
+      <title>Hug a OSS developer or don&#39;t be a dick</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2011/hug-a-oss-developer-or-dont-be-a-dick/</link>
+      <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2011/hug-a-oss-developer-or-dont-be-a-dick/</guid>
+      <description>I am one of the few privileged people in the world to only work on open source software for a living. All the work I get paid for as well as all my private projects is open source. It was one of the main things that drew me to work at Mozilla. Creating software that I can give away and when there are bugs I can fix, or even better receive a patch, and I can learn from my mistakes all in the open.</description>
+    </item>
+    
+    <item>
       <title>Py.Test and -XDist Plugin</title>
       <link>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</link>
       <pubDate>Mon, 14 Feb 2011 00:00:00 +0000</pubDate>
