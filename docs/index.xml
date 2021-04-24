@@ -6,7 +6,17 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ethics and Empathy in Open Source</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2021/ethics-and-empathy-in-open-source/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2021/ethics-and-empathy-in-open-source/</guid>
+      <description>One of the biggest stories to come out in the tech industry last week was the deliberate bad patches to the linux kernel which got the University of Minnesota banned from future contributions to the Linux kernel.
+When reading the article I was reminded how incredibly broken the tech industry is. I say broken because a group of people thought that it was ok to experiment on an Open Source Project without express permission.</description>
+    </item>
+    
     <item>
       <title>Open Source is corporate responsibility</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/</link>
