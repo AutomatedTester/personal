@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 16 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ethics and Empathy in Open Source</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2021/ethics-and-empathy-in-open-source/</link>
+      <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2021/ethics-and-empathy-in-open-source/</guid>
+      <description>One of the biggest stories to come out in the tech industry last week was the deliberate bad patches to the linux kernel and got the University of Minnesota from future contributions.
+When reading the article I was reminded how incredibly broken the tech industry is. I say broken because a group of people thought that it was ok to experiment on an Open Source Project without express permission. This shows that the leadership of the Computer Science faculty, and possibly the Doctoral candidates lack any form of empathy&amp;hellip; and possibly shows how there is a lack of ethics being taught.</description>
+    </item>
+    
+    <item>
       <title>Open Source is corporate responsibility</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/</link>
       <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
