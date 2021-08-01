@@ -4,9 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="David Burns">
-    <meta name="description" content="David Burns - Engineer">
+    <meta name="description" content="Recently I was shown that Telerik did a &ldquo;Five Hidden Costs of Selenium&rdquo;. I knew straight away from the title that this was purely a marketing document targeting teams with little to no automation skills to do automation. For what it is worth, if you want to do automation you should really hire the right engineers for the job.
+My offence with the article is not that its wrong, there are a few items I disagree with which are documented below, but with it trying to sell snake oil or silver bullets.">
     <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
     <meta name="twitter:card" content="summary"/>
@@ -24,9 +29,6 @@ My offence with the article is not that its wrong, there are a few items I disag
 
 
 
-    
-      <base href="https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/">
-    
     <title>
   Don&#39;t write &#34;Five Hidden Costs of X&#34; but when you do I will reply · David Burns - AutomatedTester
 </title>
@@ -35,14 +37,12 @@ My offence with the article is not that its wrong, there are a few items I disag
       <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css" integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi&#43;9c=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -53,17 +53,30 @@ My offence with the article is not that its wrong, there are a few items I disag
 
     
 
-    
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
-    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.82.0" />
   </head>
 
   
   
-  <body class="colorscheme-light">
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
@@ -71,26 +84,28 @@ My offence with the article is not that its wrong, there are a few items I disag
       David Burns - AutomatedTester
     </a>
     
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/blog/">Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/about/">About</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
     
   </section>
 </nav>
@@ -101,23 +116,52 @@ My offence with the article is not that its wrong, there are a few items I disag
   <section class="container page">
   <article>
     <header>
-      <h1>Don&#39;t write &#34;Five Hidden Costs of X&#34; but when you do I will reply</h1>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/">
+          Don&#39;t write &#34;Five Hidden Costs of X&#34; but when you do I will reply
+        </a>
+      </h1>
     </header>
 
     <p>Recently I was shown that Telerik did a &ldquo;<a href="http://blogs.telerik.com/jimholmes/posts/14-03-07/five-hidden-costs-of-selenium">Five Hidden Costs of Selenium</a>&rdquo;. I knew straight away from the title that this was purely a marketing document targeting teams with little to no automation skills to do automation. For what it is worth, if you want to do automation you should really hire the right engineers for the job.</p>
 <p>My offence with the article is not that its wrong, there are a few items I disagree with which are documented below, but with it trying to sell snake oil or silver bullets. So let&rsquo;s even up the argument a bit. Note I am only comparing the WebDriver parts since if it were purely Selenium IDE vs Teleriks tool then I think it would be fair comments.</p>
-<h1 id="no-buildscheduling-server">No Build/Scheduling Server</h1>
+<h1 id="no-buildscheduling-server">
+  No Build/Scheduling Server
+  <a class="heading-link" href="#no-buildscheduling-server">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
 <p>Telerik say we don&rsquo;t have those items and we don&rsquo;t. We don&rsquo;t want to be working on them since there are some awesome open source products with many years worth of engineering effort in them that you can use. These are free and allow a great amount freedom of customisation. They also work really well if you have hybrid systems as part of your test. Have you seen that ThoughtWorks has open sourced Go which is a great product from people who have been doing continuous integration for nearly, if not more, than a decade. Don&rsquo;t want to host it yourself, because managing servers is a hidden cost in all worlds, then look at the huge amount of Continuous Integration as a Service companies out there.</p>
-<h1 id="execution-agentsparallel-running">Execution Agents/Parallel Running</h1>
+<h1 id="execution-agentsparallel-running">
+  Execution Agents/Parallel Running
+  <a class="heading-link" href="#execution-agentsparallel-running">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
 <p>It says this is a 3rd party plugin which is not true. The Selenium server has a remote server system built in and if the correct arguments are passed in it can become a grid with a central hub managing which nodes are being used. This is called Selenium Grid.</p>
 <p>The one thing, from the documentation, is that you have to host all these nodes yourself. Does it create hermetic environments to run against when scheduling? Hermetic environments is something that each core developer would want and if we can&rsquo;t give it then its not worth releasing. There are Infrastructure as a Service companies that WebDriver tests can be hooked up to so you don&rsquo;t need to maintain all the infrastructure yourself. The infrastructure costs can be quite expensive if you&rsquo;re a smallish team, using a service here can help. Unfortunately Telerik don&rsquo;t offer execute nodes as a service so you&rsquo;ll have to manage them yourself.</p>
 <p>Also, its fine that nUnit doesn&rsquo;t support parallel execution, get your scheduling server to run a task for each browser and these tasks could be run in parallel.</p>
-<h1 id="reporting">Reporting</h1>
+<h1 id="reporting">
+  Reporting
+  <a class="heading-link" href="#reporting">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
 <p>This is best done by the continuous integration server as part of the build and test. These take the output from the tasks they have told them to execute and then report. Having this as a selling point in marketing documentation feels like it is just targeting the untrained staff.</p>
-<h1 id="multi-browser-support">Multi-Browser Support</h1>
+<h1 id="multi-browser-support">
+  Multi-Browser Support
+  <a class="heading-link" href="#multi-browser-support">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
 <p>This is where you would think we would be even but Telerik is stuck to desktop browsers. WebDriver, due to its flexible transport mechanism (it&rsquo;s like we thought about it or something, means anyone can implement the server side and control a browser and all languages just work. We recently saw that with <a href="http://devblog.blackberry.com/2014/02/selenium-support-in-blackberry-10/">Blackberry creating an implementation</a> for their devices. We have <a href="http://selendroid.io/">Selendroid for Android</a> and <a href="http://ios-driver.github.io/ios-driver/">iOS-Driver for iOS</a>. Mobile is the future so only supporting the major desktop browsers is going to limit your future greatly.</p>
 <p>Jim also mentioned that you would need to build a factory and teach it to get things running against multiple projects. You do have to but here is a <a href="https://code.google.com/p/selenium/source/browse/dotnet/test/common/Environment/">link</a> to the Selenium projects' way of handling it. We need to run our tests in multiple environments and we do it pretty well. This is just a one time sunk cost.</p>
-<h1 id="maintenance-of-tests">Maintenance of tests</h1>
+<h1 id="maintenance-of-tests">
+  Maintenance of tests
+  <a class="heading-link" href="#maintenance-of-tests">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
 <p>I might be pulling a Telerik here but having tests look like the following</p>
 <p><img src="/img/telerik-features.jpg" alt="screenshot of telerik in use but with weird locators"></p>
 <p>Being able to code as an automation engineer is crucial. Being able to write good tests is useful too! I am biased but Mozilla has some really good examples that show good maintainable tests. Tests are trivial to write and update since they invested in a good pattern for tests. Record and playback tools have never had the ability to write maintainable tests and for them to be using meaningful API names. Also, it hampers (as in no one will take you seriously) your career calling yourself an automation engineer and only using record and playback tools.</p>
@@ -127,6 +171,23 @@ My offence with the article is not that its wrong, there are a few items I disag
   </article>
 </section>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
 
       </div>
 
@@ -150,7 +211,15 @@ My offence with the article is not that its wrong, there are a few items I disag
     </section>
   </footer>
 
+
     </main>
+
+    
+      
+      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -168,6 +237,15 @@ if (!doNotTrack) {
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>

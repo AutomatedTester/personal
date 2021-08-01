@@ -4,9 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
 
     <meta name="author" content="David Burns">
-    <meta name="description" content="David Burns - Engineer">
+    <meta name="description" content="It&rsquo;s that fun time of the year for most people at work. It&rsquo;s the beginning of the fiscal year, it&rsquo;s review cycle time, it&rsquo;s the beginning of a new quarter. For most managers, myself included, it means that there is a huge amount of work that needs to happen.
+I head up the Open Source efforts at BrowserStack and, like most engineering leadership, I am looking at how we can promote our work without being overbearing in a community.">
     <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
     <meta name="twitter:card" content="summary"/>
@@ -24,9 +29,6 @@ I head up the Open Source efforts at BrowserStack and, like most engineering lea
 
 
 
-    
-      <base href="https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/">
-    
     <title>
   Open Source is corporate responsibility · David Burns - AutomatedTester
 </title>
@@ -35,14 +37,12 @@ I head up the Open Source efforts at BrowserStack and, like most engineering lea
       <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/">
     
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css" integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi&#43;9c=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -53,17 +53,30 @@ I head up the Open Source efforts at BrowserStack and, like most engineering lea
 
     
 
-    
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
-    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://www.theautomatedtester.co.uk/images/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
 
     <meta name="generator" content="Hugo 0.82.0" />
   </head>
 
   
   
-  <body class="colorscheme-light">
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
     <main class="wrapper">
       <nav class="navigation">
   <section class="container">
@@ -71,26 +84,28 @@ I head up the Open Source efforts at BrowserStack and, like most engineering lea
       David Burns - AutomatedTester
     </a>
     
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/blog/">Blog</a>
-          </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://www.theautomatedtester.co.uk/about/">About</a>
-          </li>
         
-          <li class="navigation-item">
-            <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
-          </li>
-        
-      
-      
-    </ul>
+      </ul>
     
   </section>
 </nav>
@@ -101,7 +116,11 @@ I head up the Open Source efforts at BrowserStack and, like most engineering lea
   <section class="container page">
   <article>
     <header>
-      <h1>Open Source is corporate responsibility</h1>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/">
+          Open Source is corporate responsibility
+        </a>
+      </h1>
     </header>
 
     <p>It&rsquo;s that fun time of the year for most people at work. It&rsquo;s the
@@ -116,7 +135,12 @@ Friends, not foes. Democracy over Autocracy.
 For me, I don&rsquo;t want to be creating <a href="/blog/2016/public-source-vs-open-source">Public Source code</a>.
 I want to be growing communities, making lasting connections, and
 since I am an engineer, shipping code!</p>
-<h2 id="but-what-about-metrics">But what about metrics?</h2>
+<h2 id="but-what-about-metrics">
+  But what about metrics?
+  <a class="heading-link" href="#but-what-about-metrics">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>We can&rsquo;t have all the fancy analytics
 that most &ldquo;corporate&rdquo; teams have, for the most part, as it goes
 against the general ethos of open source. This means the normal
@@ -131,7 +155,12 @@ but when they are more mature? I mean for something like Selenium, it&rsquo;s be
 around for over decade. Contributors come and go but we&rsquo;re not going to have
 the 200+ pull requests a month that something like React has. Does this make
 it any less successful? I don&rsquo;t think so.</p>
-<h2 id="so-what-does-this-mean-for-corporate-entities-investing-in-open-source">So what does this mean for corporate entities investing in Open Source?</h2>
+<h2 id="so-what-does-this-mean-for-corporate-entities-investing-in-open-source">
+  So what does this mean for corporate entities investing in Open Source?
+  <a class="heading-link" href="#so-what-does-this-mean-for-corporate-entities-investing-in-open-source">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <p>For them I suggest that looking at the holistic view of the community is worthwhile.
 Open Source is about the general availability of code for people to use. Companies
 build on top of this daily to make multi-(m|b)illion companies. If it was about supporting,
@@ -157,6 +186,23 @@ everyone and needs to be given the time to grow.</p>
   </article>
 </section>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
 
       </div>
 
@@ -180,7 +226,15 @@ everyone and needs to be given the time to grow.</p>
     </section>
   </footer>
 
+
     </main>
+
+    
+      
+      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
 
     
 <script type="application/javascript">
@@ -198,6 +252,15 @@ if (!doNotTrack) {
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
   </body>
 
 </html>
