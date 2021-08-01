@@ -8,7 +8,7 @@ Chair person for the W3C Browser Testing and Tools Working Group. Editor of the 
 
 In the past I worked at Mozilla on tooling to make the web predictable and help give software engineers the tools to make sure their websites work in Firefox and other browsers at Mozilla.
 
-I was Programme, Project and Product Manager and tech leader for Firefox's implementation of the WebDriver Specification as well as a core contributor on the Selenium Open Source Project. Introduced and started implementation of Puppeteer and Chrome Debug Protocol focusing on automation uses first.
+I was Programme, Project, Product Manager,  and tech leader for Firefox's implementation of the WebDriver Specification as well as a core contributor on the Selenium Open Source Project. Introduced and started implementation of Puppeteer and Chrome Debug Protocol focusing on automation uses first.
 
 Tools-smith working on a number of different tools and development frameworks solving the really hard problems!
 
