@@ -30,18 +30,18 @@ googleAnalytics = "UA-1089177-5"
 # Social links
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github fa-2x"
+    icon = "fa fa-github"
     weight = 1
     url = "https://github.com/automatedtester/"
 [[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
+    icon = "fa fa-twitter"
     weight = 2
     url = "https://twitter.com/automatedtester/"
 
 [[params.social]]
     name = "LinkedIn"
-    icon = "fab fa-linkedin fa-2x"
+    icon = "fa fa-linkedin"
     weight = 2
     url = "https://linkedin.com/in/automatedtester/"
 
