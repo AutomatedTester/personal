@@ -1,16 +1,230 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="en"><meta name=color-scheme content="light dark"><meta name=author content="David Burns"><meta name=description content="This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Tuesday and Wednesday. The most notable items are;
- Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By."><meta name=keywords content="blog,developer,personal,selenium,automation,browsers,interoperability"><meta name=twitter:card content="summary"><meta name=twitter:title content="WebDriver Face To Face - February 2014"><meta name=twitter:description content="This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
+ Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By.">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WebDriver Face To Face - February 2014"/>
+<meta name="twitter:description" content="This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Tuesday and Wednesday. The most notable items are;
- Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By."><meta property="og:title" content="WebDriver Face To Face - February 2014"><meta property="og:description" content="This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
+ Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By."/>
+
+    <meta property="og:title" content="WebDriver Face To Face - February 2014" />
+<meta property="og:description" content="This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Tuesday and Wednesday. The most notable items are;
- Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By."><meta property="og:type" content="article"><meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/"><meta property="article:section" content="blog"><meta property="article:published_time" content="2014-02-28T00:00:00+00:00"><meta property="article:modified_time" content="2014-02-28T00:00:00+00:00"><title>WebDriver Face To Face - February 2014 · David Burns - AutomatedTester</title><link rel=canonical href=https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi+9c=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.82.0"></head><body class="preload-transitions colorscheme-light"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>David Burns - AutomatedTester</a>
-<input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/blog/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=https://streamlabs.com/automatedtester#social-reach>Twitch</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/>WebDriver Face To Face - February 2014</a></h1></header><p>This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.</p><p>The agenda for the meeting was placed, as usual, on the <a href=https://www.w3.org/wiki/WebDriver/2014-February-F2F>W3 Wiki</a>. We had quite a lot to discuss and, as always, was a very productive meeting.</p><p>The meeting notes are available for <a href=http://www.w3.org/2014/02/25-testing-minutes.html>Tuesday</a> and <a href=http://www.w3.org/2014/02/26-testing-minutes.html>Wednesday</a>. The most notable items are;</p><ul><li>Changing switchToFrame to only accept a WebElement or Index</li><li>Adding switchToParentFrame to the API</li><li>Potential changes to the way we do clicks on elements larger</li><li>Numerous bugs in the spec</li><li>Removing findElement(By.className and By.Id)</li><li>Landed the User Interactions spec and created an endpoint for batched actions</li></ul><p>The other amazing things that happened was we had Blackberry join the working group, especially after their <a href=http://devblog.blackberry.com/2014/02/selenium-support-in-blackberry-10/>announcement</a> saying they have created an implementation.</p><p>And&mldr; how can I forget about this&mldr;</p><blockquote class=twitter-tweet><p lang=en dir=ltr>Biggest announcement at <a href="https://twitter.com/hashtag/WebDriver?src=hash&ref_src=twsrc%5Etfw">#WebDriver</a> <a href="https://twitter.com/w3c?ref_src=twsrc%5Etfw">@W3C</a> meeting today came from <a href="https://twitter.com/thejohnjansen?ref_src=twsrc%5Etfw">@thejohnjansen</a>; Microsoft to ship a WebDriver implementation from @IE 11+</p>&mdash; David Burns - #gotYourBackNHS (@AutomatedTester) <a href="https://twitter.com/AutomatedTester/status/438558763432169472?ref_src=twsrc%5Etfw">February 26, 2014</a></blockquote><script async src=https://platform.twitter.com/widgets.js></script><p>The specification is getting a lot of attention from the people that we need and want which makes me really excited!</p></article></section><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}}</script></div><footer class=footer><section class=container><p>Engineering Effectiveness Nerd</p>©
-2021
-David Burns
-·
-Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-1089177-5','auto'),ga('send','pageview'))</script></body></html>
+ Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2014-02-28T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2014-02-28T00:00:00&#43;00:00" />
+
+
+
+    <title>
+  WebDriver Face To Face - February 2014 · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css" integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi&#43;9c=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.82.0" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/">
+          WebDriver Face To Face - February 2014
+        </a>
+      </h1>
+    </header>
+
+    <p>This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.</p>
+<p>The agenda for the meeting was placed, as usual, on the <a href="https://www.w3.org/wiki/WebDriver/2014-February-F2F">W3 Wiki</a>. We had quite a lot to discuss and, as always, was a very productive meeting.</p>
+<p>The meeting notes are available for <a href="http://www.w3.org/2014/02/25-testing-minutes.html">Tuesday</a> and <a href="http://www.w3.org/2014/02/26-testing-minutes.html">Wednesday</a>. The most notable items are;</p>
+<ul>
+<li>Changing switchToFrame to only accept a WebElement or Index</li>
+<li>Adding switchToParentFrame to the API</li>
+<li>Potential changes to the way we do clicks on elements larger</li>
+<li>Numerous bugs in the spec</li>
+<li>Removing findElement(By.className and By.Id)</li>
+<li>Landed the User Interactions spec and created an endpoint for batched actions</li>
+</ul>
+<p>The other amazing things that happened was we had Blackberry join the working group, especially after their <a href="http://devblog.blackberry.com/2014/02/selenium-support-in-blackberry-10/">announcement</a> saying they have created an implementation.</p>
+<p>And&hellip; how can I forget about this&hellip;</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Biggest announcement at <a href="https://twitter.com/hashtag/WebDriver?src=hash&amp;ref_src=twsrc%5Etfw">#WebDriver</a> <a href="https://twitter.com/w3c?ref_src=twsrc%5Etfw">@W3C</a> meeting today came from <a href="https://twitter.com/thejohnjansen?ref_src=twsrc%5Etfw">@thejohnjansen</a>; Microsoft to ship a WebDriver implementation from @IE 11+</p>&mdash; David Burns - #gotYourBackNHS (@AutomatedTester) <a href="https://twitter.com/AutomatedTester/status/438558763432169472?ref_src=twsrc%5Etfw">February 26, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>The specification is getting a lot of attention from the people that we need and want which makes me really excited!</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2021
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1089177-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

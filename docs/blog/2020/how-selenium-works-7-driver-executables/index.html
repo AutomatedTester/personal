@@ -1,13 +1,235 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="en"><meta name=color-scheme content="light dark"><meta name=author content="David Burns"><meta name=description content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
-Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming."><meta name=keywords content="blog,developer,personal,selenium,automation,browsers,interoperability"><meta name=twitter:card content="summary"><meta name=twitter:title content="How Selenium Works: Episode 7 - Driver Executables"><meta name=twitter:description content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
-Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming."><meta property="og:title" content="How Selenium Works: Episode 7 - Driver Executables"><meta property="og:description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
-Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming."><meta property="og:type" content="article"><meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/"><meta property="article:section" content="blog"><meta property="article:published_time" content="2020-04-29T00:00:00+00:00"><meta property="article:modified_time" content="2020-04-29T00:00:00+00:00"><title>How Selenium Works: Episode 7 - Driver Executables · David Burns - AutomatedTester</title><link rel=canonical href=https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi+9c=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.82.0"></head><body class="preload-transitions colorscheme-light"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>David Burns - AutomatedTester</a>
-<input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/blog/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=https://streamlabs.com/automatedtester#social-reach>Twitch</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/>How Selenium Works: Episode 7 - Driver Executables</a></h1></header><p>So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?</p><h2 id=why-do-i-need-to-download-something>Why do I need to download something?
-<a class=heading-link href=#why-do-i-need-to-download-something><i class="fa fa-link" aria-hidden=true></i></a></h2><p>This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?</p><p>In <a href=https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/>Episode 1</a> I mentioned Selenium under the hood speaks a <a href=https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/#http-and-rest-ish-really>REST-ish API</a>.</p><p>The driver you are downloading is an HTTP server for the client libraries to be able to speak to.</p><h2 id=so-why-not-just-get-the-client-bindings-to-speak-whatever-is-native-to-the-browser>So&mldr; Why not just get the client bindings to speak whatever is native to the browser?
-<a class=heading-link href=#so-why-not-just-get-the-client-bindings-to-speak-whatever-is-native-to-the-browser><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Unfortunately, as I mentioned in <a href=https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/>Episode 1</a>, doing that increases the amount of work each binding maintainer needs to do and potentially limits who can write the bindings.</p><p>It also means any setup required for the browser needs to be done by the bindings. If you&rsquo;re using a Chromium-based browser or Firefox, the bindings will need to know where to find the browser executable normally, as well as make sure the profile directory is created properly. It also puts the onus of fixing any breaking changes the browser vendors do to their startup setups on to each of the binding maintainers.</p><p>Trust me, the Selenium Project used to do that and every browser release day meant a mad scramble. We would start running tests in an attempt to make sure nothing was broken. We would fix the problems and then release. This herculean effort by core contributors meant we were limited in adding new features.</p><p>Not having to scramble and making sure it was simple for client binding maintainers to keep up to date was a great push for creating the <a href=https://w3c.github.io/webdriver/>WebDriver Specification</a>.</p><h2 id=what-about-automatic-downloads-from-the-selenium-project>What about automatic downloads from the Selenium Project?
-<a class=heading-link href=#what-about-automatic-downloads-from-the-selenium-project><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Well&mldr; This is something we have wanted to implement in the past but we haven&rsquo;t had time. Fortunately, there have been other projects that have come along and made this work easier. In the future, we are likely to try to incorporate one of these projects or we might look to see about implementing something ourselves.</p><p>This will be something we will try look into once we have shipped Selenium 4.</p></article></section><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}}</script></div><footer class=footer><section class=container><p>Engineering Effectiveness Nerd</p>©
-2021
-David Burns
-·
-Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-1089177-5','auto'),ga('send','pageview'))</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
+Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming.">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How Selenium Works: Episode 7 - Driver Executables"/>
+<meta name="twitter:description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
+Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming."/>
+
+    <meta property="og:title" content="How Selenium Works: Episode 7 - Driver Executables" />
+<meta property="og:description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
+Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-04-29T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-04-29T00:00:00&#43;00:00" />
+
+
+
+    <title>
+  How Selenium Works: Episode 7 - Driver Executables · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css" integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi&#43;9c=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.82.0" />
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/">
+          How Selenium Works: Episode 7 - Driver Executables
+        </a>
+      </h1>
+    </header>
+
+    <p>So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?</p>
+<h2 id="why-do-i-need-to-download-something">
+  Why do I need to download something?
+  <a class="heading-link" href="#why-do-i-need-to-download-something">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?</p>
+<p>In <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/">Episode 1</a> I mentioned Selenium under the hood speaks a <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/#http-and-rest-ish-really">REST-ish API</a>.</p>
+<p>The driver you are downloading is an HTTP server for the client libraries to be able to speak to.</p>
+<h2 id="so-why-not-just-get-the-client-bindings-to-speak-whatever-is-native-to-the-browser">
+  So&hellip; Why not just get the client bindings to speak whatever is native to the browser?
+  <a class="heading-link" href="#so-why-not-just-get-the-client-bindings-to-speak-whatever-is-native-to-the-browser">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Unfortunately, as I mentioned in <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/">Episode 1</a>, doing that increases the amount of work each binding maintainer needs to do and potentially limits who can write the bindings.</p>
+<p>It also means any setup required for the browser needs to be done by the bindings. If you&rsquo;re using a Chromium-based browser or Firefox, the bindings will need to know where to find the browser executable normally, as well as make sure the profile directory is created properly. It also puts the onus of fixing any breaking changes the browser vendors do to their startup setups on to each of the binding maintainers.</p>
+<p>Trust me, the Selenium Project used to do that and every browser release day meant a mad scramble. We would start running tests in an attempt to make sure nothing was broken. We would fix the problems and then release. This herculean effort by core contributors meant we were limited in adding new features.</p>
+<p>Not having to scramble and making sure it was simple for client binding maintainers to keep up to date was a great push for creating the <a href="https://w3c.github.io/webdriver/">WebDriver Specification</a>.</p>
+<h2 id="what-about-automatic-downloads-from-the-selenium-project">
+  What about automatic downloads from the Selenium Project?
+  <a class="heading-link" href="#what-about-automatic-downloads-from-the-selenium-project">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Well&hellip; This is something we have wanted to implement in the past but we haven&rsquo;t had time. Fortunately, there have been other projects that have come along and made this work easier. In the future, we are likely to try to incorporate one of these projects or we might look to see about implementing something ourselves.</p>
+<p>This will be something we will try look into once we have shipped Selenium 4.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2021
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1089177-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
