@@ -24,8 +24,8 @@ Our default position is we enforce the idea of emulation."/>
 Our default position is we enforce the idea of emulation." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2013-06-26T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2013-06-26T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2013-06-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-06-26T00:00:00+00:00" />
 
 
 
@@ -42,7 +42,7 @@ Our default position is we enforce the idea of emulation." />
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.1c5be2977bf4fd2bc1b51737e4f1d47fcf148ab4ed15316d1485d225d3a2fbd7.css" integrity="sha256-HFvil3v0/SvBtRc35PHUf88UirTtFTFtFIXSJdOi&#43;9c=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -61,7 +61,7 @@ Our default position is we enforce the idea of emulation." />
 
     
 
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.89.4" />
   </head>
 
   
@@ -128,7 +128,7 @@ Our default position is we enforce the idea of emulation." />
 <p>So is this a feature we want to add to WebDriver? No. &ldquo;But David, we do!?!?!?&rdquo; I hear you cry! The use case that comes up regularly is I want to know if a server is returning a 404 or 500 when I access a page. Why is there a need to start a browser to find this out? When I asked this question on twitter, my friend and fellow committer Kevin Menard said that it could be useful to to see the page response on failure and some pages can only be accessed with a real browser. The use cases that Kevin had is you want to check that the endpoint that you originally hit might might change based on the user agent passed in or there might be a site that follows the single page idea and breaks push state and therefore most of the web semantics. I admit Kevin is right with those use cases. However its only looking at a small part of the issue and there are a lot of corner cases. The major one for me is watching XHRs. What if one of your XHR returns a 500 and you get an error? Should WebDriver show you that information as well? I am sure you can see how quickly this can escalate. If you start worrying about all requests, and you should if you are worried about the initial request to a page, then you want the browser to capture all of this information and return it in a standard format. There just happens to be a format called Http Archive (HAR).</p>
 <p>So does the project take the task of creating a mechanism for extracting a HAR from the browser? That could be near impossible on browsers that don&rsquo;t readily share network usage information. So we go from WebDriver being a browser automation framework for user emulation to browser automation framework for user emulation and networking information gathering. That might be a little obtuse but its meant to be.</p>
 <p>While Selenium&rsquo;s main use case is for test automation, is not solely designed for that. We want to be the best at browser automation. Proxies are really good at managing network information and reporting on it in standard formats. Examples are fiddler and browsermob-proxy. And you can even hook them into Selenium WebDriver! Like the following:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> browsermobproxy <span style="color:#f92672">import</span> Server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> browsermobproxy <span style="color:#f92672">import</span> Server
 server <span style="color:#f92672">=</span> Server(<span style="color:#e6db74">&#34;path/to/browsermob-proxy&#34;</span>)
 server<span style="color:#f92672">.</span>start()
 proxy <span style="color:#f92672">=</span> server<span style="color:#f92672">.</span>create_proxy()
@@ -180,7 +180,7 @@ driver<span style="color:#f92672">.</span>quit()</code></pre></div></p>
       
         ©
         
-        2021
+        2022
          David Burns 
       
       
