@@ -6,7 +6,18 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Color and Faker shows how broken our build processes are</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2022/color-faker-shows-how-broken-our-builds-are/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2022/color-faker-shows-how-broken-our-builds-are/</guid>
+      <description>In what feels like an month ago turns out to be only a week ago. Just last week, Marak, decided to have stage a protest about the way open source maintainers are not compensated for their work.
+As with all protests, they are meant to be noticed. They are, by design, supposed to disrupt.
+I am not condoning what he did but people should totally support your open source developers. We&amp;rsquo;ve seen how Log4shell disrupted a lot of the web in December and for being integral to the web.</description>
+    </item>
+    
     <item>
       <title>FOSS is community first</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/foss-is-community-first/</link>
@@ -150,7 +161,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
       <guid>https://www.theautomatedtester.co.uk/blog/2018/what-makes-a-senior-developer-or-senior-engineer/</guid>
       <description>Over the festive break I sent out this tweet.
 I would fire the “senior” engineers for being over levelled. Senior engineers jobs are to mentor and build up the engineers below them. If they find that a burden then they need to re-evaluate their seniority. https://t.co/f0G5TtumRE
-&amp;mdash; David Burns - 💉💉💉 (@AutomatedTester) December 22, 2017  The, now deleted, quoted tweet went along the lines of &amp;ldquo;If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior&amp;rdquo;.</description>
+&amp;mdash; David Burns - 💉💉💉 🇺🇦 (@AutomatedTester) December 22, 2017  The, now deleted, quoted tweet went along the lines of &amp;ldquo;If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior&amp;rdquo;.</description>
     </item>
     
     <item>

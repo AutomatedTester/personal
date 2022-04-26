@@ -45,6 +45,12 @@ googleAnalytics = "UA-1089177-5"
     weight = 2
     url = "https://linkedin.com/in/automatedtester/"
 
+[[params.social]]
+    name = "Mastodon"
+    icon = "fa fa-mastodon"
+    weight = 2
+    url = "https://mastodon.social/@automatedtester"
+
 
 # Menu links
 [[menu.main]]
