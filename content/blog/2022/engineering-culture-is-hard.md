@@ -46,8 +46,7 @@ is going to show them how they can interact with you. I know when I speak to cer
 make sure that if someone calls me sir that I remind them that I am not knighted and they should just call me David.
 
 Why? Because if they fail they are likely to feel that they can't speak to me. I also remind them that fail stands for
-_First Attempt In Learning_. For example, learning before acting, calling people by their prefered name, and definitely
-not their Dead Name, means they are likely to listen to you. Not firing people and then trying to hire them back.
+_First Attempt In Learning_. Give people the space to grow and you will be amazed by what they come out with.
 
 It's really the little things.
 
