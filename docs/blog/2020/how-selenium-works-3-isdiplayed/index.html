@@ -61,7 +61,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 
     
 
-    <meta name="generator" content="Hugo 0.92.1" />
+    <meta name="generator" content="Hugo 0.105.0">
   </head>
 
   
@@ -147,9 +147,9 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 <p>From there we need to have a look at the element. We need to start looking at the CSS that is on the element.</p>
 <p>First, let&rsquo;s see if the element would still be part of the accessibility tree. We don&rsquo;t look in the accessibility tree, we just look at some scenarios where they won&rsquo;t be there and they won&rsquo;t influence any positioning of elements on the page. We don&rsquo;t look in the accessibility tree as this can be an extremely expensive operation in the browser.</p>
 <p>An easy scenario like that is when there is <code>display: none</code> on a element like below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#idOfElement {
-    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#idOfElement {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>This will result in nothing being added to the <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">accessibility tree</a> and won&rsquo;t influence the positioning of elements.</p>
 <p>Next we need to look and see if we can actually scroll to the element if that is necessary. We are just going to test it as we don&rsquo;t want to actually scroll. This is important for elements that have been transformed to somewhere else on the page. This means that we can&rsquo;t always rely on looking at the DOM tree. I discussed this in a <a href="https://www.theautomatedtester.co.uk/blog/2013/could-css3-be-making-sites-that-are-not-testable/">previous post in 2013</a>.</p>
 <p>From there we need to do a few checks on items like <code>&lt;input&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code> and <code>&lt;map&gt;</code>. <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code>  items are &ldquo;hidden&rdquo; unless you click on them we assume they are visible&hellip; well mostly.</p>
@@ -230,7 +230,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 
     
       
-      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
     
 
     

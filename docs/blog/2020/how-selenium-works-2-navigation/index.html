@@ -61,7 +61,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 
     
 
-    <meta name="generator" content="Hugo 0.92.1" />
+    <meta name="generator" content="Hugo 0.105.0">
   </head>
 
   
@@ -126,10 +126,10 @@ I will repeat this on every page of the series but a lot, an annoying amount som
     <p>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.</p>
 <p>I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</p>
 <p>In this episode we are going to look into the sheer amount of work that goes into navigation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
-
-driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+</span></span><span style="display:flex;"><span>driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)</span></span></code></pre></div>
 <p>We can see above&hellip; it looks easy enough right&hellip; no!</p>
 <p>Actually, it leads me to a pet peeve in interviews. If someone ever asks you to ever describe what happens in a browser when you type a URL and press enter there is a high probability that they have no real idea what goes into navigation. Anyway&hellip; back to Selenium and how we navigate.</p>
 <h1 id="driverget">
@@ -156,9 +156,9 @@ driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;h
   </a>
 </h2>
 <p>Once we have got round the certificates we get the page to load. Luckily we don&rsquo;t need to do anything more than the equivalent of</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>; 
-<span style="color:#75715e">// or
-</span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>; 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// or
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>;</span></span></code></pre></div>
 <h2 id="done">
   Done&hellip;
   <a class="heading-link" href="#done">
@@ -168,11 +168,11 @@ driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;h
 <p>When Selenium has &ldquo;finished&rdquo; a command it will return. So, we just need to wait for the page to be finished loading. To be honest, what does <em>&ldquo;finished loading&rdquo;</em> even mean.</p>
 <p>In the browser it will fire a number of different events. We will know when the page has been shown and then tell you what it&rsquo;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState"><code>readyState</code></a>. Selenium will check all of that and it will also wait for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event"><code>DOMContentLoaded</code></a>.</p>
 <p>Then there is the problem if you&rsquo;re on the page and you try navigate to an anchor on the page. Let&rsquo;s look at the following example.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
-
-driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk#someAnchor&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+</span></span><span style="display:flex;"><span>driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+</span></span><span style="display:flex;"><span>driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk#someAnchor&#34;</span>)</span></span></code></pre></div>
 <p>Oh look, none of the page loading events are going to be fired! Yay? Stupid browser is being efficient and will just scroll to the anchor. This means that we can&rsquo;t solely depend on events coming out of the page.</p>
 <p>No, so we need to have specialised code for this case and what &ldquo;done&rdquo; means in this case. If we get this wrong it&rsquo;s going to create a lot of unstable tests. Unstable tests make people grumpy and we don&rsquo;t want grumpy developers, there are enough of them in the world without unstable tests.</p>
 <p>Once we have done those checks, and you can manipulate how we look at those events, if you want it to load quicker, using the <a href="https://w3c.github.io/webdriver/#dfn-page-loading-strategy">Page Load Strategies</a>. This is more of a power user feature so I wouldn&rsquo;t worry about them now but they affect how quickly the navigation command</p>
@@ -183,12 +183,12 @@ driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;h
   </a>
 </h2>
 <p>This is where there is &ldquo;fun&rdquo;. A lot of frameworks will do a lot of loading after their initial load on to the page. If you have ever worked on a single page app, or have ever used a single page app, you will have seen a lot of items render as the data comes in. Unfortunately it does mean that you can&rsquo;t just rely on the navigation command returning. You will have to add a <code>WebDriverWait</code> command to your code, as shown below, to make sure your test is in the right state before going off to do what it needs to.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
-<span style="color:#f92672">from</span> selenium.webdriver.support.wait <span style="color:#f92672">import</span> WebDriverWait
-
-driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
-driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
-element <span style="color:#f92672">=</span> WebDriverWait(driver, <span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>until(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#960050;background-color:#1e0010">“</span>someId<span style="color:#960050;background-color:#1e0010">”</span>))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium.webdriver.support.wait <span style="color:#f92672">import</span> WebDriverWait
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Firefox()
+</span></span><span style="display:flex;"><span>driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://www.theautomatedtester.co.uk&#34;</span>)
+</span></span><span style="display:flex;"><span>element <span style="color:#f92672">=</span> WebDriverWait(driver, <span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>until(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#960050;background-color:#1e0010">“</span>someId<span style="color:#960050;background-color:#1e0010">”</span>))</span></span></code></pre></div>
 <h2 id="conclusion">
   Conclusion
   <a class="heading-link" href="#conclusion">
@@ -255,7 +255,7 @@ element <span style="color:#f92672">=</span> WebDriverWait(driver, <span style="
 
     
       
-      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
     
 
     

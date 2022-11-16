@@ -61,7 +61,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 
     
 
-    <meta name="generator" content="Hugo 0.92.1" />
+    <meta name="generator" content="Hugo 0.105.0">
   </head>
 
   
@@ -168,15 +168,15 @@ I will repeat this on every page of the series but a lot, an annoying amount som
   </a>
 </h3>
 <p>The next step is we need to process the string that has come in and split it according to <a href="http://www.unicode.org/reports/tr29/">grapheme text clusters</a>. We do this as Selenium has assigned some values in the <a href="https://en.wikipedia.org/wiki/Private_Use_Areas">unicode private use area</a> or PUA for some of the keys. Below is a sample
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    TAB <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue004</span><span style="color:#e6db74">&#39;</span>
-    CLEAR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue005</span><span style="color:#e6db74">&#39;</span>
-    RETURN <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue006</span><span style="color:#e6db74">&#39;</span>
-    ENTER <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue007</span><span style="color:#e6db74">&#39;</span>
-    SHIFT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue008</span><span style="color:#e6db74">&#39;</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    TAB <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue004</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    CLEAR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue005</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    RETURN <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue006</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    ENTER <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue007</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    SHIFT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\ue008</span><span style="color:#e6db74">&#39;</span></span></span></code></pre></div></p>
 <p>This allows people to send through combinations of keys like below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#f92672">from</span> selenium.webdriver.common.keys <span style="color:#f92672">import</span> Keys
-    element<span style="color:#f92672">.</span>send_keys(<span style="color:#e6db74">&#34;I&#34;</span> <span style="color:#f92672">+</span> Keys<span style="color:#f92672">.</span>SPACE <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;love &#34;</span> <span style="color:#f92672">+</span> Keys<span style="color:#f92672">.</span>SHIFT <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;cheese&#34;</span>)
-    <span style="color:#75715e"># This writes &#34;I love CHEESE&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#f92672">from</span> selenium.webdriver.common.keys <span style="color:#f92672">import</span> Keys
+</span></span><span style="display:flex;"><span>    element<span style="color:#f92672">.</span>send_keys(<span style="color:#e6db74">&#34;I&#34;</span> <span style="color:#f92672">+</span> Keys<span style="color:#f92672">.</span>SPACE <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;love &#34;</span> <span style="color:#f92672">+</span> Keys<span style="color:#f92672">.</span>SHIFT <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;cheese&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># This writes &#34;I love CHEESE&#34;</span></span></span></code></pre></div>
 <h3 id="firing-some-events-off">
   Firing some events off
   <a class="heading-link" href="#firing-some-events-off">
@@ -269,7 +269,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 
     
       
-      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
     
 
     

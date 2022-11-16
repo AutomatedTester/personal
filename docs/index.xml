@@ -6,16 +6,16 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Color and Faker shows how broken our build processes are</title>
-      <link>https://www.theautomatedtester.co.uk/blog/2022/color-faker-shows-how-broken-our-builds-are/</link>
-      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      <title>Engineering culture is hard to make but easy to destroy</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2022/engineering-culture-is-hard/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.theautomatedtester.co.uk/blog/2022/color-faker-shows-how-broken-our-builds-are/</guid>
-      <description>In what feels like an month ago turns out to be only a week ago. Just last week, Marak, decided to have stage a protest about the way open source maintainers are not compensated for their work.
-As with all protests, they are meant to be noticed. They are, by design, supposed to disrupt.
-I am not condoning what he did but people should totally support your open source developers. We&amp;rsquo;ve seen how Log4shell disrupted a lot of the web in December and for being integral to the web.</description>
+      <guid>https://www.theautomatedtester.co.uk/blog/2022/engineering-culture-is-hard/</guid>
+      <description>Like most people, I have been watching, with utter despair, the downfall of Twitter. Twitter, the community, has been a bit of a cesspool in general but there are some really great micro communities that help each other.
+I know I have met amazing people on there and from there cultivated great friendships.
+The one thing that has shocked me with Elon Musk, is not how he said he was going to down size the company.</description>
     </item>
     
     <item>
@@ -57,8 +57,8 @@ I head up the Open Source efforts at BrowserStack and, like most engineering lea
       
       <guid>https://www.theautomatedtester.co.uk/blog/2021/i-am-on-twitch/</guid>
       <description>At the end of 2020, I wanted to try something new, well new for the Selenium community. I created a new Twitch channel.
-Why?    The main reason is that I wanted to show people that working on Selenium is not scary. You don&amp;rsquo;t need to be a &amp;ldquo;rockstar&amp;rdquo; engineer. Actually, Rockstars are actively discouraged since they normally just trash hotel rooms.
-What have I done so far?    I have shown people around the codebase.</description>
+Why? The main reason is that I wanted to show people that working on Selenium is not scary. You don&amp;rsquo;t need to be a &amp;ldquo;rockstar&amp;rdquo; engineer. Actually, Rockstars are actively discouraged since they normally just trash hotel rooms.
+What have I done so far? I have shown people around the codebase.</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@ Another project has started adding multiple language support, which is awesome, 
       <description>It&amp;rsquo;s that time of the year where working groups from the W3C meet up to discuss the various standards that are being worked on.
 Within the Browser Testing and Tools Working Group, there are 2 different standards.
 We have:
- WebDriver WebDriver-Bidi  The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.</description>
+WebDriver WebDriver-Bidi The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.</description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@ We have:
       
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/</guid>
       <description>So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
-Why do I need to download something?    This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming.</description>
+Why do I need to download something? This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming.</description>
     </item>
     
     <item>
@@ -159,7 +159,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.theautomatedtester.co.uk/about/</guid>
-      <description>David Burns    Chair person for the W3C Browser Testing and Tools Working Group. Editor of the W3C WebDriver specification. Heading up the Open Source Program Office at BrowserStack working collaborating on Open Source Projects used BrowserStack and their customers!
+      <description>David Burns Chair person for the W3C Browser Testing and Tools Working Group. Editor of the W3C WebDriver specification. Heading up the Open Source Program Office at BrowserStack working collaborating on Open Source Projects used BrowserStack and their customers!
 In the past I worked at Mozilla on tooling to make the web predictable and help give software engineers the tools to make sure their websites work in Firefox and other browsers at Mozilla.</description>
     </item>
     
@@ -171,7 +171,7 @@ In the past I worked at Mozilla on tooling to make the web predictable and help 
       <guid>https://www.theautomatedtester.co.uk/blog/2018/what-makes-a-senior-developer-or-senior-engineer/</guid>
       <description>Over the festive break I sent out this tweet.
 I would fire the “senior” engineers for being over levelled. Senior engineers jobs are to mentor and build up the engineers below them. If they find that a burden then they need to re-evaluate their seniority. https://t.co/f0G5TtumRE
-&amp;mdash; David Burns - 💉💉💉 🇺🇦 (@AutomatedTester) December 22, 2017  The, now deleted, quoted tweet went along the lines of &amp;ldquo;If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior&amp;rdquo;.</description>
+&amp;mdash; David @automatedtester@mastodon.social (@AutomatedTester) December 22, 2017 The, now deleted, quoted tweet went along the lines of &amp;ldquo;If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -205,7 +205,7 @@ Tell your manager when you are struggling with a task and not feel like you are 
       <description>Last week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Microsoft campus in Redmond, Washington.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Wednesday and Thursday. The most notable items are;
- Finalising Actions in the specification newSession Certificate handling on navigation Specification tests  We also welcomed Apple to their first WG meeting.</description>
+Finalising Actions in the specification newSession Certificate handling on navigation Specification tests We also welcomed Apple to their first WG meeting.</description>
     </item>
     
     <item>
@@ -258,10 +258,10 @@ The WebDriver Working Group was part of TPAC this year, like previous years, and
     
     <item>
       <title>WebDriver F2F - London 2014</title>
-      <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f-london-2014/</link>
+      <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f---london-2014/</link>
       <pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f-london-2014/</guid>
+      <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f---london-2014/</guid>
       <description>Last week saw the latest face to face of the WebDriver Working Group held at Facebook. This meeting was important as this is hopefully the last face to face before we go to Last call allowing us to concentrate on issues that come up during last call.
 This meeting was really useful as we were a number of discussions around the prose of the spec when it comes to conformance and usability of the spec, especially when given to implementors who have never worked on WebDriver.</description>
     </item>
@@ -293,7 +293,7 @@ He then declares that he has had enough and declares that he does not write test
       
       <guid>https://www.theautomatedtester.co.uk/blog/2014/management-is-hard/</guid>
       <description>I have been a manager within the A*Team for 6 months now and I wanted to share what I have learnt in that time. The main thing that I have learnt is being a manager is hard work.
-Why has it been hard?    Well, being a manager is requires a certain amount of personal skills. So being able to speak to people and check they are doing the tasks they are supposed to is trivial.</description>
+Why has it been hard? Well, being a manager is requires a certain amount of personal skills. So being able to speak to people and check they are doing the tasks they are supposed to is trivial.</description>
     </item>
     
     <item>
@@ -315,7 +315,7 @@ My offence with the article is not that its wrong, there are a few items I disag
       <description>This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Tuesday and Wednesday. The most notable items are;
- Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By.</description>
+Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By.</description>
     </item>
     
     <item>
@@ -327,7 +327,7 @@ The meeting notes are available for Tuesday and Wednesday. The most notable item
       <description>Last week I was at W3 TPAC for week of face to face meeting to discuss WebDriver and other W3C specifications that other working groups are working on.
 Our initial agenda went up just before the meeting and we were lucky enough to get through all the items. If you would like to read the notes for the meeting Monday and Tuesday.
 Highlights from the meeting are
- We are rescoping the specification to have the relevant things we need - we have been suffering from scope creep so we are removing things that aren&amp;rsquo;t complete or won&amp;rsquo;t be completed soon.</description>
+We are rescoping the specification to have the relevant things we need - we have been suffering from scope creep so we are removing things that aren&amp;rsquo;t complete or won&amp;rsquo;t be completed soon.</description>
     </item>
     
     <item>
