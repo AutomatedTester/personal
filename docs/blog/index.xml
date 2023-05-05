@@ -6,7 +6,18 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Login Test</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2023/the-login-test/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2023/the-login-test/</guid>
+      <description>The login test I have been in the automation space for a very long time and have seen some really amazing ideas and some really awful ideas when it comes to automation frameworks. The one thing that has helped me along the way is figuring out if a framework can handle the “login test”.
+Can it log in to your website? Simple enough… right?
+Before we start I want to make sure that we all have the same concept of a Login test.</description>
+    </item>
+    
     <item>
       <title>Engineering culture is hard to make but easy to destroy</title>
       <link>https://www.theautomatedtester.co.uk/blog/2022/engineering-culture-is-hard/</link>
