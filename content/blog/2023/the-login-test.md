@@ -13,7 +13,7 @@ Before we start I want to make sure that we all have the same concept of a Login
 
 - Start from HTTP url. On a stage or production environment it should handle the 302 to HTTPS.
 - It should have a username and password  items. This could be done within an iframe or separate window if you’re using a 3rd party service like OKTA
-- It should in the positive case it should redirect to a new landing page. In the negative case it should error and show the error that you can access.
+- It should in the positive case redirect to a new landing page. In the negative case it should error and show the error that you can access.
 
 Hopefully none of this should be controversial right?
 
