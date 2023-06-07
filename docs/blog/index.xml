@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selenium Manager - The best tool from Selenium that you can forget about</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/</link>
+      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/</guid>
+      <description>Selenium Manager - The best tool from Selenium that you can forget about I am sure that you have heard all the buzz in the Selenium community about Selenium Manager. A tool built into Selenium that by the end of this post you can be safe in the knowledge that you can forget about it.
+So, what is it? It is an executable that is shipped in all of the driver bindings in all the languages that the Selenium Project maintains that will make sure that you have the driver you need for the browser you are about to use even after the browser updates.</description>
+    </item>
+    
     <item>
       <title>The Login Test</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/the-login-test/</link>
