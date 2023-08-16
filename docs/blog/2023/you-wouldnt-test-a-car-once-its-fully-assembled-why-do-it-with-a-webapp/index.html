@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="One of the things that I have seen over my career is how often we see organisations see quality and testing as a feature that happens just before you ship with minor tweaks.
+This is very different to how cars are made. Cars, like websites, are made from components. But… can we safely say that web components we use are tested to the same level? Or even half the level that car components are?">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="You wouldn’t test a car once it’s fully assembled, why do that to your app?"/>
+<meta name="twitter:description" content="One of the things that I have seen over my career is how often we see organisations see quality and testing as a feature that happens just before you ship with minor tweaks.
+This is very different to how cars are made. Cars, like websites, are made from components. But… can we safely say that web components we use are tested to the same level? Or even half the level that car components are?"/>
+
+    <meta property="og:title" content="You wouldn’t test a car once it’s fully assembled, why do that to your app?" />
+<meta property="og:description" content="One of the things that I have seen over my career is how often we see organisations see quality and testing as a feature that happens just before you ship with minor tweaks.
+This is very different to how cars are made. Cars, like websites, are made from components. But… can we safely say that web components we use are tested to the same level? Or even half the level that car components are?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-16T00:00:00+00:00" />
+
+
+    <title>
+  You wouldn’t test a car once it’s fully assembled, why do that to your app? · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.111.3">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/">
+          You wouldn’t test a car once it’s fully assembled, why do that to your app?
+        </a>
+      </h1>
+    </header>
+
+    <p>One of the things that I have seen over my career is how often we see organisations see quality and testing as a feature that happens just before you ship with minor tweaks.</p>
+<p>This is very different to how cars are made. Cars, like websites, are made from components. But… can we safely say that web components we use are tested to the same level? Or even half the level that car components are?</p>
+<p>There are a number of similarities in how cars are built and how software is built. There are humans moving things about and there are a robots doing the heavy lifting. In software, our robots are IDEs, linters, CIs, and even the ML that helps us in our development environments.</p>
+<p>Unfortunately, the way that we develop and test software is not to the same level. I remember when I was in university I was told that software doesn’t need to be tested as rigorously as machinery that can kill people. And while that is mostly true, there is one thing that is very different is our view of what is good enough testing.</p>
+<p>I have seen a lot of companies that feel that there should be a QA department writing tests and the “engineering” teams should be writing code. This has led to a weird situation that tertiary education does not teach students how to test. This leads students thinking that testing is beneath them which then leads to people in the industry think that testing is a second class citizen. This means that SDETs are software developers. It’s the same as when I see Front End Engineers being put down by back end engineers.</p>
+<p>Since they are treated as second class citizens we tend to see a number of problems creep into how they develop their tests. We all know that we <em>should</em> try to follow the testing pyramid but what generally happens is we get what I call the Testing Christmas tree as seen below.</p>
+<p><img src="/img/test_christmas_tree.png" alt="test_christmas_tree.png"></p>
+<p>So, how do we go about improving this and having fewer UI tests if that’s the problem. Well, that’s not problem per se, it’s how people are approaching the problem. We’ve had component testing for a while now and people are using it but are they doing enough or even testing the right thing? Below is a video I created recently that shows how the “best practise” doesn’t catch issues, and people are unaware until it really catches them out in production.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/h5ct9Plqpjk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>So, how do we improve this?</p>
+<p>The simple answer is to make sure that we are testing things in the right manner at the right time. There is no silver bullet. We should not be pushing to have 1 type of testing and developers need to remember that the QA team does not assure quality. They are just there to highlight your errors in your code. Quality is everyones responsibility.</p>
+<p>Make sure that you split up your tests so that you get to a state that computers are waiting on people not people waiting on computers.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2023
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1089177-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

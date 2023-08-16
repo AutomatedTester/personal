@@ -6,7 +6,17 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You wouldn’t test a car once it’s fully assembled, why do that to your app?</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/</guid>
+      <description>One of the things that I have seen over my career is how often we see organisations see quality and testing as a feature that happens just before you ship with minor tweaks.
+This is very different to how cars are made. Cars, like websites, are made from components. But… can we safely say that web components we use are tested to the same level? Or even half the level that car components are?</description>
+    </item>
+    
     <item>
       <title>Selenium Manager - The best tool from Selenium that you can forget about</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/</link>
