@@ -4,7 +4,7 @@ title: "Accessibility Testing is important and easy to do!"
 publishDate: 2023-11-02
 ---
 
-In today's digital age, creating websites and web applications that are accessible to all is not just a best practice; it's a legal requirement in many regions. Accessibility, often denoted as "a11y", ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for "accessibility" since it starts with `a` and ends in `y` and the word is 11 characters long.
+In today's digital age, creating websites and web applications that are accessible to all is not just a best practice; it's a legal requirement in many regions. Accessibility, often denoted as "a11y", ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for "accessibility" since it starts with `a` and ends in `y` and the rest of the characters is 11.
 
 To achieve this, automated testing tools like Nightwatch.js can be invaluable. In this blog post, we'll explore how Nightwatch.js can be used to perform accessibility testing against a website, helping you make your web content inclusive for everyone. In the [EU there are laws](https://en.wikipedia.org/wiki/European_Accessibility_Act) coming into affect in 2025 that makes companies liable for not having an accessible website or application.
 
