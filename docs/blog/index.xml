@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessibility Testing is important and easy to do!</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/</guid>
+      <description>In today&amp;rsquo;s digital age, creating websites and web applications that are accessible to all is not just a best practice; it&amp;rsquo;s a legal requirement in many regions. Accessibility, often denoted as &amp;ldquo;a11y&amp;rdquo;, ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for &amp;ldquo;accessibility&amp;rdquo; since it starts with a and ends in y and the word is 11 characters long.
+To achieve this, automated testing tools like Nightwatch.</description>
+    </item>
+    
     <item>
       <title>Keeping Up with the Fast Pace of Browser Releases for Software Testers</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/keeping-browsers-up-to-date/</link>

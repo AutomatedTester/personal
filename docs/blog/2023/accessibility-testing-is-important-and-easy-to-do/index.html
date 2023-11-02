@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="In today&rsquo;s digital age, creating websites and web applications that are accessible to all is not just a best practice; it&rsquo;s a legal requirement in many regions. Accessibility, often denoted as &ldquo;a11y&rdquo;, ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for &ldquo;accessibility&rdquo; since it starts with a and ends in y and the word is 11 characters long.
+To achieve this, automated testing tools like Nightwatch.">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Accessibility Testing is important and easy to do!"/>
+<meta name="twitter:description" content="In today&rsquo;s digital age, creating websites and web applications that are accessible to all is not just a best practice; it&rsquo;s a legal requirement in many regions. Accessibility, often denoted as &ldquo;a11y&rdquo;, ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for &ldquo;accessibility&rdquo; since it starts with a and ends in y and the word is 11 characters long.
+To achieve this, automated testing tools like Nightwatch."/>
+
+    <meta property="og:title" content="Accessibility Testing is important and easy to do!" />
+<meta property="og:description" content="In today&rsquo;s digital age, creating websites and web applications that are accessible to all is not just a best practice; it&rsquo;s a legal requirement in many regions. Accessibility, often denoted as &ldquo;a11y&rdquo;, ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for &ldquo;accessibility&rdquo; since it starts with a and ends in y and the word is 11 characters long.
+To achieve this, automated testing tools like Nightwatch." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-11-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-02T00:00:00+00:00" />
+
+
+    <title>
+  Accessibility Testing is important and easy to do! · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.119.0">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/">
+          Accessibility Testing is important and easy to do!
+        </a>
+      </h1>
+    </header>
+
+    <p>In today&rsquo;s digital age, creating websites and web applications that are accessible to all is not just a best practice; it&rsquo;s a legal requirement in many regions. Accessibility, often denoted as &ldquo;a11y&rdquo;, ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for &ldquo;accessibility&rdquo; since it starts with <code>a</code> and ends in <code>y</code> and the word is 11 characters long.</p>
+<p>To achieve this, automated testing tools like Nightwatch.js can be invaluable. In this blog post, we&rsquo;ll explore how Nightwatch.js can be used to perform accessibility testing against a website, helping you make your web content inclusive for everyone. In the <a href="https://en.wikipedia.org/wiki/European_Accessibility_Act">EU there are laws</a> coming into affect in 2025 that makes companies liable for not having an accessible website or application.</p>
+<h2 id="accessibility-testing-is-easy">
+  Accessibility Testing is easy
+  <a class="heading-link" href="#accessibility-testing-is-easy">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Having been working on Nightwatch for a while we wanted to make sure that Accessibility testing was:</p>
+<ul>
+<li>First class citizen</li>
+<li>As easy as you can make it!</li>
+</ul>
+<p>If you don’t have Nightwatch installed you can do that by doing the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">init</span> <span style="color:#a6e22e">nightwatch</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">latest</span>
+</span></span></code></pre></div><p>Once you had answered the questions then you can then start writing a11y tests which look like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">axeInject</span>()
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">axeRun</span>(<span style="color:#e6db74">&#39;swap with a locator for something on the page&#39;</span>)
+</span></span></code></pre></div><p>You can do this in a normal test like</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;Nightwatch website page has accessible headers&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">browser</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">axeInject</span>()
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">axeRun</span>(<span style="color:#e6db74">&#39;body&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>or if you are doing component testing it would look like</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">A11yCheckBoxes</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">assign</span>(
+</span></span><span style="display:flex;"><span>    () =&gt; &lt;<span style="color:#f92672">CheckBoxes</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A11y&#39;</span> /&gt;, {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">browser</span>, { <span style="color:#a6e22e">component</span> }) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">axeInject</span>()
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">axeRun</span>(<span style="color:#e6db74">&#39;div&#39;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p>You can see it in action</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Iv_QYguxYDQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="analyzing-the-results">
+  Analyzing the Results
+  <a class="heading-link" href="#analyzing-the-results">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Once the test runs, Nightwatch.js generates a detailed report highlighting accessibility issues, including WCAG (Web Content Accessibility Guidelines) violations and suggestions for improvements.</p>
+<p>It&rsquo;s crucial to review and address these issues, ensuring that your website complies with accessibility standards. Common issues may include missing alt text on images, improper use of ARIA attributes, and keyboard navigation problems.</p>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Using NightwatchJS for accessibility testing is a powerful way to ensure your website is inclusive for all users with little to no effort. By automating the process, you can catch and address accessibility issues early in your development cycle, saving time, resources, and ensuring that your web content is compliant with accessibility standards. Accessibility isn&rsquo;t just a good practice; it&rsquo;s a fundamental aspect of a user-friendly and legally compliant website.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2023
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1089177-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
