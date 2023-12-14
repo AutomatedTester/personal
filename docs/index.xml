@@ -6,450 +6,373 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Hidden Cost of Ignoring Browser Compatibility: Why Websites are Losing Business</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2023/the-hidden-cost-of-ignoring-browser-compatibility/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.theautomatedtester.co.uk/blog/2023/the-hidden-cost-of-ignoring-browser-compatibility/</guid>
+      <description>In the fast-paced digital era, a website is often the first point of contact between a business and its potential customers. However, many businesses are unknowingly losing valuable opportunities by neglecting a critical aspect of web development – testing their sites across different browsers. In this blog post, we will explore the repercussions of overlooking browser compatibility and how it can lead to a significant loss in business.
+The Importance of Browser Compatibility: A recent study by StatCounter revealed that the global browser market is diverse, with Chrome, Safari, Firefox, and Microsoft Edge among the leading players.</description>
+    </item>
     <item>
       <title>Accessibility Testing is important and easy to do!</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/</guid>
       <description>In today&amp;rsquo;s digital age, creating websites and web applications that are accessible to all is not just a best practice; it&amp;rsquo;s a legal requirement in many regions. Accessibility, often denoted as &amp;ldquo;a11y&amp;rdquo;, ensures that websites are usable by individuals with disabilities. As an aside, a11y is short for &amp;ldquo;accessibility&amp;rdquo; since it starts with a and ends in y and the rest of the characters is 11.
 To achieve this, automated testing tools like Nightwatch.</description>
     </item>
-    
     <item>
       <title>Keeping Up with the Fast Pace of Browser Releases for Software Testers</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/keeping-browsers-up-to-date/</link>
       <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2023/keeping-browsers-up-to-date/</guid>
       <description>In the ever-evolving world of software testing, staying up-to-date with the latest browser releases is crucial for ensuring the compatibility and reliability of web applications. With browsers like Chrome, Firefox, Edge, and Safari pushing frequent updates, software testers must be proactive in monitoring these changes to adapt their testing strategies accordingly. In this blog post, we&amp;rsquo;ll explore the importance of tracking browser updates and provide tips for software testers on how to effectively manage the challenges they bring.</description>
     </item>
-    
     <item>
       <title>You wouldn’t test a car once it’s fully assembled, why do that to your app?</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/</guid>
       <description>One of the things that I have seen over my career is how often we see organisations see quality and testing as a feature that happens just before you ship with minor tweaks.
 This is very different to how cars are made. Cars, like websites, are made from components. But… can we safely say that web components we use are tested to the same level? Or even half the level that car components are?</description>
     </item>
-    
     <item>
       <title>Selenium Manager - The best tool from Selenium that you can forget about</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/</link>
       <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/</guid>
       <description>Selenium Manager - The best tool from Selenium that you can forget about I am sure that you have heard all the buzz in the Selenium community about Selenium Manager. A tool built into Selenium that by the end of this post you can be safe in the knowledge that you can forget about it.
 So, what is it? It is an executable that is shipped in all of the driver bindings in all the languages that the Selenium Project maintains that will make sure that you have the driver you need for the browser you are about to use even after the browser updates.</description>
     </item>
-    
     <item>
       <title>The Login Test</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/the-login-test/</link>
       <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2023/the-login-test/</guid>
       <description>The login test I have been in the automation space for a very long time and have seen some really amazing ideas and some really awful ideas when it comes to automation frameworks. The one thing that has helped me along the way is figuring out if a framework can handle the “login test”.
 Can it log in to your website? Simple enough… right?
 Before we start I want to make sure that we all have the same concept of a Login test.</description>
     </item>
-    
     <item>
       <title>Engineering culture is hard to make but easy to destroy</title>
       <link>https://www.theautomatedtester.co.uk/blog/2022/engineering-culture-is-hard/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2022/engineering-culture-is-hard/</guid>
       <description>Like most people, I have been watching, with utter despair, the downfall of Twitter. Twitter, the community, has been a bit of a cesspool in general but there are some really great micro communities that help each other.
 I know I have met amazing people on there and from there cultivated great friendships.
 The one thing that has shocked me with Elon Musk, is not how he said he was going to down size the company.</description>
     </item>
-    
     <item>
       <title>FOSS is community first</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/foss-is-community-first/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2021/foss-is-community-first/</guid>
       <description>If you want to hear this post, you can listen to it on my racket
 On the weekend there was a discussion about people in FOSS on twitter. It started that people my age, nearly 40, who have been in Open Source for a long time have failed the younger generation of FOSS supporters.
 If you&amp;rsquo;re unaware of what FOSS stands for, it means Free and Open Source Software.
 So&amp;hellip; why have my generation failed the newer members of FOSS world?</description>
     </item>
-    
     <item>
       <title>Ethics and Empathy in Open Source</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/ethics-and-empathy-in-open-source/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2021/ethics-and-empathy-in-open-source/</guid>
       <description>One of the biggest stories to come out in the tech industry last week was the deliberate bad patches to the linux kernel which got the University of Minnesota banned from future contributions to the Linux kernel.
 When reading the article I was reminded how incredibly broken the tech industry is. I say broken because a group of people thought that it was ok to experiment on an Open Source Project without express permission.</description>
     </item>
-    
     <item>
       <title>Open Source is corporate responsibility</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/</link>
       <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2021/oss-is-corporate-responsibility/</guid>
       <description>It&amp;rsquo;s that fun time of the year for most people at work. It&amp;rsquo;s the beginning of the fiscal year, it&amp;rsquo;s review cycle time, it&amp;rsquo;s the beginning of a new quarter. For most managers, myself included, it means that there is a huge amount of work that needs to happen.
 I head up the Open Source efforts at BrowserStack and, like most engineering leadership, I am looking at how we can promote our work without being overbearing in a community.</description>
     </item>
-    
     <item>
       <title>I am on Twitch</title>
       <link>https://www.theautomatedtester.co.uk/blog/2021/i-am-on-twitch/</link>
       <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2021/i-am-on-twitch/</guid>
       <description>At the end of 2020, I wanted to try something new, well new for the Selenium community. I created a new Twitch channel.
 Why? The main reason is that I wanted to show people that working on Selenium is not scary. You don&amp;rsquo;t need to be a &amp;ldquo;rockstar&amp;rdquo; engineer. Actually, Rockstars are actively discouraged since they normally just trash hotel rooms.
 What have I done so far? I have shown people around the codebase.</description>
     </item>
-    
     <item>
       <title>Collaboration over combat</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/collaboration-over-combat/</link>
       <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/collaboration-over-combat/</guid>
       <description>As most of you know, I am a core contributor to the Selenium project and thanks to BrowserStack I&amp;rsquo;m able to do this as my main job. Yesterday I heard that a similar project, and there are a few nowadays, is adding a feature we added 8 years ago and no longer support because we dropped to automation as it was incredibly limiting.
 Another project has started adding multiple language support, which is awesome, but they&amp;rsquo;re generating the code.</description>
     </item>
-    
     <item>
       <title>Browser Testing and Tools WG Meeting @ TPAC 2020</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/webdriver-tpac-meeting-2020/</link>
       <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/webdriver-tpac-meeting-2020/</guid>
       <description>It&amp;rsquo;s that time of the year where working groups from the W3C meet up to discuss the various standards that are being worked on.
 Within the Browser Testing and Tools Working Group, there are 2 different standards.
 We have:
 WebDriver WebDriver-Bidi The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 7 - Driver Executables</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/</guid>
       <description>So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
 Why do I need to download something? This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 6 - sendKeys</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-6-typing/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-6-typing/</guid>
       <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 5 - clicking</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-5-clicking/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-5-clicking/</guid>
       <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 4 - Finding Elements</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-4-finding-elements/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-4-finding-elements/</guid>
       <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 3 - isDisplayed</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-3-isdiplayed/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-3-isdiplayed/</guid>
       <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 2 - Navigation</title>
       <link>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-2-navigation/</link>
       <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-2-navigation/</guid>
       <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
     </item>
-    
     <item>
       <title>How Selenium Works: Episode 1 - Transportation</title>
       <link>https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/</link>
       <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/</guid>
       <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://www.theautomatedtester.co.uk/about/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/about/</guid>
       <description>David Burns Chair person for the W3C Browser Testing and Tools Working Group. Editor of the W3C WebDriver specification. Heading up the Open Source Program Office at BrowserStack working collaborating on Open Source Projects used BrowserStack and their customers!
 In the past I worked at Mozilla on tooling to make the web predictable and help give software engineers the tools to make sure their websites work in Firefox and other browsers at Mozilla.</description>
     </item>
-    
     <item>
       <title>What makes a senior developer or senior engineer</title>
       <link>https://www.theautomatedtester.co.uk/blog/2018/what-makes-a-senior-developer-or-senior-engineer/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2018/what-makes-a-senior-developer-or-senior-engineer/</guid>
       <description>Over the festive break I sent out this tweet.
 I would fire the “senior” engineers for being over levelled. Senior engineers jobs are to mentor and build up the engineers below them. If they find that a burden then they need to re-evaluate their seniority. https://t.co/f0G5TtumRE
 &amp;mdash; David @automatedtester@mastodon.social (@AutomatedTester) December 22, 2017 The, now deleted, quoted tweet went along the lines of &amp;ldquo;If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Harassment of Open Source Maintainers or Contributors</title>
       <link>https://www.theautomatedtester.co.uk/blog/2017/harassment-of-open-source-maintainers-or-contributors/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2017/harassment-of-open-source-maintainers-or-contributors/</guid>
       <description>On Friday I had the unfortunate pleasure of taking the brunt on an unhappy Selenium user. Their issue? My team said that a release of GeckoDriver would happen when we are confident in the code. They said that was not professional. They started by telling me that they contribute to Mozilla and this is not acceptable for them as a customer.
 Below is a break down of why I took exception to this:</description>
     </item>
-    
     <item>
       <title>honest and open conversations</title>
       <link>https://www.theautomatedtester.co.uk/blog/2017/honest-and-open-conversations/</link>
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2017/honest-and-open-conversations/</guid>
       <description>Can you have an open and honest conversation with your peers and, this is the most important one, can you have an open and honest conversation with your manager?
 Have a good think about this, don&amp;rsquo;t answer straight away. Let&amp;rsquo;s go through the following scenarios to find out if you can have open and honest conversations.
 Can you&amp;hellip;
 Tell your manager when you are struggling with a task and not feel like you are going to chastised?</description>
     </item>
-    
     <item>
       <title>WebDriver F2F - July 2016</title>
       <link>https://www.theautomatedtester.co.uk/blog/2016/webdriver-f2f-july-2016/</link>
       <pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2016/webdriver-f2f-july-2016/</guid>
       <description>Last week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Microsoft campus in Redmond, Washington.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Wednesday and Thursday. The most notable items are;
 Finalising Actions in the specification newSession Certificate handling on navigation Specification tests We also welcomed Apple to their first WG meeting.</description>
     </item>
-    
     <item>
       <title>trust</title>
       <link>https://www.theautomatedtester.co.uk/blog/2016/trust/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2016/trust/</guid>
       <description>The thing that is at the core of every hyper effective team is trust. Without it, any of the pieces that make the team hyper effective can fall apart very quickly. This is something that I have always instinctively known. I always work hard with my reports to make sure they can trust me. If they trust me, and more importantly I trust them, then I can ask them to take on work and then just come back every so often to see if they are stuck.</description>
     </item>
-    
     <item>
       <title>Public Source vs Open Source</title>
       <link>https://www.theautomatedtester.co.uk/blog/2016/public-source-vs-open-source/</link>
       <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2016/public-source-vs-open-source/</guid>
       <description>A few weeks ago I had an interesting conversation on twitter and then on instant messaging about a bit of software that was open sourced. Some thought, and might still do, the new piece of software might not be supported.
 There was also recently a good blog post from James Long about how it can be hard to create open source code and then maintain it. Either life gets in the way or another project gets in the way.</description>
     </item>
-    
     <item>
       <title>The &#34;power&#34; of overworking</title>
       <link>https://www.theautomatedtester.co.uk/blog/2016/the-power-of-overworking/</link>
       <pubDate>Mon, 04 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2016/the-power-of-overworking/</guid>
       <description>The other week I was in Orlando, Florida for a Mozilla All-Hands. It is a week where around 1200 Mozillians get together to spend time with each other planning, coding, or solving some hard problems.
 One of the topics that came up was how someone always seemed to be online. This comment was a little more than &amp;ldquo;they never seem to go offline from IRC&amp;rdquo;. It was &amp;ldquo;they seem to commenting on things around 20 hours a day&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>WebDriver Specification - Have you read it lately?</title>
       <link>https://www.theautomatedtester.co.uk/blog/2015/webdriver-specification-have-you-read-it-lately/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2015/webdriver-specification-have-you-read-it-lately/</guid>
       <description>A lot of work has gone into the WebDriver Specification this year. The methods in there have had a major make over to make them more specific in the steps that are required as well as having the relevant links. Go have a read of it and feel free to raise bugs against it, we will be updating it quite regularly. You can see all the work that is happening on Github.</description>
     </item>
-    
     <item>
       <title>WebDriver Face To Face TPAC 2014</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-tpac-2014/</link>
       <pubDate>Tue, 04 Nov 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-tpac-2014/</guid>
       <description>Last week was the 2014 W3C TPAC. For those that don&amp;rsquo;t know, TPAC is a conference where a number of W3C working groups get together in the same venue. This allows for a great amount of discussions between groups and also allows people to see what is coming in the future of the web.
 The WebDriver Working Group was part of TPAC this year, like previous years, and there was some really great discussions.</description>
     </item>
-    
     <item>
       <title>WebDriver F2F - London 2014</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f---london-2014/</link>
       <pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-f2f---london-2014/</guid>
       <description>Last week saw the latest face to face of the WebDriver Working Group held at Facebook. This meeting was important as this is hopefully the last face to face before we go to Last call allowing us to concentrate on issues that come up during last call.
 This meeting was really useful as we were a number of discussions around the prose of the spec when it comes to conformance and usability of the spec, especially when given to implementors who have never worked on WebDriver.</description>
     </item>
-    
     <item>
       <title>My ideal build, test, and land world</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/my-ideal-build-test-and-land-world/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/my-ideal-build-test-and-land-world/</guid>
       <description>The other week I tweeted I was noticing for that day we had 1 revert push to Mozilla Inbound in every 10 pushes. For those that don&amp;rsquo;t know, Mozilla Inbound is the most active integration repository that Firefox code lands in. A push can contain a number of commits depending on the bug or if a sheriff is handling checkin-needed bugs.
 This tweet got replies like, and I am paraphrasing, &amp;ldquo;That&amp;rsquo;s not too bad&amp;rdquo;, &amp;ldquo;I expected it to be worse&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Do you trust a test that you have never seen fail</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/do-you-trust-a-test-that-you-have-never-seen-fail/</link>
       <pubDate>Mon, 28 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/do-you-trust-a-test-that-you-have-never-seen-fail/</guid>
       <description>Recently David Heinemeier Hansson (dhh) wrote a blog post called &amp;ldquo;TDD is dead, long live testing&amp;rdquo;. He describes how the TDD world has got mean spirited and perhaps the use of the technique was to break down the barriers of automated testing and regression testing but that is no longer the case. (I agree with this a little but there are a lot of angry people out there)
 He then declares that he has had enough and declares that he does not write tests first and is proud of it.</description>
     </item>
-    
     <item>
       <title>Management is hard</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/management-is-hard/</link>
       <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/management-is-hard/</guid>
       <description>I have been a manager within the A*Team for 6 months now and I wanted to share what I have learnt in that time. The main thing that I have learnt is being a manager is hard work.
 Why has it been hard? Well, being a manager is requires a certain amount of personal skills. So being able to speak to people and check they are doing the tasks they are supposed to is trivial.</description>
     </item>
-    
     <item>
       <title>Don&#39;t write &#34;Five Hidden Costs of X&#34; but when you do I will reply</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/</link>
       <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply/</guid>
       <description>Recently I was shown that Telerik did a &amp;ldquo;Five Hidden Costs of Selenium&amp;rdquo;. I knew straight away from the title that this was purely a marketing document targeting teams with little to no automation skills to do automation. For what it is worth, if you want to do automation you should really hire the right engineers for the job.
 My offence with the article is not that its wrong, there are a few items I disagree with which are documented below, but with it trying to sell snake oil or silver bullets.</description>
     </item>
-    
     <item>
       <title>WebDriver Face To Face - February 2014</title>
       <link>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-february-2014/</guid>
       <description>This week saw the latest WebDriver F2F to work on the specification. We held the meeting at the Mozilla San Francisco office.
 The agenda for the meeting was placed, as usual, on the W3 Wiki. We had quite a lot to discuss and, as always, was a very productive meeting.
 The meeting notes are available for Tuesday and Wednesday. The most notable items are;
 Changing switchToFrame to only accept a WebElement or Index Adding switchToParentFrame to the API Potential changes to the way we do clicks on elements larger Numerous bugs in the spec Removing findElement(By.</description>
     </item>
-    
     <item>
       <title>TPAC 2013 - WebDriver Face To Face and more</title>
       <link>https://www.theautomatedtester.co.uk/blog/2013/tpac-2013-webdriver-face-to-face-and-more/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2013/tpac-2013-webdriver-face-to-face-and-more/</guid>
       <description>Last week I was at W3 TPAC for week of face to face meeting to discuss WebDriver and other W3C specifications that other working groups are working on.
 Our initial agenda went up just before the meeting and we were lucky enough to get through all the items. If you would like to read the notes for the meeting Monday and Tuesday.
 Highlights from the meeting are
 We are rescoping the specification to have the relevant things we need - we have been suffering from scope creep so we are removing things that aren&amp;rsquo;t complete or won&amp;rsquo;t be completed soon.</description>
     </item>
-    
     <item>
       <title>The tale of Selenium bug 141</title>
       <link>https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/</link>
       <pubDate>Wed, 26 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2013/the-tale-of-selenium-bug-141/</guid>
       <description>The selenium project has for a while now wanted to create a library that allows user emulation in the browser. The project has done a reasonable job at this so far with respect to this. We check if items are in the DOM, we check the visibility of items and we normalise text from the browser, amongst our other amazing talents!
 Our default position is we enforce the idea of emulation.</description>
     </item>
-    
     <item>
       <title>The value of locators and why everyone &#34;owns&#34; them</title>
       <link>https://www.theautomatedtester.co.uk/blog/2013/the-value-of-locators-and-why-everyone-owns-them/</link>
       <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2013/the-value-of-locators-and-why-everyone-owns-them/</guid>
       <description>The other day I got asked if I knew of a tool that would notice changes to IDs of elements and update Selenium tests accordingly because there was an incurred maintenance cost in updating these all the time because the test will fail.
 The tl;dr; is there isn&amp;rsquo;t a tool and I don&amp;rsquo;t think there should ever be one
 Why?
 HTML documents are not complex things, far from it, so when we change them we should think about how this is going to impact everything that hangs off a page.</description>
     </item>
-    
     <item>
       <title>Why working on Open Source software makes you a better developer</title>
       <link>https://www.theautomatedtester.co.uk/blog/2013/why-working-on-open-source-software-makes-you-a-better-developer/</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2013/why-working-on-open-source-software-makes-you-a-better-developer/</guid>
       <description>Recently there was a bit of a rant on the Selenium users mailing list about how there were a few bugs irritating the person and, because they are only testers with not enough development experience, didnt feel that they could help with fixing these issues.
 Note: this person was not rude and was not trolling so was happy to reach out.
 One thing that I want people to know is that you don&amp;rsquo;t have to be a brilliant developer to work on Open Source projects.</description>
     </item>
-    
     <item>
       <title>Could CSS3 be making sites that are not testable?</title>
       <link>https://www.theautomatedtester.co.uk/blog/2013/could-css3-be-making-sites-that-are-not-testable/</link>
       <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2013/could-css3-be-making-sites-that-are-not-testable/</guid>
       <description>Could CSS 3, while is a great thing for the Internet and for web developers, be making websites that are extremely hard to automate?
 As most of you know, in Selenium WebDriver we try an emulate what elements that a user can interact with. This means that we do a lot of DOM walking and gathering important little bits about the CSS on each of the elements to make sure that they are visible.</description>
     </item>
-    
     <item>
       <title>Using Dropbox as a source respository for book writing</title>
       <link>https://www.theautomatedtester.co.uk/blog/2013/using-dropbox-as-a-source-repository-for-book-writing/</link>
       <pubDate>Wed, 16 Jan 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2013/using-dropbox-as-a-source-repository-for-book-writing/</guid>
       <description>As many of you know I have recently released the 2nd edition of my Selenium book. When I wrote my first book I looked for a way to do version control of my book. Being a developer and test type, I used git to do all of my version control but I found that I would sometimes forget to commit and push my changes. This broke my own rule of keeping commits small.</description>
     </item>
-    
     <item>
       <title>Hug a OSS developer or don&#39;t be a dick</title>
       <link>https://www.theautomatedtester.co.uk/blog/2011/hug-a-oss-developer-or-dont-be-a-dick/</link>
       <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2011/hug-a-oss-developer-or-dont-be-a-dick/</guid>
       <description>I am one of the few privileged people in the world to only work on open source software for a living. All the work I get paid for as well as all my private projects is open source. It was one of the main things that drew me to work at Mozilla. Creating software that I can give away and when there are bugs I can fix, or even better receive a patch, and I can learn from my mistakes all in the open.</description>
     </item>
-    
     <item>
       <title>Py.Test and -XDist Plugin</title>
       <link>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</link>
       <pubDate>Mon, 14 Feb 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</guid>
       <description>The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
 The thing that people don&amp;rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.</description>
     </item>
-    
   </channel>
 </rss>
