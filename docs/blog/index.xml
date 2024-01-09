@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How lack of testing can ruin lives - The technology problems behind the Post Office Scandal</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2024/how-lack-of-testing-can-ruin-lives/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.theautomatedtester.co.uk/blog/2024/how-lack-of-testing-can-ruin-lives/</guid>
+      <description>Software testing is a critical phase in the development lifecycle that ensures the reliability and functionality of a program. However, recent scandals involving the Post Office and Fujitsu have shed light on the serious problems that can arise when testing is not conducted rigorously or ethically. In this blog post, we will delve into the issues surrounding the software testing practices in the Post Office and Fujitsu scandal, and the broader implications for the software development industry.</description>
+    </item>
     <item>
       <title>The Hidden Cost of Ignoring Browser Compatibility: Why Websites are Losing Business</title>
       <link>https://www.theautomatedtester.co.uk/blog/2023/the-hidden-cost-of-ignoring-browser-compatibility/</link>
