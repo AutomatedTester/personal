@@ -6,8 +6,17 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Free at last! iOS is free at last! At least in the EU.</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2024/free-at-last-web-monoculture/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.theautomatedtester.co.uk/blog/2024/free-at-last-web-monoculture/</guid>
+      <description>But, have the well-meaning EU politicians dealt a killing blow for free choice on the web? Last week Apple announced changes that would allow people to pick their favourite browser and it be that browser rather than an app that used a Safari webview.
+On the face of it, this sounds great. The reality is I think it will do what the cookie banner did for privacy.
+I have been an advocate for free choice but it needs to be a free choice.</description>
+    </item>
     <item>
       <title>How lack of testing can ruin lives - The technology problems behind the Post Office Scandal</title>
       <link>https://www.theautomatedtester.co.uk/blog/2024/how-lack-of-testing-can-ruin-lives/</link>
