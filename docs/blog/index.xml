@@ -6,8 +6,16 @@
     <description>Recent content in Blogs on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Pitfalls of Code Coverage.</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/</guid>
+      <description>The Pitfalls of Code Coverage In software development, metrics play a crucial role in pretty much everything. These can be from how people are using our products to how engineers build and test their applications.
+One such metric that often garners attention is code coverage. While code coverage can provide insights into the extent to which a codebase has been tested. Unfortunately, and what feels like an unpopular opinion, it is a metric that is relied on a little too much as it doesn’t offer much help in terms of quality of your applications.</description>
+    </item>
     <item>
       <title>Free at last! iOS is free at last! At least in the EU.</title>
       <link>https://www.theautomatedtester.co.uk/blog/2024/free-at-last-web-monoculture/</link>
