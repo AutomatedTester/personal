@@ -6,8 +6,16 @@
     <description>Recent content on David Burns - AutomatedTester</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.theautomatedtester.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flakiness isn&#39;t from your test framework</title>
+      <link>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</guid>
+      <description>This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
+That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress.</description>
+    </item>
     <item>
       <title>The Pitfalls of Code Coverage.</title>
       <link>https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/</link>
@@ -397,14 +405,6 @@ As most of you know, in Selenium WebDriver we try an emulate what elements that 
       <guid>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</guid>
       <description>The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
 The thing that people don&amp;rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</guid>
-      <description>Flakiness isn’t from your test framework This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
-That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress.</description>
     </item>
   </channel>
 </rss>

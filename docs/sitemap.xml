@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.theautomatedtester.co.uk/blog/</loc>
-    <lastmod>2024-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.theautomatedtester.co.uk/</loc>
-    <lastmod>2024-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</loc>
+    <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/</loc>
     <lastmod>2024-03-19T00:00:00+00:00</lastmod>
@@ -148,8 +151,6 @@
   </url><url>
     <loc>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</loc>
     <lastmod>2011-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</loc>
   </url><url>
     <loc>https://www.theautomatedtester.co.uk/categories/</loc>
   </url><url>
