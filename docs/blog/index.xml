@@ -13,7 +13,7 @@
       <link>https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/</guid>
-      <description>The Pitfalls of Code Coverage In software development, metrics play a crucial role in pretty much everything. These can be from how people are using our products to how engineers build and test their applications.
+      <description>t sIn software development, metrics play a crucial role in pretty much everything. These can be from how people are using our products to how engineers build and test their applications.
 One such metric that often garners attention is code coverage. While code coverage can provide insights into the extent to which a codebase has been tested. Unfortunately, and what feels like an unpopular opinion, it is a metric that is relied on a little too much as it doesn’t offer much help in terms of quality of your applications.</description>
     </item>
     <item>
@@ -389,6 +389,14 @@ As most of you know, in Selenium WebDriver we try an emulate what elements that 
       <guid>https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/</guid>
       <description>The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
 The thing that people don&amp;rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</guid>
+      <description>Flakiness isn’t from your test framework This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
+That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress.</description>
     </item>
   </channel>
 </rss>
