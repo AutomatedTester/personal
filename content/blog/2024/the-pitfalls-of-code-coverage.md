@@ -3,7 +3,7 @@ title: "The Pitfalls of Code Coverage."
 publishDate: 2024-03-19
 ---
 
-t sIn software development, metrics play a crucial role in pretty much everything. These can be from how people are using our products to how engineers build and test their applications.
+In software development, metrics play a crucial role in pretty much everything. These can be from how people are using our products to how engineers build and test their applications.
 
 One such metric that often garners attention is code coverage. While code coverage can provide insights into the extent to which a codebase has been tested. Unfortunately, and what feels like an unpopular opinion, it is a metric that is relied on a little too much as it doesn’t offer much help in terms of quality of your applications.
 
