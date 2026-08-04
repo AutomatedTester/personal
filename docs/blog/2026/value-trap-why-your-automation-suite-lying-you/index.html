@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="I&rsquo;ve spent a significant portion of my career in the trenches of Open Source and browser automation. I&rsquo;ve seen thousands of test suites, some elegant, most chaotic, and I&rsquo;ve noticed a recurring, dangerous trend. We have become obsessed with verification at the expense of validation.
+We build massive CI/CD pipelines that glow green, yet our users are still frustrated. We hit 90% code coverage, yet the churn rate doesn&rsquo;t budge. If our &ldquo;Quality Assurance&rdquo; isn&rsquo;t actually assuring the quality of the user experience, what exactly are we doing?">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="The Value Trap: Why Your Automation Suite is Lying to You">
+	<meta name="twitter:description" content="I’ve spent a significant portion of my career in the trenches of Open Source and browser automation. I’ve seen thousands of test suites, some elegant, most chaotic, and I’ve noticed a recurring, dangerous trend. We have become obsessed with verification at the expense of validation.
+We build massive CI/CD pipelines that glow green, yet our users are still frustrated. We hit 90% code coverage, yet the churn rate doesn’t budge. If our “Quality Assurance” isn’t actually assuring the quality of the user experience, what exactly are we doing?">
+
+    <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/">
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="The Value Trap: Why Your Automation Suite is Lying to You">
+	<meta property="og:description" content="I’ve spent a significant portion of my career in the trenches of Open Source and browser automation. I’ve seen thousands of test suites, some elegant, most chaotic, and I’ve noticed a recurring, dangerous trend. We have become obsessed with verification at the expense of validation.
+We build massive CI/CD pipelines that glow green, yet our users are still frustrated. We hit 90% code coverage, yet the churn rate doesn’t budge. If our “Quality Assurance” isn’t actually assuring the quality of the user experience, what exactly are we doing?">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-04-23T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-04-23T00:00:00+00:00">
+
+
+    <title>
+  The Value Trap: Why Your Automation Suite is Lying to You · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.164.0">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/">
+          The Value Trap: Why Your Automation Suite is Lying to You
+        </a>
+      </h1>
+    </header>
+
+    <p>I&rsquo;ve spent a significant portion of my career in the trenches of Open Source and browser automation. I&rsquo;ve seen thousands of test suites, some elegant, most chaotic, and I&rsquo;ve noticed a recurring, dangerous trend. We have become obsessed with verification at the expense of validation.</p>
+<p>We build massive CI/CD pipelines that glow green, yet our users are still frustrated. We hit 90% code coverage, yet the churn rate doesn&rsquo;t budge. If our &ldquo;Quality Assurance&rdquo; isn&rsquo;t actually assuring the quality of the user experience, what exactly are we doing?</p>
+<p>It&rsquo;s time to stop thinking about QA as a safety net for developers and start viewing it as the ultimate guardian of customer value.</p>
+<h2 id="the-mirage-of-the-green-build">
+  The Mirage of the Green Build
+  <a class="heading-link" href="#the-mirage-of-the-green-build">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>There is a specific kind of dopamine hit that comes from seeing a row of green checks in GitHub Actions. It feels like progress. It feels like &ldquo;quality.&rdquo;</p>
+<p>But let&rsquo;s be honest: a green build only tells you that the code does what the developer thought it should do. It doesn&rsquo;t tell you if what the developer built is actually useful, intuitive, or valuable to the person paying for it.</p>
+<p>In the early days of Selenium and the birth of the WebDriver standard, the goal was interoperability. We wanted things to work across browsers. But as the industry matured, we got bogged down in the &ldquo;how&rdquo; and lost sight of the &ldquo;why.&rdquo; We started testing for existence rather than excellence.</p>
+<p>The Reality Check: A button can be 100% functional according to an automated script, but if that button is buried under three layers of confusing UI, it provides zero value to the customer.</p>
+<h2 id="shifting-the-definition-of-quality">
+  Shifting the Definition of Quality
+  <a class="heading-link" href="#shifting-the-definition-of-quality">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>In many organizations, QA is treated as a downstream activity, the &ldquo;complaint department&rdquo; that catches bugs before they hit production. This is a reactive, value-neutral approach.</p>
+<p>To deliver true value, we need to redefine Quality:</p>
+<ul>
+<li><strong>Old QA</strong>: Does the feature meet the written requirements?</li>
+<li><strong>New QA</strong>: Does the feature solve the customer&rsquo;s problem effectively?</li>
+</ul>
+<p>When I talk about automation, I&rsquo;m not just talking about scripts that click buttons. I&rsquo;m talking about building a feedback loop that informs the product team whether the technical implementation aligns with the human need. Automation should be the tool that frees up humans to do what they do best: exploratory testing and empathetic analysis.</p>
+<h2 id="automation-as-a-value-multiplier">
+  Automation as a Value Multiplier
+  <a class="heading-link" href="#automation-as-a-value-multiplier">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>If you are using automation simply to check if a login form works for the 10,000th time, you are using a Ferrari to drive to the mailbox.</p>
+<p>Automation&rsquo;s highest and best use is to handle the mundane, repeatable &ldquo;plumbing&rdquo; of the application so that the team can focus on Value-Add Testing.</p>
+<p><strong>1. Reducing the &ldquo;Cost of Curiosity&rdquo;</strong>
+When a deployment takes four hours of manual regression, the team becomes afraid to experiment. They stop asking &ldquo;What if we changed this?&rdquo; because the cost of testing that change is too high. High-quality automation reduces that cost to near zero, allowing the product to evolve at the speed of customer feedback.</p>
+<p><strong>2. Identifying Performance Slumps</strong>
+Value isn&rsquo;t just about features; it&rsquo;s about reliability and speed. If an update makes a page 500ms slower, you&rsquo;ve just degraded the customer experience. Automated performance budgets ensure that value doesn&rsquo;t &ldquo;leak&rdquo; out of the product through technical debt.</p>
+<p><strong>3. Accessibility is Non-Negotiable Value</strong>
+If a portion of your user base cannot use your product, you are failing to deliver value to them. Period. Automation should bake accessibility checks into the core of the development cycle. This isn&rsquo;t just about compliance; it&rsquo;s about ensuring the product&rsquo;s value is universal.</p>
+<h2 id="the-user-journey-vs-the-test-case">
+  The User Journey vs. The Test Case
+  <a class="heading-link" href="#the-user-journey-vs-the-test-case">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>We need to kill the &ldquo;Test Case&rdquo; mentality. Traditional test cases are often atomic, isolated, and sterile. They test A -&gt; B in a vacuum.</p>
+<p>Customers don&rsquo;t live in vacuums. They live in User Journeys.</p>
+<p>When we design our automation suites, we should be mapping them directly to the &ldquo;Jobs to be Done&rdquo; framework. Mapping automation to customer value:</p>
+<ul>
+<li><strong>Unit Tests</strong> — Technical Goal: Logic correctness. Customer Value: Stability and a crash-free experience.</li>
+<li><strong>Integration Tests</strong> — Technical Goal: Data flow between systems. Customer Value: Features that actually work together seamlessly.</li>
+<li><strong>End-to-End (E2E)</strong> — Technical Goal: Validation of the entire user flow. Customer Value: Ensuring the user successfully achieves their goal.</li>
+<li><strong>Visual Regression</strong> — Technical Goal: UI consistency across releases. Customer Value: Building trust through a professional, polished brand.</li>
+</ul>
+<h2 id="why-done-is-a-dangerous-word">
+  Why &ldquo;Done&rdquo; is a Dangerous Word
+  <a class="heading-link" href="#why-done-is-a-dangerous-word">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>In many agile setups, a ticket is &ldquo;Done&rdquo; when it passes QA. But in a value-centric world, &ldquo;Done&rdquo; is only achieved when the customer successfully uses the feature to solve a problem.</p>
+<p>As QA professionals and automation engineers, our job doesn&rsquo;t end at the merge request. We should be looking at production telemetry. We should be asking:</p>
+<ul>
+<li>Are people actually using the flow we just automated?</li>
+<li>Where are they dropping off?</li>
+<li>Is our automation suite covering the paths that 80% of our users actually take, or are we testing edge cases that no one cares about?</li>
+</ul>
+<p>If your automation suite is testing features that users don&rsquo;t use, you are wasting the company&rsquo;s money and your own time. That is the literal opposite of delivering value.</p>
+<h2 id="moving-forward-a-manifesto-for-value-driven-qa">
+  Moving Forward: A Manifesto for Value-Driven QA
+  <a class="heading-link" href="#moving-forward-a-manifesto-for-value-driven-qa">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>If you&rsquo;re looking to pivot your team toward a value-driven approach, start with these three shifts:</p>
+<ul>
+<li><strong>Stop Measuring Coverage, Start Measuring Impact</strong>: Don&rsquo;t brag about 100% code coverage. Brag about how your automation suite caught a regression that would have cost the company $50k in lost sales.</li>
+<li><strong>Involve QA in the &ldquo;Why&rdquo;</strong>: QA should be in the room when the product is being defined, not just when it&rsquo;s being delivered. If a tester doesn&rsquo;t understand the customer&rsquo;s pain point, they can&rsquo;t effectively test the solution.</li>
+<li><strong>Delete Useless Tests</strong>: Be ruthless. If a test is flaky or tests a low-value area of the app, kill it. A bloated, slow test suite is a drag on velocity, and slow velocity is a value-killer.</li>
+</ul>
+<p>Automation is a powerful tool, but it&rsquo;s just that, a tool. It is the means, not the end. The end goal is a product that delights users, solves problems, and stands the test of time.</p>
+<p>Let&rsquo;s stop testing for the sake of testing. Let&rsquo;s start testing for the sake of the user.</p>
+<p>p.s. You can see how Alan Page and I discuss this in the latest episode of BrowserStack Talks.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2026
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

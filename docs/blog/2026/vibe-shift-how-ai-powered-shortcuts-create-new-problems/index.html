@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="We are currently living through one of the most significant paradoxes in the history of software development. On one hand, tools like Copilot, Claude, Gemini, and ChatGPT offer us unprecedented speed. We can generate entire functions in moments, prototype features in an afternoon, and ship at a breakneck pace that was unimaginable just five years ago.
+But this speed comes with a hidden, mounting cost: the erosion of substance.
+As we lean more heavily on AI to do the &ldquo;heavy lifting&rdquo; of syntax and structure, we are entering the era of Vibe Coding and its equally dangerous sibling, Vibe Testing. We are writing code that looks right and feels right, but beneath the surface, we are bypassing the foundational knowledge required to build truly robust software.">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="The Vibe Shift: How AI-Powered Shortcuts Create New Problems">
+	<meta name="twitter:description" content="We are currently living through one of the most significant paradoxes in the history of software development. On one hand, tools like Copilot, Claude, Gemini, and ChatGPT offer us unprecedented speed. We can generate entire functions in moments, prototype features in an afternoon, and ship at a breakneck pace that was unimaginable just five years ago.
+But this speed comes with a hidden, mounting cost: the erosion of substance.
+As we lean more heavily on AI to do the “heavy lifting” of syntax and structure, we are entering the era of Vibe Coding and its equally dangerous sibling, Vibe Testing. We are writing code that looks right and feels right, but beneath the surface, we are bypassing the foundational knowledge required to build truly robust software.">
+
+    <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/">
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="The Vibe Shift: How AI-Powered Shortcuts Create New Problems">
+	<meta property="og:description" content="We are currently living through one of the most significant paradoxes in the history of software development. On one hand, tools like Copilot, Claude, Gemini, and ChatGPT offer us unprecedented speed. We can generate entire functions in moments, prototype features in an afternoon, and ship at a breakneck pace that was unimaginable just five years ago.
+But this speed comes with a hidden, mounting cost: the erosion of substance.
+As we lean more heavily on AI to do the “heavy lifting” of syntax and structure, we are entering the era of Vibe Coding and its equally dangerous sibling, Vibe Testing. We are writing code that looks right and feels right, but beneath the surface, we are bypassing the foundational knowledge required to build truly robust software.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-05-19T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-05-19T00:00:00+00:00">
+
+
+    <title>
+  The Vibe Shift: How AI-Powered Shortcuts Create New Problems · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.164.0">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/">
+          The Vibe Shift: How AI-Powered Shortcuts Create New Problems
+        </a>
+      </h1>
+    </header>
+
+    <p>We are currently living through one of the most significant paradoxes in the history of software development. On one hand, tools like Copilot, Claude, Gemini, and ChatGPT offer us unprecedented speed. We can generate entire functions in moments, prototype features in an afternoon, and ship at a breakneck pace that was unimaginable just five years ago.</p>
+<p>But this speed comes with a hidden, mounting cost: the erosion of substance.</p>
+<p>As we lean more heavily on AI to do the &ldquo;heavy lifting&rdquo; of syntax and structure, we are entering the era of Vibe Coding and its equally dangerous sibling, Vibe Testing. We are writing code that looks right and feels right, but beneath the surface, we are bypassing the foundational knowledge required to build truly robust software.</p>
+<h2 id="what-is-vibe-coding">
+  What is Vibe Coding?
+  <a class="heading-link" href="#what-is-vibe-coding">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>At its core, Vibe Coding is the practice of writing or accepting AI-generated code based on intuition, quick visual checks, and surface-level appearance. It is the &ldquo;eye test&rdquo; for the LLM era. If the indentation is correct, the variable names look idiomatic, and the logic seems to follow a familiar pattern, we hit &ldquo;merge.&rdquo;</p>
+<p>The Hidden Risk: The danger isn&rsquo;t that the code won&rsquo;t run; the danger is that we lose the ability to anticipate failure. When you don&rsquo;t intimately understand the &ldquo;why&rdquo; behind the code, the browser APIs being called, the framework internals at play, or the specific language specs, you cannot see the edge cases. You cannot predict the race conditions or the obscure bugs that only manifest under specific loads.</p>
+<p>If you don&rsquo;t know why it works, you certainly won&rsquo;t know why it broke.</p>
+<h2 id="the-rise-of-vibe-testing">
+  The Rise of Vibe Testing
+  <a class="heading-link" href="#the-rise-of-vibe-testing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>If Vibe Coding is the symptom, Vibe Testing is the secondary infection. This is a reactive, superficial approach to Quality Assurance where the primary goal is simply to &ldquo;make it work&rdquo; or confirm the &ldquo;happy path&rdquo;.</p>
+<p>In a Vibe Testing environment, the focus shifts from true robustness to quick, visible wins. This results in a dangerous output:</p>
+<ul>
+<li><strong>Shallow Unit Tests</strong>: Tests that only cover the code the AI generated, rather than the logic the business actually needs.</li>
+<li><strong>Missing Security Checks</strong>: Overlooking non-obvious vulnerabilities like subtle XSS or injection vectors because the AI-suggested utility seems standard.</li>
+<li><strong>Ignored Regressions</strong>: If the performance takes a hit but the test still &ldquo;runs,&rdquo; it&rsquo;s often ignored.</li>
+</ul>
+<h2 id="real-world-pitfalls-when-shortcuts-fail">
+  Real-World Pitfalls: When Shortcuts Fail
+  <a class="heading-link" href="#real-world-pitfalls-when-shortcuts-fail">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>To understand the stakes, we have to look at how these shortcuts manifest in production. In my experience, these fails usually land in two categories: Security and Performance.</p>
+<p><strong>Case 1: The Obscure Security Flaw</strong>
+Imagine an AI suggests a data-processing utility for your latest feature. To the eyes of a developer &ldquo;coding on a vibe,&rdquo; the function looks clean. However, the AI might have suggested a deprecated or non-safeguarded function. Without deep foundational knowledge of the language spec, the developer won&rsquo;t recognize the potential for injection. The code passes the eye test, passes the &ldquo;happy path&rdquo; test, and leaves a door wide open for attackers.</p>
+<p><strong>Case 2: The Performance Trap</strong>
+This is perhaps the most common AI-generated error. An AI assistant might generate an O(N²) algorithm for array manipulation when an O(N) solution exists.</p>
+<p>The Vibe Test: The developer runs it locally with a small dataset. It&rsquo;s fast. It works.
+The Reality: The moment this hits production scale with thousands of concurrent users and massive datasets, the application crashes. The &ldquo;vibe&rdquo; was good, but the math was fatal.</p>
+<h2 id="the-new-technical-debt">
+  The New Technical Debt
+  <a class="heading-link" href="#the-new-technical-debt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>We need to stop viewing AI shortcuts as free wins. They are a form of Technical Debt.</p>
+<p>Unlike traditional debt, where you might consciously choose to skip a refactor to meet a deadline, this new debt is hidden, complex, and exponentially more expensive to resolve later. When you build a system on code you don&rsquo;t fully understand, you aren&rsquo;t just shipping a feature; you are shipping a mystery that your future self (or your replacement) will eventually have to solve under pressure.</p>
+<h2 id="moving-from-crutch-to-tool">
+  Moving from &ldquo;Crutch&rdquo; to &ldquo;Tool&rdquo;
+  <a class="heading-link" href="#moving-from-crutch-to-tool">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>How do we fix this? We don&rsquo;t need to ban AI; we need to change our relationship with it. We must move from using AI as a crutch to using it as a sophisticated tool.</p>
+<p><strong>1. Read, Don&rsquo;t Just Paste</strong>
+This sounds simple, but it is the most violated rule in modern dev. You must read every single line of generated code. If there is an API or a pattern you don&rsquo;t immediately recognize, that is a signal to stop.</p>
+<p><strong>2. Stop and Research</strong>
+When you encounter that unfamiliar pattern, don&rsquo;t ask the AI to explain it, search for the official documentation. Reconnecting with the source of truth (the language docs, the browser specs) is the only way to prevent the erosion of your skills.</p>
+<p><strong>3. Intentionally Refactor &amp; Rework</strong>
+Once the AI gives you a solution, try to break it. Can you write a more idiomatic or performant version? By reworking the output, you aren&rsquo;t just improving the code; you are reclaiming the learning process.</p>
+<h2 id="deepening-foundational-skills">
+  Deepening Foundational Skills
+  <a class="heading-link" href="#deepening-foundational-skills">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Whether you are a developer or a tester, the &ldquo;Vibe Shift&rdquo; requires a doubling down on fundamentals.</p>
+<p><strong>For Developers:</strong> Dedicate time to deeply understand the &ldquo;unsexy&rdquo; parts of your stack. Know your JavaScript event loop, your Python memory management, and your React reconciliation process. When you use AI, use it as a sparring partner. Let it generate code, and then write unit tests specifically designed to break that code.</p>
+<p><strong>For Testers and QA:</strong> Shift your mindset from Verification to Anticipation. Don&rsquo;t just check if the code does what the ticket says. Ask the &ldquo;Anticipatory Testing&rdquo; question: &ldquo;What platform, state, or input could the AI not have considered when it wrote this code?&rdquo;</p>
+<p>Focus on the boundaries, the edge cases, and the non-happy paths. That is where the substance lives.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2026
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

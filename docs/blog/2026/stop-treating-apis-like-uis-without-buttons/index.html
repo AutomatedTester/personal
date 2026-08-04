@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="Let&rsquo;s be honest: Most people are doing API testing wrong.
+They treat APIs like they&rsquo;re just &ldquo;UI without the buttons.&rdquo; They take their bloated, fragile E2E mindsets, swap out a Selenium script for a Postman collection or a RestAssured suite, and wonder why they&rsquo;re still drowning in maintenance and &ldquo;flaky&rdquo; results.
+If you&rsquo;re just checking that a 200 OK comes back with the right JSON keys, you aren&rsquo;t testing the API. You&rsquo;re just checking if the server is still plugged in. This, to me, is why some people call automation checks rather than tests.">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Stop Treating APIs Like UIs Without Buttons">
+	<meta name="twitter:description" content="Let’s be honest: Most people are doing API testing wrong.
+They treat APIs like they’re just “UI without the buttons.” They take their bloated, fragile E2E mindsets, swap out a Selenium script for a Postman collection or a RestAssured suite, and wonder why they’re still drowning in maintenance and “flaky” results.
+If you’re just checking that a 200 OK comes back with the right JSON keys, you aren’t testing the API. You’re just checking if the server is still plugged in. This, to me, is why some people call automation checks rather than tests.">
+
+    <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/">
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="Stop Treating APIs Like UIs Without Buttons">
+	<meta property="og:description" content="Let’s be honest: Most people are doing API testing wrong.
+They treat APIs like they’re just “UI without the buttons.” They take their bloated, fragile E2E mindsets, swap out a Selenium script for a Postman collection or a RestAssured suite, and wonder why they’re still drowning in maintenance and “flaky” results.
+If you’re just checking that a 200 OK comes back with the right JSON keys, you aren’t testing the API. You’re just checking if the server is still plugged in. This, to me, is why some people call automation checks rather than tests.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-03-31T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-03-31T00:00:00+00:00">
+
+
+    <title>
+  Stop Treating APIs Like UIs Without Buttons · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.164.0">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/">
+          Stop Treating APIs Like UIs Without Buttons
+        </a>
+      </h1>
+    </header>
+
+    <p>Let&rsquo;s be honest: Most people are doing API testing wrong.</p>
+<p>They treat APIs like they&rsquo;re just &ldquo;UI without the buttons.&rdquo; They take their bloated, fragile E2E mindsets, swap out a Selenium script for a Postman collection or a RestAssured suite, and wonder why they&rsquo;re still drowning in maintenance and &ldquo;flaky&rdquo; results.</p>
+<p>If you&rsquo;re just checking that a 200 OK comes back with the right JSON keys, you aren&rsquo;t testing the API. You&rsquo;re just checking if the server is still plugged in. This, to me, is why some people call automation checks rather than tests.</p>
+<h2 id="your-api-tests-are-probably-useless">
+  Your API Tests Are Probably Useless
+  <a class="heading-link" href="#your-api-tests-are-probably-useless">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Here is the part where people get uncomfortable: An API test that passes 100% of the time in your CI pipeline is often a sign of a bad test suite.</p>
+<p>Why? Because most API suites focus on the &ldquo;Happy Path&rdquo; to make the dashboard look green. They validate the contract (which a Schema should be doing anyway) rather than the behavior.</p>
+<p>We&rsquo;ve spent years telling people to &ldquo;shift left&rdquo; and move away from the UI. But what did we do? We just moved the same bad habits one layer down. We created &ldquo;Integrated Tests&rdquo; (as J.B. Rainsberger calls them), tests that require three databases, a mock service, and a prayer to run.</p>
+<p>That&rsquo;s not an API test. That&rsquo;s a distributed monolith headache.</p>
+<h2 id="how-to-stop-being-productively-busy-and-start-being-effective">
+  How to Stop Being &ldquo;Productively Busy&rdquo; and Start Being Effective
+  <a class="heading-link" href="#how-to-stop-being-productively-busy-and-start-being-effective">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>If we want to actually be productive, rather than just writing code that generates reports no one reads, we need to change the approach:</p>
+<p><strong>1. Stop Testing the Schema, Start Testing the State</strong>
+If your API documentation says a field is a string, and your test confirms it&rsquo;s a string, you&rsquo;ve achieved nothing. A linter or a static type checker could have told you that.</p>
+<p>The Fix: Test the side effects. If I POST to /orders, does the stock level actually drop? If I try to refund an order twice, does the system stop me? Test the business logic that lives behind the endpoint, not the shape of the envelope.</p>
+<p><strong>2. Embrace the &ldquo;Negative&rdquo; (It&rsquo;s where the bugs live)</strong>
+Happy path testing is for demos. Real engineering is about how things fail.</p>
+<p>The Fix: Spend 70% of your time trying to break the API. Send it garbage. Send it SQL injection strings. Send it a payload that&rsquo;s 10MB too large. If your API doesn&rsquo;t fail gracefully with a meaningful error code, your &ldquo;testing&rdquo; has failed.</p>
+<p><strong>3. Kill the &ldquo;Mega-Suite&rdquo;</strong>
+We often see teams with 2,000 API tests that take 20 minutes to run. That&rsquo;s not &ldquo;fast feedback&rdquo;; that&rsquo;s a coffee break.</p>
+<p>The Fix: Contract Testing (Pact, etc.) handles the &ldquo;will these two things talk to each other?&rdquo; question. Component testing handles the logic. Your &ldquo;API tests&rdquo; should be lean, mean, and focused on the integration points that actually matter.</p>
+<h2 id="automation-isnt-scary-but-waste-is">
+  Automation isn&rsquo;t Scary&hellip; but Waste is.
+  <a class="heading-link" href="#automation-isnt-scary-but-waste-is">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>The scariest thing in automation isn&rsquo;t a failing test; it&rsquo;s a green suite that provides zero confidence.</p>
+<p>API testing should be the bedrock of your strategy, but only if you treat the API as a first-class citizen of your architecture, not just a shortcut to avoid using a browser.</p>
+<p>Let&rsquo;s stop clicking &ldquo;Run&rdquo; on suites we don&rsquo;t trust. Let&rsquo;s start building tests that actually tell us something we didn&rsquo;t already know.</p>
+<p>P.s. I had a great conversation with Kristin Jackvony about this recently on the BrowserStack Podcast.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2026
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="David Burns">
+    <meta name="description" content="We&rsquo;ve all been there: a CI/CD pipeline that takes 45 minutes to run, with three &ldquo;flaky&rdquo; tests that everyone just ignores until they pass on a retry. This isn&rsquo;t just a technical problem; it&rsquo;s a trust problem.
+When your automation suite becomes a graveyard of &ldquo;maybe&rdquo; results, it stops making life easier and starts making it more stressful.
+
+  1. The High Cost of &ldquo;Maintenance Theater&rdquo;
+  
+    
+  
+
+Research shows that teams can spend up to 80% of their time maintaining existing tests rather than building new features. We call this &ldquo;Maintenance Theater,&rdquo; acting busy fixing broken scripts without actually improving the quality of the product.">
+    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="The &#34;Automation Debt&#34; Cleanup: Less is More">
+	<meta name="twitter:description" content="We’ve all been there: a CI/CD pipeline that takes 45 minutes to run, with three “flaky” tests that everyone just ignores until they pass on a retry. This isn’t just a technical problem; it’s a trust problem.
+When your automation suite becomes a graveyard of “maybe” results, it stops making life easier and starts making it more stressful.
+1. The High Cost of “Maintenance Theater” Research shows that teams can spend up to 80% of their time maintaining existing tests rather than building new features. We call this “Maintenance Theater,” acting busy fixing broken scripts without actually improving the quality of the product.">
+
+    <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/">
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="The &#34;Automation Debt&#34; Cleanup: Less is More">
+	<meta property="og:description" content="We’ve all been there: a CI/CD pipeline that takes 45 minutes to run, with three “flaky” tests that everyone just ignores until they pass on a retry. This isn’t just a technical problem; it’s a trust problem.
+When your automation suite becomes a graveyard of “maybe” results, it stops making life easier and starts making it more stressful.
+1. The High Cost of “Maintenance Theater” Research shows that teams can spend up to 80% of their time maintaining existing tests rather than building new features. We call this “Maintenance Theater,” acting busy fixing broken scripts without actually improving the quality of the product.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-03-13T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-03-13T00:00:00+00:00">
+
+
+    <title>
+  The &#34;Automation Debt&#34; Cleanup: Less is More · David Burns - AutomatedTester
+</title>
+
+    
+      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.164.0">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      David Burns - AutomatedTester
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/">
+          The &#34;Automation Debt&#34; Cleanup: Less is More
+        </a>
+      </h1>
+    </header>
+
+    <p>We&rsquo;ve all been there: a CI/CD pipeline that takes 45 minutes to run, with three &ldquo;flaky&rdquo; tests that everyone just ignores until they pass on a retry. This isn&rsquo;t just a technical problem; it&rsquo;s a trust problem.</p>
+<p>When your automation suite becomes a graveyard of &ldquo;maybe&rdquo; results, it stops making life easier and starts making it more stressful.</p>
+<h2 id="1-the-high-cost-of-maintenance-theater">
+  1. The High Cost of &ldquo;Maintenance Theater&rdquo;
+  <a class="heading-link" href="#1-the-high-cost-of-maintenance-theater">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Research shows that teams can spend up to 80% of their time maintaining existing tests rather than building new features. We call this &ldquo;Maintenance Theater,&rdquo; acting busy fixing broken scripts without actually improving the quality of the product.</p>
+<p>The Fix: Use the &ldquo;Keep, Refactor, or Kill&rdquo; framework:</p>
+<ul>
+<li><strong>Keep</strong>: High-value, stable tests covering critical user journeys (e.g., &ldquo;Can a user pay us?&rdquo;).</li>
+<li><strong>Refactor</strong>: Flaky tests that are valuable but poorly written. If it fails 10% of the time for no reason, it&rsquo;s a liability.</li>
+<li><strong>Kill</strong>: Redundant tests, &ldquo;ghost&rdquo; tests for features that no longer exist, or tests that have never caught a single bug in two years. Deleting a bad test is a net positive for the team.</li>
+</ul>
+<h2 id="2-the-ai-agent-paradox-quantity--quality">
+  2. The AI Agent Paradox: Quantity != Quality
+  <a class="heading-link" href="#2-the-ai-agent-paradox-quantity--quality">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>We are entering an era where AI agents can generate hundreds of test cases in seconds. While this feels like a superpower, it introduces a dangerous new form of &ldquo;Automation Debt.&rdquo;</p>
+<p>The Risk: AI agents are excellent at pattern matching but often blind to business risk.</p>
+<p>An AI agent might generate 50 tests for a button&rsquo;s color and alignment (low risk) while completely ignoring a complex race condition in the checkout logic (high risk). Without human-in-the-loop oversight, you end up with:</p>
+<ul>
+<li><strong>Scenario Explosion</strong>: Thousands of tests that pass but don&rsquo;t actually validate the intent of the software.</li>
+<li><strong>False Confidence</strong>: A &ldquo;green&rdquo; dashboard that masks critical logic gaps because the AI didn&rsquo;t &ldquo;understand&rdquo; the underlying business rules.</li>
+<li><strong>Context Blindness</strong>: AI might verify a function works technically, but miss that the behavior should change based on user permissions or regional regulations.</li>
+</ul>
+<h2 id="3-making-it-easier-the-confidence-engineering-approach">
+  3. Making it Easier: The &ldquo;Confidence Engineering&rdquo; Approach
+  <a class="heading-link" href="#3-making-it-easier-the-confidence-engineering-approach">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>To truly simplify your workflow, stop measuring &ldquo;Test Coverage&rdquo; (how much code is touched) and start measuring &ldquo;Risk Coverage&rdquo; (how much of the business value is protected).</p>
+<p>Traditional Automation vs. Confidence Engineering:</p>
+<ul>
+<li>Traditional focuses on the total number of tests; Confidence focuses on the most critical failure modes.</li>
+<li>Traditional lets AI agents generate scripts blindly based on patterns; Confidence has humans guide AI to probe high-risk business logic.</li>
+<li>Traditional treats maintenance as a &ldquo;chore&rdquo; you do when things break; Confidence treats maintenance as a &ldquo;pruning&rdquo; session to keep the suite lean.</li>
+<li>Traditional trusts the &ldquo;Green&rdquo; dashboard without question; Confidence verifies the &ldquo;Why&rdquo; behind every test failure.</li>
+</ul>
+<p>The 5-Minute Win: Go to your test suite today and find the one test that fails most often. If it&rsquo;s not testing a mission-critical flow, delete it. Experience the immediate relief of a faster, more reliable pipeline.</p>
+<p>I had this conversation with Simon Stewart recently on BrowserStack Talks.</p>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Engineering Effectiveness Nerd</p>
+      
+      
+        ©
+        
+        2026
+         David Burns 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

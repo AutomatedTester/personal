@@ -10,9 +10,58 @@
 		
 		
 		
-			<lastBuildDate>Wed, 08 May 2024 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 17 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://www.theautomatedtester.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Testing Shouldn&#39;t Be a Chore. Here is How to Make it Automatic.</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/testing-shouldnt-chore-here-how-make-automatic/</link>
+				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/testing-shouldnt-chore-here-how-make-automatic/</guid>
+				<description>&lt;p&gt;Let&amp;rsquo;s be honest: nobody wakes up excited to do chores.&lt;/p&gt;&#xA;&lt;p&gt;For a lot of engineering teams, testing feels exactly like that, a tedious, manual chore tacked onto the end of a long sprint. The developer finishes the feature, throws it over the wall, and prays it doesn&amp;rsquo;t bounce back with a list of bugs.&lt;/p&gt;&#xA;&lt;p&gt;When testing feels like an extra burden, people skip it, rush through it, or resent it. And that&amp;rsquo;s exactly when critical issues slip through into production.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Execution Trap: Stop Running Tests That Don&#39;t Need Running</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/execution-trap-stop-running-tests-dont-need/</link>
+				<pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/execution-trap-stop-running-tests-dont-need/</guid>
+				<description>&lt;p&gt;We&amp;rsquo;ve all been there. You update a small piece of text or fix a tiny CSS bug. You push the code, and then&amp;hellip; you wait. Your CI pipeline decides that this minor tweak means it needs to run your entire end-to-end regression suite.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s slow, it&amp;rsquo;s expensive, and honestly, it&amp;rsquo;s a sledgehammer to crack a nut.&lt;/p&gt;&#xA;&lt;p&gt;If you tuned into Selenium Conference this year, you might have caught Simon Stewart&amp;rsquo;s talk. He hit on a topic that every team struggling with slow deployments needs to hear: we need to stop running things just because they are there.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Vibe Shift: How AI-Powered Shortcuts Create New Problems</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/</link>
+				<pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/</guid>
+				<description>&lt;p&gt;We are currently living through one of the most significant paradoxes in the history of software development. On one hand, tools like Copilot, Claude, Gemini, and ChatGPT offer us unprecedented speed. We can generate entire functions in moments, prototype features in an afternoon, and ship at a breakneck pace that was unimaginable just five years ago.&lt;/p&gt;&#xA;&lt;p&gt;But this speed comes with a hidden, mounting cost: the erosion of substance.&lt;/p&gt;&#xA;&lt;p&gt;As we lean more heavily on AI to do the &amp;ldquo;heavy lifting&amp;rdquo; of syntax and structure, we are entering the era of Vibe Coding and its equally dangerous sibling, Vibe Testing. We are writing code that looks right and feels right, but beneath the surface, we are bypassing the foundational knowledge required to build truly robust software.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Value Trap: Why Your Automation Suite is Lying to You</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/</link>
+				<pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;ve spent a significant portion of my career in the trenches of Open Source and browser automation. I&amp;rsquo;ve seen thousands of test suites, some elegant, most chaotic, and I&amp;rsquo;ve noticed a recurring, dangerous trend. We have become obsessed with verification at the expense of validation.&lt;/p&gt;&#xA;&lt;p&gt;We build massive CI/CD pipelines that glow green, yet our users are still frustrated. We hit 90% code coverage, yet the churn rate doesn&amp;rsquo;t budge. If our &amp;ldquo;Quality Assurance&amp;rdquo; isn&amp;rsquo;t actually assuring the quality of the user experience, what exactly are we doing?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Stop Treating APIs Like UIs Without Buttons</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/</link>
+				<pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/</guid>
+				<description>&lt;p&gt;Let&amp;rsquo;s be honest: Most people are doing API testing wrong.&lt;/p&gt;&#xA;&lt;p&gt;They treat APIs like they&amp;rsquo;re just &amp;ldquo;UI without the buttons.&amp;rdquo; They take their bloated, fragile E2E mindsets, swap out a Selenium script for a Postman collection or a RestAssured suite, and wonder why they&amp;rsquo;re still drowning in maintenance and &amp;ldquo;flaky&amp;rdquo; results.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re just checking that a 200 OK comes back with the right JSON keys, you aren&amp;rsquo;t testing the API. You&amp;rsquo;re just checking if the server is still plugged in. This, to me, is why some people call automation checks rather than tests.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The &#34;Automation Debt&#34; Cleanup: Less is More</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/</link>
+				<pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/</guid>
+				<description>&lt;p&gt;We&amp;rsquo;ve all been there: a CI/CD pipeline that takes 45 minutes to run, with three &amp;ldquo;flaky&amp;rdquo; tests that everyone just ignores until they pass on a retry. This isn&amp;rsquo;t just a technical problem; it&amp;rsquo;s a trust problem.&lt;/p&gt;&#xA;&lt;p&gt;When your automation suite becomes a graveyard of &amp;ldquo;maybe&amp;rdquo; results, it stops making life easier and starts making it more stressful.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-the-high-cost-of-maintenance-theater&#34;&gt;&#xA;  1. The High Cost of &amp;ldquo;Maintenance Theater&amp;rdquo;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-the-high-cost-of-maintenance-theater&#34;&gt;&#xA;    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Research shows that teams can spend up to 80% of their time maintaining existing tests rather than building new features. We call this &amp;ldquo;Maintenance Theater,&amp;rdquo; acting busy fixing broken scripts without actually improving the quality of the product.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Developer&#39;s Compass: Why TDD is the Only Way to Survive the AI Gold Rush</title>
+				<link>https://www.theautomatedtester.co.uk/blog/2026/developers-compass-why-tdd-only-way-survive-ai-gold-rush/</link>
+				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.theautomatedtester.co.uk/blog/2026/developers-compass-why-tdd-only-way-survive-ai-gold-rush/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;ve spent most of my career arguing that if you aren&amp;rsquo;t testing, you aren&amp;rsquo;t actually engineering; you&amp;rsquo;re just hoping. For years, I&amp;rsquo;ve stood on stages telling anyone who&amp;rsquo;d listen that &amp;ldquo;flakiness isn&amp;rsquo;t from your test framework&amp;rdquo; and that &amp;ldquo;you wouldn&amp;rsquo;t test a car once it&amp;rsquo;s fully assembled, so why do that to your app?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;But now, we&amp;rsquo;ve hit a weird inflection point. We are in the era of Generative AI, where code is being vomited out of LLMs at a velocity we&amp;rsquo;ve never seen. Everyone is talking about &amp;ldquo;vibe coding,&amp;rdquo; the idea that you can just describe a feature, watch the screen fill with syntax, and if it looks okay, you ship it.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Flakiness isn&#39;t from your test framework</title>
 				<link>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</link>
