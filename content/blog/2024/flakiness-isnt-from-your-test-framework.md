@@ -15,7 +15,7 @@ Cypress runs in the page that’s being tested. That means Cypress is hemmed in 
 
 Selenium, when [Jason Huggins](https://twitter.com/hugs) created it, used this technique for automating the browser and Selenium moved away from it when we merged with WebDriver. Hugs have been calling this out for ever. It’s also the reason why you can’t do basic things like trusted events, iframes, or navigating between different [origins](https://developer.mozilla.org/en-US/docs/Glossary/Origin).
 
-{{< twitter user="hugs" id="1177619507927490560" >}}
+{{< x user="hugs" id="1177619507927490560" >}}
 
 Driving the browser from inside to outside, where outside is your webpage, is always going to give you a more realistic testing experience.
 

@@ -20,6 +20,6 @@ The other amazing things that happened was we had Blackberry join the working gr
 
 And... how can I forget about this...
 
-{{< tweet user="AutomatedTester" id="438558763432169472" >}}
+{{< x user="AutomatedTester" id="438558763432169472" >}}
 
 The specification is getting a lot of attention from the people that we need and want which makes me really excited!

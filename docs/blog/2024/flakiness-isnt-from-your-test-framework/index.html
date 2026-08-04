@@ -11,23 +11,25 @@
 
     <meta name="author" content="David Burns">
     <meta name="description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
-That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress.">
+That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress. The reason your tests are flaky is more down to how you interpret the UI and how the browser runs the code, or to put in a different way, you’re thinking about your synchronous steps of a test while they’re running in an asynchronous way. This mismatch leads to flakiness.">
     <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Flakiness isn&#39;t from your test framework">
-<meta name="twitter:description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
-That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress.">
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Flakiness isn&#39;t from your test framework">
+	<meta name="twitter:description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
+That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress. The reason your tests are flaky is more down to how you interpret the UI and how the browser runs the code, or to put in a different way, you’re thinking about your synchronous steps of a test while they’re running in an asynchronous way. This mismatch leads to flakiness.">
 
     <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/">
-  <meta property="og:site_name" content="David Burns - AutomatedTester">
-  <meta property="og:title" content="Flakiness isn&#39;t from your test framework">
-  <meta property="og:description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
-That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-05-08T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-05-08T00:00:00+00:00">
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="Flakiness isn&#39;t from your test framework">
+	<meta property="og:description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
+That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress. The reason your tests are flaky is more down to how you interpret the UI and how the browser runs the code, or to put in a different way, you’re thinking about your synchronous steps of a test while they’re running in an asynchronous way. This mismatch leads to flakiness.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2024-05-08T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-05-08T00:00:00+00:00">
 
 
     <title>
@@ -43,7 +45,7 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -62,7 +64,7 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 
     
 
-    <meta name="generator" content="Hugo 0.125.6">
+    <meta name="generator" content="Hugo 0.164.0">
   </head>
 
   
@@ -135,8 +137,8 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 </h2>
 <p>Cypress runs in the page that’s being tested. That means Cypress is hemmed in by the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. It injects what it needs to the page. The problem is this means CPU has to swap in commands from different tasks. This <em>could</em> lead to less flakiness but it’s because it’s running much slower. Since there is no guarantee of ordering of commands between tests and the front end, the reduced flakiness is pure chance.</p>
 <p>Selenium, when <a href="https://twitter.com/hugs">Jason Huggins</a> created it, used this technique for automating the browser and Selenium moved away from it when we merged with WebDriver. Hugs have been calling this out for ever. It’s also the reason why you can’t do basic things like trusted events, iframes, or navigating between different <a href="https://developer.mozilla.org/en-US/docs/Glossary/Origin">origins</a>.</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I continue to be amused and amazed by the popularity of Cypress. Its fundamental architecture has the same limitations as the first version of Selenium. Which is why we abandoned that approach in Se 2, merging with the WebDriver project, which does not have these limitations. <a href="https://t.co/16dbcr5J7y">pic.twitter.com/16dbcr5J7y</a></p>&mdash; Jason Huggins 🛠️ (@hugs) <a href="https://twitter.com/hugs/status/1177619507927490560?ref_src=twsrc%5Etfw">September 27, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I continue to be amused and amazed by the popularity of Cypress. Its fundamental architecture has the same limitations as the first version of Selenium. Which is why we abandoned that approach in Se 2, merging with the WebDriver project, which does not have these limitations. <a href="https://t.co/16dbcr5J7y">pic.twitter.com/16dbcr5J7y</a></p>&mdash; Jason Huggins 🛠️ (@hugs) <a href="https://x.com/hugs/status/1177619507927490560?ref_src=twsrc%5Etfw">September 27, 2019</a></blockquote>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
 
 <p>Driving the browser from inside to outside, where outside is your webpage, is always going to give you a more realistic testing experience.</p>
@@ -191,13 +193,9 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 </h2>
 <p>So is there any benefit to running your tests in Electron? Well… how many of your users use your site with electron? Probably the same amount as would use playwright-Firefox or playwright-WebKit. It’s a number that is very close to 0.</p>
 <p>I’ve talked about this many times about having your tests work. It’s important to have a number of tests running in the environments where our users are. I’ve got examples in my talk from last year. Different environments, like mobile versus desktop, can also lead to different reasons for flakiness.</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Mo6LmFGrtxY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Mo6LmFGrtxY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+		</div>
 
 <p>So… when picking a framework, pick one that works well for you. It should be able to do a <a href="https://www.theautomatedtester.co.uk/blog/2023/the-login-test/">Login Test</a> easily. If it can’t then it shouldn’t be used.</p>
 
@@ -233,7 +231,7 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
       
         ©
         
-        2024
+        2026
          David Burns 
       
       
@@ -255,13 +253,6 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
     
 
     
-  
-    
-      
-    
-  
-
-
 
     
 

@@ -4,7 +4,7 @@ date: 2018-01-04
 ---
 Over the festive break I sent out this tweet.
 
-{{< tweet user="AutomatedTester" id="944194130854498304" >}}
+{{< x user="AutomatedTester" id="944194130854498304" >}}
 
 The, now deleted, quoted tweet went along the lines of "If you have 3 senior engineers earning $150k and a junior developer breaks the repository is it worth the $60k for having a junior". The original tweet, and then similar tweets that came out after that shows that there seems to be a disconnect on what some engineers, and even managers, believe a senior engineer should act like and what it really takes to be a senior or higher engineer.
 

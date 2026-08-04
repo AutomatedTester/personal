@@ -11,23 +11,25 @@
 
     <meta name="author" content="David Burns">
     <meta name="description" content="The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
-The thing that people don&rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.">
+The thing that people don&rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly. The next thing that we need to do is to make sure that we can report on all our tests. I have a QA Director that likes to have a look at the test reports every so often so metrics are very important.">
     <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Py.Test and -XDist Plugin">
-<meta name="twitter:description" content="The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
-The thing that people don&rsquo;t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.">
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Py.Test and -XDist Plugin">
+	<meta name="twitter:description" content="The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
+The thing that people don’t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly. The next thing that we need to do is to make sure that we can report on all our tests. I have a QA Director that likes to have a look at the test reports every so often so metrics are very important.">
 
     <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2011/pytest_and_xdist_plugin/">
-  <meta property="og:site_name" content="David Burns - AutomatedTester">
-  <meta property="og:title" content="Py.Test and -XDist Plugin">
-  <meta property="og:description" content="The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
-The thing that people don’t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2011-02-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2011-02-14T00:00:00+00:00">
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="Py.Test and -XDist Plugin">
+	<meta property="og:description" content="The other day I was working on trying to find a decent way to start parallelising our Selenium Tests within Mozilla. One thing to know is that the team I am in, WebQA, does the QA work for all of the Mozilla Web properties.
+The thing that people don’t probably realise is that Mozilla has a lot sites. Lots and lots of sites so we need to make sure that we run our Selenium tests really quickly. The next thing that we need to do is to make sure that we can report on all our tests. I have a QA Director that likes to have a look at the test reports every so often so metrics are very important.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2011-02-14T00:00:00+00:00">
+		<meta property="article:modified_time" content="2011-02-14T00:00:00+00:00">
 
 
     <title>
@@ -43,7 +45,7 @@ The thing that people don’t probably realise is that Mozilla has a lot sites. 
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -62,7 +64,7 @@ The thing that people don’t probably realise is that Mozilla has a lot sites. 
 
     
 
-    <meta name="generator" content="Hugo 0.125.6">
+    <meta name="generator" content="Hugo 0.164.0">
   </head>
 
   
@@ -164,7 +166,7 @@ The thing that people don’t probably realise is that Mozilla has a lot sites. 
       
         ©
         
-        2024
+        2026
          David Burns 
       
       
@@ -186,13 +188,6 @@ The thing that people don’t probably realise is that Mozilla has a lot sites. 
     
 
     
-  
-    
-      
-    
-  
-
-
 
     
 

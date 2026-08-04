@@ -14,20 +14,22 @@
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.">
     <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="How Selenium Works: Episode 3 - isDisplayed">
-<meta name="twitter:description" content="After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="How Selenium Works: Episode 3 - isDisplayed">
+	<meta name="twitter:description" content="After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.">
 
     <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-3-isdiplayed/">
-  <meta property="og:site_name" content="David Burns - AutomatedTester">
-  <meta property="og:title" content="How Selenium Works: Episode 3 - isDisplayed">
-  <meta property="og:description" content="After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
+	<meta property="og:site_name" content="David Burns - AutomatedTester">
+	<meta property="og:title" content="How Selenium Works: Episode 3 - isDisplayed">
+	<meta property="og:description" content="After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
 I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2020-02-27T00:00:00+00:00">
-    <meta property="article:modified_time" content="2020-02-27T00:00:00+00:00">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2020-02-27T00:00:00+00:00">
+		<meta property="article:modified_time" content="2020-02-27T00:00:00+00:00">
 
 
     <title>
@@ -43,7 +45,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -62,7 +64,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 
     
 
-    <meta name="generator" content="Hugo 0.125.6">
+    <meta name="generator" content="Hugo 0.164.0">
   </head>
 
   
@@ -148,7 +150,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
 <p>From there we need to have a look at the element. We need to start looking at the CSS that is on the element.</p>
 <p>First, let&rsquo;s see if the element would still be part of the accessibility tree. We don&rsquo;t look in the accessibility tree, we just look at some scenarios where they won&rsquo;t be there and they won&rsquo;t influence any positioning of elements on the page. We don&rsquo;t look in the accessibility tree as this can be an extremely expensive operation in the browser.</p>
 <p>An easy scenario like that is when there is <code>display: none</code> on a element like below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#idOfElement {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#idOfElement {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>This will result in nothing being added to the <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">accessibility tree</a> and won&rsquo;t influence the positioning of elements.</p>
@@ -215,7 +217,7 @@ I will repeat this on every page of the series but a lot, an annoying amount som
       
         ©
         
-        2024
+        2026
          David Burns 
       
       
@@ -237,13 +239,6 @@ I will repeat this on every page of the series but a lot, an annoying amount som
     
 
     
-  
-    
-      
-    
-  
-
-
 
     
 
