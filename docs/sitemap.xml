@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.theautomatedtester.co.uk/blog/</loc>
-    <lastmod>2024-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.theautomatedtester.co.uk/</loc>
-    <lastmod>2024-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/testing-shouldnt-chore-here-how-make-automatic/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/execution-trap-stop-running-tests-dont-need/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/</loc>
+    <lastmod>2026-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/</loc>
+    <lastmod>2026-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/</loc>
+    <lastmod>2026-03-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/</loc>
+    <lastmod>2026-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theautomatedtester.co.uk/blog/2026/developers-compass-why-tdd-only-way-survive-ai-gold-rush/</loc>
+    <lastmod>2026-02-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
