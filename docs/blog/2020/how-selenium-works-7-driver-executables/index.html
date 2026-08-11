@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="color-scheme" content="light dark">
+<head>
+  <title>
+  How Selenium Works: Episode 7 - Driver Executables · David Burns - AutomatedTester
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
-    
 
-    <meta name="author" content="David Burns">
-    <meta name="description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
+
+
+<meta name="author" content="David Burns">
+<meta name="description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
 
   Why do I need to download something?
   
     
+    Link to heading
   
 
 This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?">
-    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+<meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
-    
+
+
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="How Selenium Works: Episode 7 - Driver Executables">
 	<meta name="twitter:description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
-Why do I need to download something? This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?">
+Why do I need to download something? Link to heading This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?">
 
-    <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/">
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/">
 	<meta property="og:site_name" content="David Burns - AutomatedTester">
 	<meta property="og:title" content="How Selenium Works: Episode 7 - Driver Executables">
 	<meta property="og:description" content="So this episode is going to be slightly different to previous episodes as this question came up this week. Why do browser vendors and the Selenium Project ship a driver executable? And Why do I need to update it with every browser release?
-Why do I need to download something? This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?">
+Why do I need to download something? Link to heading This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?">
 	<meta property="og:locale" content="en_us">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="blog">
@@ -38,78 +43,92 @@ Why do I need to download something? This is one of the biggest pain points I ha
 		<meta property="article:modified_time" content="2020-04-29T00:00:00+00:00">
 
 
-    <title>
-  How Selenium Works: Episode 7 - Driver Executables · David Burns - AutomatedTester
-</title>
 
-    
-      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/">
-    
 
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2020/how-selenium-works-7-driver-executables/">
 
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
-    
 
-    
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    
-
-    <meta name="generator" content="Hugo 0.164.0">
-  </head>
 
   
   
-  <body class="preload-transitions colorscheme-light"
-        onload=""
-  >
-    
+  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
 
-    <main class="wrapper">
-      <nav class="navigation">
+  <main class="wrapper">
+    <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="https://www.theautomatedtester.co.uk/">
       David Burns - AutomatedTester
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/blog/">Blog</a>
+              <a class="navigation-link " href="/blog/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+              <a class="navigation-link " href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
             </li>
           
         
@@ -120,8 +139,8 @@ Why do I need to download something? This is one of the biggest pain points I ha
 </nav>
 
 
-      <div class="content">
-        
+    <div class="content">
+      
   <section class="container page">
   <article>
     <header>
@@ -136,26 +155,29 @@ Why do I need to download something? This is one of the biggest pain points I ha
 <h2 id="why-do-i-need-to-download-something">
   Why do I need to download something?
   <a class="heading-link" href="#why-do-i-need-to-download-something">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <p>This is one of the biggest pain points I have seen people struggle with when using Selenium. The majority of the people who struggle are those who do not have a lot of experience programming. So why do we download this executable?</p>
-<p>In <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/">Episode 1</a> I mentioned Selenium under the hood speaks a <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/#http-and-rest-ish-really">REST-ish API</a>.</p>
+<p>In <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/" >Episode 1</a> I mentioned Selenium under the hood speaks a <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/#http-and-rest-ish-really" >REST-ish API</a>.</p>
 <p>The driver you are downloading is an HTTP server for the client libraries to be able to speak to.</p>
 <h2 id="so-why-not-just-get-the-client-bindings-to-speak-whatever-is-native-to-the-browser">
   So&hellip; Why not just get the client bindings to speak whatever is native to the browser?
   <a class="heading-link" href="#so-why-not-just-get-the-client-bindings-to-speak-whatever-is-native-to-the-browser">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Unfortunately, as I mentioned in <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/">Episode 1</a>, doing that increases the amount of work each binding maintainer needs to do and potentially limits who can write the bindings.</p>
+<p>Unfortunately, as I mentioned in <a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/" >Episode 1</a>, doing that increases the amount of work each binding maintainer needs to do and potentially limits who can write the bindings.</p>
 <p>It also means any setup required for the browser needs to be done by the bindings. If you&rsquo;re using a Chromium-based browser or Firefox, the bindings will need to know where to find the browser executable normally, as well as make sure the profile directory is created properly. It also puts the onus of fixing any breaking changes the browser vendors do to their startup setups on to each of the binding maintainers.</p>
 <p>Trust me, the Selenium Project used to do that and every browser release day meant a mad scramble. We would start running tests in an attempt to make sure nothing was broken. We would fix the problems and then release. This herculean effort by core contributors meant we were limited in adding new features.</p>
-<p>Not having to scramble and making sure it was simple for client binding maintainers to keep up to date was a great push for creating the <a href="https://w3c.github.io/webdriver/">WebDriver Specification</a>.</p>
+<p>Not having to scramble and making sure it was simple for client binding maintainers to keep up to date was a great push for creating the <a href="https://w3c.github.io/webdriver/"  class="external-link" target="_blank" rel="noopener">WebDriver Specification</a>.</p>
 <h2 id="what-about-automatic-downloads-from-the-selenium-project">
   What about automatic downloads from the Selenium Project?
   <a class="heading-link" href="#what-about-automatic-downloads-from-the-selenium-project">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <p>Well&hellip; This is something we have wanted to implement in the past but we haven&rsquo;t had time. Fortunately, there have been other projects that have come along and made this work easier. In the future, we are likely to try to incorporate one of these projects or we might look to see about implementing something ourselves.</p>
@@ -164,57 +186,58 @@ Why do I need to download something? This is one of the biggest pain points I ha
   </article>
 </section>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
   
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [
-          ['$', '$'], ['\\(', '\\)']
-        ],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
       }
-    };
-  </script>
+    );"></script>
 
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>Engineering Effectiveness Nerd</p>
-      
-      
-        ©
-        
-        2026
-         David Burns 
-      
-      
-         · 
-        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-      
-      
-    </section>
-  </footer>
-
-
-    </main>
+    </div>
 
     
-      
-      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+<footer class="footer">
+  <section class="container">
     
+      <p>Engineering Effectiveness Nerd</p>
+    
+    ©
+    
+    2026
+     David Burns 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
 
-    
+  </main>
 
-    
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-M05789F0E5"></script>
       <script>
         var doNotTrack = false;
@@ -230,17 +253,36 @@ Why do I need to download something? This is one of the biggest pain points I ha
         }
       </script>
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
-  </body>
+  
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
 </html>
