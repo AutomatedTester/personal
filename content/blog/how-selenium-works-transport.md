@@ -31,7 +31,7 @@ The Web, the internet, and the world has moved on. Why hasn't Selenium?
 
 This is a good question and the thing is we are trying to move things on. Unfortunately the web has a state where it is broken unless it is working. HTTP is pretty robust as a protocol. It can also allow people to build up clusters for testing without having to worry too much about how the multiplexing would work. This is the reason why Selenium Grid was created and is still a pretty good choice when it comes to farming out your testing to multiple devices and multiple machines.
 
-### But <Some automation Framework that uses Chrome Debug Protocol> is more like the web, be like them.
+### But \<Some automation Framework that uses Chrome Debug Protocol\> is more like the web, be like them.
 
 So... There are tools that use Chrome's Debug Protocol to drive the browser and some of the things they do better than Selenium are down to their choice of how they speak to the speak to the browser. Unfortunately it's a Chrome proprietary protocol and Google are not interested in working with other browsers on making it not.
 
