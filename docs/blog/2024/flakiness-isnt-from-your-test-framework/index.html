@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="color-scheme" content="light dark">
+<head>
+  <title>
+  Flakiness isn&#39;t from your test framework · David Burns - AutomatedTester
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
-    
 
-    <meta name="author" content="David Burns">
-    <meta name="description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
+
+
+<meta name="author" content="David Burns">
+<meta name="description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
 That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress. The reason your tests are flaky is more down to how you interpret the UI and how the browser runs the code, or to put in a different way, you’re thinking about your synchronous steps of a test while they’re running in an asynchronous way. This mismatch leads to flakiness.">
-    <meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
+<meta name="keywords" content="blog,developer,personal,selenium,automation,browsers,interoperability">
 
-    
+
+
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Flakiness isn&#39;t from your test framework">
 	<meta name="twitter:description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
 That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress. The reason your tests are flaky is more down to how you interpret the UI and how the browser runs the code, or to put in a different way, you’re thinking about your synchronous steps of a test while they’re running in an asynchronous way. This mismatch leads to flakiness.">
 
-    <meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/">
+<meta property="og:url" content="https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/">
 	<meta property="og:site_name" content="David Burns - AutomatedTester">
 	<meta property="og:title" content="Flakiness isn&#39;t from your test framework">
 	<meta property="og:description" content="This week I saw Filip Hric share a post from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.
@@ -32,78 +36,92 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 		<meta property="article:modified_time" content="2024-05-08T00:00:00+00:00">
 
 
-    <title>
-  Flakiness isn&#39;t from your test framework · David Burns - AutomatedTester
-</title>
 
-    
-      <link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/">
-    
 
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="canonical" href="https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/">
 
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.92e8d903b61966e866169016fd158f9b71cf99208c68a45957679953ba8654e7.css" integrity="sha256-kujZA7YZZuhmFpAW/RWPm3HPmSCMaKRZV2eZU7qGVOc=" crossorigin="anonymous" media="screen" />
-    
 
-    
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    
-
-    <meta name="generator" content="Hugo 0.164.0">
-  </head>
 
   
   
-  <body class="preload-transitions colorscheme-light"
-        onload=""
-  >
-    
+  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
 
-    <main class="wrapper">
-      <nav class="navigation">
+  <main class="wrapper">
+    <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="https://www.theautomatedtester.co.uk/">
       David Burns - AutomatedTester
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/blog/">Blog</a>
+              <a class="navigation-link " href="/blog/">Blog</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
+              <a class="navigation-link " href="https://streamlabs.com/automatedtester#social-reach">Twitch</a>
             </li>
           
         
@@ -114,8 +132,8 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 </nav>
 
 
-      <div class="content">
-        
+    <div class="content">
+      
   <section class="container page">
   <article>
     <header>
@@ -126,17 +144,18 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
       </h1>
     </header>
 
-    <p>This week I saw Filip Hric share <a href="https://www.linkedin.com/feed/update/urn:li:activity:7193270830271762432/">a post</a> from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.</p>
+    <p>This week I saw Filip Hric share <a href="https://www.linkedin.com/feed/update/urn:li:activity:7193270830271762432/"  class="external-link" target="_blank" rel="noopener">a post</a> from Gleb Bahmutov, ex-principal engineer for Cypress, explaining that the way cypress works and not using transport layers like playwright or WebDriver based frameworks makes its tests less flaky.</p>
 <p>That’s 100% not the reason your tests are flaky. I’m not going to lie, this shocked me that Gleb would say this as I’ve always thought of him as a good engineer after seeing his work on Cypress. The reason your tests are flaky is more down to how you interpret the UI and how the browser runs the code, or to put in a different way, you’re thinking about your synchronous steps of a test while they’re running in an asynchronous way. <strong>This mismatch leads to flakiness</strong>.</p>
 <p>Now add in different browsers interpreting the code in different ways leads to more flakiness. This is why some frameworks don’t want to or can’t support different browsers.</p>
 <h2 id="single-threadedness-of-javascript">
   Single threadedness of JavaScript
   <a class="heading-link" href="#single-threadedness-of-javascript">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Cypress runs in the page that’s being tested. That means Cypress is hemmed in by the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. It injects what it needs to the page. The problem is this means CPU has to swap in commands from different tasks. This <em>could</em> lead to less flakiness but it’s because it’s running much slower. Since there is no guarantee of ordering of commands between tests and the front end, the reduced flakiness is pure chance.</p>
-<p>Selenium, when <a href="https://twitter.com/hugs">Jason Huggins</a> created it, used this technique for automating the browser and Selenium moved away from it when we merged with WebDriver. Hugs have been calling this out for ever. It’s also the reason why you can’t do basic things like trusted events, iframes, or navigating between different <a href="https://developer.mozilla.org/en-US/docs/Glossary/Origin">origins</a>.</p>
+<p>Cypress runs in the page that’s being tested. That means Cypress is hemmed in by the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy"  class="external-link" target="_blank" rel="noopener">same-origin policy</a>. It injects what it needs to the page. The problem is this means CPU has to swap in commands from different tasks. This <em>could</em> lead to less flakiness but it’s because it’s running much slower. Since there is no guarantee of ordering of commands between tests and the front end, the reduced flakiness is pure chance.</p>
+<p>Selenium, when <a href="https://twitter.com/hugs"  class="external-link" target="_blank" rel="noopener">Jason Huggins</a> created it, used this technique for automating the browser and Selenium moved away from it when we merged with WebDriver. Hugs have been calling this out for ever. It’s also the reason why you can’t do basic things like trusted events, iframes, or navigating between different <a href="https://developer.mozilla.org/en-US/docs/Glossary/Origin"  class="external-link" target="_blank" rel="noopener">origins</a>.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I continue to be amused and amazed by the popularity of Cypress. Its fundamental architecture has the same limitations as the first version of Selenium. Which is why we abandoned that approach in Se 2, merging with the WebDriver project, which does not have these limitations. <a href="https://t.co/16dbcr5J7y">pic.twitter.com/16dbcr5J7y</a></p>&mdash; Jason Huggins 🛠️ (@hugs) <a href="https://x.com/hugs/status/1177619507927490560?ref_src=twsrc%5Etfw">September 27, 2019</a></blockquote>
 <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
@@ -145,35 +164,39 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 <h2 id="transport-layers">
   Transport layers
   <a class="heading-link" href="#transport-layers">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <p>The transport layer for speaking to the browser doesn’t affect the flakiness. Its main benefit is scalability. If you need your tests to run in the same browser as the runner then you struggle to scale. Since Selenium’s main transport system is based off HTTP we know it’s highly scalable. Cypress tests are less scalable because it wanted to do everything on the browser.</p>
 <h3 id="but-what-about-cdp">
   but what about CDP?
   <a class="heading-link" href="#but-what-about-cdp">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<p>What about it? It’s a chromium based protocol. Playwright uses it, Puppeteer uses it, and this might shock you, Selenium uses it. This is firstly how Edgedriver and chromedriver speak to the browser. So if you’ve used chromedriver at any point in the last 8+ years you’ve used CDP.  Selenium can also speaks directly to the browser using CDP for some commands. We see this with their network intercept API and logging APIs are examples. Now, webdriverio also supports WebDriver and puppeteer through these APIs. So if we follow <a href="https://glebbahmutov.com/blog/cypress-vs-other-test-runners/">Gleb’s post</a>, we need to move <em>everything</em> down to playwright/puppeteer part of his diagram.</p>
-<p>The one downside to having to rely on CDP is you limited to chromium specific APIs. These are not stable by design which the Chromium team will tell you. It’s the reason why chromedriver/edgedriver needs to be updated with each browser release. Fortunately, <a href="https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/">Selenium Manager can auto update</a> your drivers for you without you needing to worry. If you&rsquo;re not using Selenium Manager you will have to update all your dependencies which you would have to do with Playwright or puppeteer. If you’re using the Selenium event driven APIs then you will have to update your selenium dependency.</p>
+<p>What about it? It’s a chromium based protocol. Playwright uses it, Puppeteer uses it, and this might shock you, Selenium uses it. This is firstly how Edgedriver and chromedriver speak to the browser. So if you’ve used chromedriver at any point in the last 8+ years you’ve used CDP.  Selenium can also speaks directly to the browser using CDP for some commands. We see this with their network intercept API and logging APIs are examples. Now, webdriverio also supports WebDriver and puppeteer through these APIs. So if we follow <a href="https://glebbahmutov.com/blog/cypress-vs-other-test-runners/"  class="external-link" target="_blank" rel="noopener">Gleb’s post</a>, we need to move <em>everything</em> down to playwright/puppeteer part of his diagram.</p>
+<p>The one downside to having to rely on CDP is you limited to chromium specific APIs. These are not stable by design which the Chromium team will tell you. It’s the reason why chromedriver/edgedriver needs to be updated with each browser release. Fortunately, <a href="https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/"  class="external-link" target="_blank" rel="noopener">Selenium Manager can auto update</a> your drivers for you without you needing to worry. If you&rsquo;re not using Selenium Manager you will have to update all your dependencies which you would have to do with Playwright or puppeteer. If you’re using the Selenium event driven APIs then you will have to update your selenium dependency.</p>
 <p>As mentioned, it does limit us to chromium specific APIs which is why Selenium is working with Google, Apple, Mozilla, and a few other little companies to bring about the new Webdriver-bidi spec. When WebDriver-BiDi is out to all browsers then the requirements for updating with the browser will drop like they did with Firefox and geckodriver.</p>
-<p>The <a href="https://developer.chrome.com/blog/webdriver-bidi/">puppeteer team is supporting WebDriver-BiDi</a>. A debug protocol is not the best for automation as it relies heavily on browser state. It’s great for debugging but not automation. Since this work is happening in the open, we are happy for the playwright and cypress team to come collaborate with us.</p>
+<p>The <a href="https://developer.chrome.com/blog/webdriver-bidi/"  class="external-link" target="_blank" rel="noopener">puppeteer team is supporting WebDriver-BiDi</a>. A debug protocol is not the best for automation as it relies heavily on browser state. It’s great for debugging but not automation. Since this work is happening in the open, we are happy for the playwright and cypress team to come collaborate with us.</p>
 <h2 id="how-do-we-solve-flakiness-then">
   How do we solve flakiness then?
   <a class="heading-link" href="#how-do-we-solve-flakiness-then">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <p>Auto-waiting, minimizing what your tests are doing, and root cause analysis of failures. Webdriver.io, Nightwatch, playwright, puppeteer, and cypress have the auto waiting. All at different levels. There is some opinions that differ on what should be waited for but they are aiming for the same end result.</p>
 <p>Selenium has had auto waiting in a minimal wait with the explicit and implicit waits. People can struggle with them. These waits are opinionated like the above. So&hellip; we&rsquo;re down to which opinions we like. So&hellip; if you&rsquo;re learning a tool for a CV&hellip; well it&rsquo;s just an opinion that&rsquo;s different. How to do web testing, and understanding it, that is the super power you need.</p>
 <p><em>As an aside, when I was at Mozilla, automattic came to us saying they wanted puppeteer support as they were dropping selenium because of flakiness&hellip; and then then the flakiness was still happening with puppeteer</em></p>
-<p>Flakiness has been around for a long time. <a href="https://twitter.com/shs96c">Simon Stewart</a> wrote a <a href="https://testing.googleblog.com/2009/06/my-selenium-tests-arent-stable.html">good blog post about this problem 15 years ago</a> and how to solve some of them. This is not a new problem and someone telling you their framework will solve it is lying.</p>
+<p>Flakiness has been around for a long time. <a href="https://twitter.com/shs96c"  class="external-link" target="_blank" rel="noopener">Simon Stewart</a> wrote a <a href="https://testing.googleblog.com/2009/06/my-selenium-tests-arent-stable.html"  class="external-link" target="_blank" rel="noopener">good blog post about this problem 15 years ago</a> and how to solve some of them. This is not a new problem and someone telling you their framework will solve it is lying.</p>
 <p>Unfortunately, there will still be some flakiness… and it’s not your fault.</p>
 <h2 id="front-end-frameworks-hate-testers">
   Front end frameworks hate testers
   <a class="heading-link" href="#front-end-frameworks-hate-testers">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <p>These frameworks make flakiness equal when it comes to testing.</p>
@@ -181,14 +204,16 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 <h3 id="asynchronocity-is-hard">
   Asynchronocity is hard
   <a class="heading-link" href="#asynchronocity-is-hard">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h3>
 <p>As I alluded to above, we don’t think of tests in the same way we think of rendering front end tests. When we’re wanting to take data off a server and render it, it’s all happening asynchronously due to how JavaScript and fetch APIs work. The move to server side rendering again is not going to solve this either… it’s just moving the heavy lifting around. Yes with promises we can write code that looks synchronous but that’s just for where that bit of code is. A slow response from a server can impact our tests. Having your tests and front end competing in the same thread won’t make your tests less flaky other than by sheer luck.</p>
 <h2 id="finally-work-in-the-same-world-as-your-users">
   Finally… work in the same world as your users
   <a class="heading-link" href="#finally-work-in-the-same-world-as-your-users">
-    <i class="fa fa-link" aria-hidden="true"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <p>So is there any benefit to running your tests in Electron? Well… how many of your users use your site with electron? Probably the same amount as would use playwright-Firefox or playwright-WebKit. It’s a number that is very close to 0.</p>
@@ -197,62 +222,63 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
 			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Mo6LmFGrtxY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
 		</div>
 
-<p>So… when picking a framework, pick one that works well for you. It should be able to do a <a href="https://www.theautomatedtester.co.uk/blog/2023/the-login-test/">Login Test</a> easily. If it can’t then it shouldn’t be used.</p>
+<p>So… when picking a framework, pick one that works well for you. It should be able to do a <a href="https://www.theautomatedtester.co.uk/blog/2023/the-login-test/"  class="external-link" target="_blank" rel="noopener">Login Test</a> easily. If it can’t then it shouldn’t be used.</p>
 
   </article>
 </section>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
   
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [
-          ['$', '$'], ['\\(', '\\)']
-        ],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
       }
-    };
-  </script>
+    );"></script>
 
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>Engineering Effectiveness Nerd</p>
-      
-      
-        ©
-        
-        2026
-         David Burns 
-      
-      
-         · 
-        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-      
-      
-    </section>
-  </footer>
-
-
-    </main>
+    </div>
 
     
-      
-      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+<footer class="footer">
+  <section class="container">
     
+      <p>Engineering Effectiveness Nerd</p>
+    
+    ©
+    
+    2026
+     David Burns 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
 
-    
+  </main>
 
-    
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-M05789F0E5"></script>
       <script>
         var doNotTrack = false;
@@ -268,17 +294,36 @@ That’s 100% not the reason your tests are flaky. I’m not going to lie, this 
         }
       </script>
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
-  </body>
+  
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
 </html>

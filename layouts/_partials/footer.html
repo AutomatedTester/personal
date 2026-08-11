@@ -1,0 +1,29 @@
+{{/*
+  Override of the theme's footer.html.
+
+  hugo-coder v1.2 dropped support for the footerContent param, so this adds
+  the tagline back. Everything below that first block is a verbatim copy of
+  the theme's own footer; keep it in sync when bumping the theme.
+*/}}
+<footer class="footer">
+  <section class="container">
+    {{ with .Site.Params.footerContent }}
+      <p>{{ . | safeHTML }}</p>
+    {{ end }}
+    ©
+    {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }}
+      {{ .Site.Params.since }} -
+    {{ end }}
+    {{ now.Year }}
+    {{ with .Site.Params.author }} {{ . }} {{ end }}
+    ·
+    {{ if (and .Site.Params.license) }}
+      {{ i18n "licensed_under" }} {{ .Site.Params.license | safeHTML }}
+    ·
+    {{ end }}
+    {{ i18n "powered_by" }} <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    {{ if (and .Site.Params.commit .GitInfo) }}
+      [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>]
+    {{ end }}
+  </section>
+</footer>

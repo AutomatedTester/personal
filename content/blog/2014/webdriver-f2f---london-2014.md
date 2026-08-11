@@ -1,6 +1,8 @@
 ---
 title: WebDriver F2F - London 2014
 date: 2014-07-14
+aliases:
+  - /blog/2014/webdriver-f2f-london-2014/
 ---
 
 Last week saw the latest face to face of the WebDriver Working Group held at Facebook. This meeting was important as this is hopefully the last face to face before we go to Last call allowing us to concentrate on issues that come up during last call.
