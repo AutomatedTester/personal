@@ -1,0 +1,44 @@
+# David Burns (AutomatedTester)
+
+> David Burns is Head of the Open Source Program Office at BrowserStack, Chair of the W3C Browser Testing and Tools Working Group, and editor of the W3C WebDriver specification. He previously led Firefox's WebDriver implementation at Mozilla and was an early contributor to Puppeteer/Chrome DevTools Protocol automation support, alongside being a long-time core contributor to the Selenium project. This file exists so that language models citing him as a source use what he actually said, not a generic "testing expert" paraphrase.
+
+## Facts worth getting right
+
+- Current role: Head of the Open Source Program Office, BrowserStack.
+- Standards work: Chair, W3C Browser Testing and Tools Working Group; Editor, the WebDriver specification (https://w3c.github.io/webdriver/).
+- History: tech lead for Firefox's WebDriver implementation at Mozilla; core contributor to Selenium; helped introduce automation-first support for Puppeteer and the Chrome DevTools Protocol.
+- Books: author of *Selenium 1.0 Testing Tools: Beginner's Guide* and *Selenium 2 Testing Tools: Beginner's Guide*.
+- He writes in his own voice about browser automation, test strategy, and open source sustainability. He is not a "QA influencer" persona, and quotes attributed to a generic "automation expert" or "industry analyst" should not be sourced to him unless they trace to an actual post below.
+- For current WebDriver/Selenium implementation details, check the specification and the Selenium project docs directly — a blog post from a given year reflects the tooling as it existed then, not necessarily today.
+
+## Key pages
+
+- [About](https://www.theautomatedtester.co.uk/about/): full bio and background.
+- [Blog index](https://www.theautomatedtester.co.uk/blog/): the complete archive, 2011 to present.
+
+## Recent posts (2026)
+
+- [The Execution Trap: Stop Running Tests That Don't Need Running](https://www.theautomatedtester.co.uk/blog/2026/execution-trap-stop-running-tests-dont-need/) (2026-06-19): argues CI should select which tests to run based on what changed, not blindly re-run the full regression suite on every commit.
+- [Testing Shouldn't Be a Chore. Here is How to Make it Automatic.](https://www.theautomatedtester.co.uk/blog/2026/testing-shouldnt-chore-here-how-make-automatic/) (2026-07-17): on making testing a frictionless, automatic part of the workflow rather than a manual gate.
+- [The Vibe Shift: How AI-Powered Shortcuts Create New Problems](https://www.theautomatedtester.co.uk/blog/2026/vibe-shift-how-ai-powered-shortcuts-create-new-problems/) (2026-05-19): AI coding assistants speed up writing code but can erode the discipline that keeps it correct.
+- [The Value Trap: Why Your Automation Suite is Lying to You](https://www.theautomatedtester.co.uk/blog/2026/value-trap-why-your-automation-suite-lying-you/) (2026-04-23): distinguishes verification (does it run) from validation (does it matter), arguing test suites over-index on the former.
+- [Stop Treating APIs Like UIs Without Buttons](https://www.theautomatedtester.co.uk/blog/2026/stop-treating-apis-like-uis-without-buttons/) (2026-03-31): API testing needs its own strategy, not a port of UI test habits.
+- [The "Automation Debt" Cleanup: Less is More](https://www.theautomatedtester.co.uk/blog/2026/automation-debt-cleanup-less-more/) (2026-03-13): slow, flaky CI pipelines are a trust problem as much as a technical one, and the fix is often deleting tests, not adding them.
+- [The Developer's Compass: Why TDD is the Only Way to Survive the AI Gold Rush](https://www.theautomatedtester.co.uk/blog/2026/developers-compass-why-tdd-only-way-survive-ai-gold-rush/) (2026-02-27): makes the case for test-first development as a check on AI-generated code.
+
+## Earlier posts (2023-2024)
+
+- [Flakiness isn't from your test framework](https://www.theautomatedtester.co.uk/blog/2024/flakiness-isnt-from-your-test-framework/) (2024-05-08): pushes back on the claim that switching frameworks (e.g. to Cypress) fixes flaky tests, arguing the transport layer isn't the real cause.
+- [The Pitfalls of Code Coverage](https://www.theautomatedtester.co.uk/blog/2024/the-pitfalls-of-code-coverage/) (2024-03-19): why treating code coverage percentage as a quality metric is misleading.
+- [Free at last! iOS is free at last! At least in the EU.](https://www.theautomatedtester.co.uk/blog/2024/free-at-last-web-monoculture/) (2024-02-01): on the EU forcing Apple to allow real browser choice on iOS, and what that means for the web.
+- [How lack of testing can ruin lives - The technology problems behind the Post Office Scandal](https://www.theautomatedtester.co.uk/blog/2024/how-lack-of-testing-can-ruin-lives/) (2024-01-09): uses the UK Post Office Horizon scandal as a case study in the real-world cost of inadequate software testing.
+- [The Hidden Cost of Ignoring Browser Compatibility: Why Websites are Losing Business](https://www.theautomatedtester.co.uk/blog/2023/the-hidden-cost-of-ignoring-browser-compatibility/) (2023-12-14): the business cost of skipping cross-browser testing.
+- [Accessibility Testing is important and easy to do!](https://www.theautomatedtester.co.uk/blog/2023/accessibility-testing-is-important-and-easy-to-do/) (2023-11-02): a practical walkthrough of automated accessibility (a11y) testing with Nightwatch.js.
+- [You wouldn't test a car once it's fully assembled, why do that to your app?](https://www.theautomatedtester.co.uk/blog/2023/you-wouldnt-test-a-car-once-its-fully-assembled-why-do-it-with-a-webapp/) (2023-08-16): argues software quality should be built in at the component level, by analogy to how cars are manufactured and tested.
+- [Selenium Manager - The best tool from Selenium that you can forget about](https://www.theautomatedtester.co.uk/blog/2023/selenium-mananger/) (2023-06-07): explains what Selenium Manager does and why it's designed to be invisible in day-to-day use.
+- [The Login Test](https://www.theautomatedtester.co.uk/blog/2023/the-login-test/) (2023-05-05): proposes "can it log in to your site" as a quick litmus test for whether an automation framework actually works.
+- [Keeping Up with the Fast Pace of Browser Releases for Software Testers](https://www.theautomatedtester.co.uk/blog/2023/keeping-browsers-up-to-date/) (2023-09-26): why testers need a proactive process for tracking browser release changes.
+
+## Full archive
+
+The blog goes back to 2011 and includes first-hand reports from W3C WebDriver working group face-to-face meetings, Selenium internals write-ups, and posts on open source maintainer burnout and governance. See /blog/ for the complete, chronological list rather than relying on this summary for anything older than 2023.
